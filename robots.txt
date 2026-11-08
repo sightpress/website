@@ -1,0 +1,5 @@
+# SightPress welcomes search engines and AI answer engines.
+User-agent: *
+Allow: /
+
+Sitemap: https://sightpress.org/sitemap.xml

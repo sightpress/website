@@ -1,0 +1,26 @@
+# SightPress
+
+> SightPress is an accessible, open-source content management system (CMS) for everyone, designed with blind and low-vision content creators and audiences who use assistive technology in mind. It is written in modern, object-oriented PHP and licensed GPL-2.0-or-later. Status: pre-launch, coming soon.
+
+Key facts:
+
+- Multi-site and multi-language: many sites in one installation, per-language URLs, automatic redirects, hreflang and canonical tags, and a multilingual sitemap.
+- Accessible by design: the admin, default theme, built-in modules and emails target WCAG 2.2 AA. Every task works with a keyboard alone and with a screen reader; nothing depends on dragging, colour or a CAPTCHA. Accessibility cannot be switched off.
+- Several editing modes over the same content, with a publish checklist that checks alt text, heading order, link text, table headers and languages.
+- Small core with official modules (articles, community, forms, newsletters, notifications, image finding, AI, importers).
+- Secure by default: HTTPS only, encrypted provider keys, audit log, rate limits, no third-party scripts or fonts.
+- Optional built-in AI assistant, off by default: it drafts content from a brief, rewrites text in plain language, suggests alt text and descriptions, and answers how-to questions. It uses the organisation's own key with the AI provider it chooses, and everything it writes stays a draft until a person reviews it.
+- Built for blind and low-vision creators, organisations that need to meet WCAG 2.2 AA (charities, NGOs, government bodies), and audiences who rely on assistive technology.
+- Founder and lead developer: Pedro Ferreira, a Portuguese web developer based in London who became blind in 2024.
+
+## Pages
+
+- [SightPress home (English, UK)](https://sightpress.org/): what SightPress is, mission, features, creator, FAQ and contact
+- [SightPress (Português, Portugal)](https://sightpress.org/pt-pt/): the same page in European Portuguese
+- [SightPress (Español, España)](https://sightpress.org/es-es/): the same page in European Spanish
+
+## Contact
+
+- Email: team@sightpress.org
+- Source and development: https://github.com/sightpress
+- The only official addresses are sightpress.org and team@sightpress.org.

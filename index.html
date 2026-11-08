@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SightPress: an accessible, open-source CMS for everyone</title>
+  <meta name="description" content="SightPress is a powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Written in modern, object-oriented PHP and open source. Coming soon.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/">
+  <link rel="alternate" hreflang="en-GB" href="https://sightpress.org/">
+  <link rel="alternate" hreflang="pt-PT" href="https://sightpress.org/pt-pt/">
+  <link rel="alternate" hreflang="es-ES" href="https://sightpress.org/es-es/">
+  <link rel="alternate" hreflang="x-default" href="https://sightpress.org/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:title" content="SightPress: Beyond sight.">
+  <meta property="og:description" content="A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Coming soon.">
+  <meta property="og:url" content="https://sightpress.org/">
+  <meta property="og:image" content="https://sightpress.org/brand/social/sightpress-share-card-motto.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SightPress logo. Beyond sight. A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SightPress: Beyond sight.">
+  <meta name="twitter:description" content="A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Coming soon.">
+  <meta name="twitter:image" content="https://sightpress.org/brand/social/sightpress-share-card-motto.png">
+  <meta name="twitter:image:alt" content="SightPress logo. Beyond sight. A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind.">
+  <meta property="og:image:type" content="image/png">
+  <link rel="preload" href="brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="brand/fonts/fonts.css">
+  <link rel="stylesheet" href="brand/tokens/tokens.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/theme.js"></script>
+  <link rel="icon" href="brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="brand/favicons/site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sightpress.org/#organization",
+        "name": "SightPress",
+        "url": "https://sightpress.org/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sightpress.org/brand/favicons/icon-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "email": "team@sightpress.org",
+        "slogan": "Beyond sight.",
+        "sameAs": [
+          "https://github.com/sightpress"
+        ],
+        "founder": {
+          "@id": "https://sightpress.org/#pedro-ferreira"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sightpress.org/#website",
+        "name": "SightPress",
+        "url": "https://sightpress.org/",
+        "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+        "publisher": {
+          "@id": "https://sightpress.org/#organization"
+        },
+        "inLanguage": [
+          "en-GB",
+          "pt-PT",
+          "es-ES"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sightpress.org/#webpage",
+        "url": "https://sightpress.org/",
+        "name": "SightPress: an accessible, open-source CMS for everyone",
+        "description": "SightPress is a powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Written in modern, object-oriented PHP and open source. Coming soon.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://sightpress.org/#website"
+        },
+        "about": {
+          "@id": "https://sightpress.org/#software"
+        },
+        "dateModified": "2026-11-07",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://sightpress.org/brand/social/sightpress-share-card-motto.png",
+          "width": 1200,
+          "height": 630
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://sightpress.org/#software",
+        "name": "SightPress",
+        "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+        "url": "https://sightpress.org/",
+        "codeRepository": "https://github.com/sightpress",
+        "programmingLanguage": "PHP",
+        "runtimePlatform": "PHP",
+        "license": "https://spdx.org/licenses/GPL-2.0-or-later.html",
+        "creativeWorkStatus": "Pre-launch",
+        "author": {
+          "@id": "https://sightpress.org/#organization"
+        },
+        "creator": {
+          "@id": "https://sightpress.org/#pedro-ferreira"
+        },
+        "keywords": "CMS, accessibility, WCAG 2.2 AA, screen reader, blind, low vision, open source, PHP, multilingual, multi-site"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://sightpress.org/#pedro-ferreira",
+        "name": "Pedro Ferreira",
+        "jobTitle": "Founder and lead developer of SightPress",
+        "image": "https://sightpress.org/assets/pedro.jpg",
+        "worksFor": {
+          "@id": "https://sightpress.org/#organization"
+        },
+        "url": "https://sightpress.org/#creator",
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Lisbon, Portugal"
+        },
+        "knowsAbout": [
+          "PHP",
+          "Web development",
+          "Open source",
+          "Web accessibility",
+          "Screen readers"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sightpress.org/#faq",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://sightpress.org/#webpage"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is SightPress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use SightPress with a screen reader?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, that is what it is built for. The admin, default theme, built-in modules and emails target WCAG 2.2 AA. Every task works with a keyboard alone and with a screen reader, and nothing depends on dragging, colour or a CAPTCHA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SightPress free and open source?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SightPress is licensed GPL-2.0-or-later, like WordPress, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technology does SightPress use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SightPress is written in modern, object-oriented PHP. It runs on most major databases and web servers, and it loads no third-party scripts or fonts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my site be easy to find in search engines and AI answers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SightPress includes SEO and AIO (optimisation for AI-powered search and answers) from the start: per-language URLs, hreflang and canonical tags, a multilingual sitemap, share images and link preview cards, and accessible, well-structured pages that people and machines can both read."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does SightPress use AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if you want it to. The built-in AI assistant is off by default. When you turn it on, it uses your organisation’s own key with the AI provider you choose, and everything it writes stays a draft until a person reviews it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When can I try SightPress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SightPress has not launched yet. Email team@sightpress.org to hear when there is something to try, or follow the development on GitHub."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img class="logo-light" src="brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#creator">Creator</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Language">
+          <ul class="lang-list">
+            <li><a href="./" lang="en-GB" hreflang="en-GB" aria-current="true">English (UK)</a></li>
+            <li><a href="pt-pt/" lang="pt-PT" hreflang="pt-PT">Português (Portugal)</a></li>
+            <li><a href="es-es/" lang="es-ES" hreflang="es-ES">Español (España)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="status">Pre-launch: coming soon</p>
+        <p class="motto">Beyond sight<span class="dot">.</span></p>
+        <h1 id="hero-title">Publish for every reader<span class="dot">.</span></h1>
+        <p class="lede">SightPress is a powerful multi-site, multi-language CMS for everyone, designed with <strong>blind and low-vision content creators</strong> and <strong>audiences who use assistive technology</strong> in mind.</p>
+        <p class="lede">We are still building it. Tell us you are interested and we will write to you when there is something to try.</p>
+        <div class="actions">
+          <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-mail"/></svg>
+            Email us to stay informed
+          </a>
+          <a class="button button-secondary" href="#about">
+            Read about SightPress
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-chevron-down"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="cms" aria-labelledby="cms-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">The basics</p>
+          <h2 id="cms-title">What is a CMS?</h2>
+          <p class="lede">A CMS, or content management system, is the tool you use to create, edit and publish a website without writing code.</p>
+          <p>You write pages, add images and organise menus in an admin area. The CMS stores that content and turns it into the web pages your readers see.</p>
+        </div>
+        <div>
+          <h3>What a CMS does for you</h3>
+          <ul class="ticks">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Keeps your content, images and translations in one place.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Lets several people write, review and publish together.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Keeps the look of your site consistent, whoever writes the content.</span></li>
+          </ul>
+          <p>WordPress is the best-known example. SightPress is a new CMS built so that the admin is as usable with a screen reader as with a mouse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Our mission</p>
+          <h2 id="about-title">Open to write. Open to read.</h2>
+          <p class="lede">To make publishing on the web fully open to blind and low-vision creators, and reading it fully open to everyone, by building a CMS where accessibility is the floor, quality design is the goal, and neither is ever traded for the other.</p>
+          <p>SightPress is written in modern, object-oriented PHP and licensed <strong>GPL-2.0-or-later</strong>, like WordPress. Accessibility can’t be switched off, and blind creators are the primary admin users.</p>
+        </div>
+        <div>
+          <h3>Who it is for</h3>
+          <ul class="ticks">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Blind and low-vision creators.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Organisations that need to meet WCAG 2.2 AA, including charities, NGOs and government bodies.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-check"/></svg><span>Audiences who rely on assistive technology.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="eyebrow">What is coming</p>
+        <h2 id="features-title">Major features</h2>
+        <ul class="cards">
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-language"/></svg></span>
+            <h3>Multi-site, multi-language</h3>
+            <p>Pages with a translation workflow, a content planner, menus and links that never break.</p>
+          </li>
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-edit"/></svg></span>
+            <h3>Four ways to edit</h3>
+            <p>Markdown, plain text, a block editor or raw HTML, all over the same content.</p>
+          </li>
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-alt-text"/></svg></span>
+            <h3>Accessibility built into content</h3>
+            <p>Accessibility metadata is part of your content, and a linter blocks publishing until it passes.</p>
+          </li>
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-theme"/></svg></span>
+            <h3>Beautiful by default</h3>
+            <p>A media library, widgets, accessible themes, site profiles, legal pages, SEO and AIO.</p>
+          </li>
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-module"/></svg></span>
+            <h3>Small core, official modules</h3>
+            <p>Modules for articles, community features, forms, newsletters, notifications, image finding, AI and importers.</p>
+          </li>
+          <li class="card">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-lock"/></svg></span>
+            <h3>Secure and fast</h3>
+            <p>Secure and fast by default, so you can concentrate on what you want to say.</p>
+          </li>
+        </ul>
+
+        <div class="callout callout-spaced">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-sparkle-ai"/></svg> AI that helps, and never decides</h3>
+          <p>SightPress includes an optional AI assistant that helps you with everyday tasks: it drafts content from a short brief, makes text clearer and plainer, suggests alt text and descriptions, and answers questions about using SightPress. It is off until you turn it on, it uses your organisation’s own key with the AI provider you choose, and everything it writes stays a draft until a person reviews it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="creator" aria-labelledby="creator-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Creator</p>
+          <img class="avatar" src="assets/pedro.jpg" width="160" height="160" alt="Portrait of Pedro Ferreira">
+          <h2 id="creator-title">Hello, I’m Pedro.</h2>
+          <p class="quote">Publishing should not be harder because you can’t see the screen.</p>
+          <p><strong>Pedro Ferreira</strong>, founder and lead developer of SightPress.</p>
+        </div>
+        <div>
+          <p>I am Portuguese. I was born in Lisbon and have lived in London since 2010. I’m an open-source advisor and a specialist in modern web development, with PHP as my primary language.</p>
+          <p>I’ve spent my career building for the web, working with small agencies and startups, and in the telecom and finance industries. That mix taught me how to move fast with a small team and how to meet the standards of large, regulated organisations.</p>
+          <p>In 2024 I became blind because of a genetic condition. I learned quickly how to keep working with screen readers and other assistive technologies. But I also found that most major web interfaces, especially the admin screens of content tools, are ugly to work with: cluttered, inconsistent, and built for the mouse and the eye first.</p>
+          <p>I chose to build a CMS rather than patch an existing one because accessibility works best when it is the foundation, not an add-on. I want to give other blind and low-vision people easy-to-use tools for their creative work, and I want those same tools to help audiences who rely on assistive technology get content that is accessible too. SightPress is open source under the GPL, so anyone can use it, inspect it, improve it and trust it.</p>
+          <p>I hope creators can write, describe, translate and publish without fighting their tools, and that audiences can read the result with any assistive technology. I’d like to show that a CMS can be accessible and beautiful at once, and that blind and low-vision people can build, and not only use, the tools of the web.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">Good to know</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <ul class="faq">
+          <li>
+            <h3 id="faq-1">What is SightPress?</h3>
+            <p>SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind.</p>
+          </li>
+          <li>
+            <h3 id="faq-2">Can I use SightPress with a screen reader?</h3>
+            <p>Yes, that is what it is built for. The admin, default theme, built-in modules and emails target WCAG 2.2 AA. Every task works with a keyboard alone and with a screen reader, and nothing depends on dragging, colour or a CAPTCHA.</p>
+          </li>
+          <li>
+            <h3 id="faq-3">Is SightPress free and open source?</h3>
+            <p>Yes. SightPress is licensed GPL-2.0-or-later, like WordPress, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub.</p>
+          </li>
+          <li>
+            <h3 id="faq-4">What technology does SightPress use?</h3>
+            <p>SightPress is written in modern, object-oriented PHP. It runs on most major databases and web servers, and it loads no third-party scripts or fonts.</p>
+          </li>
+          <li>
+            <h3 id="faq-5">Will my site be easy to find in search engines and AI answers?</h3>
+            <p>SightPress includes SEO and AIO (optimisation for AI-powered search and answers) from the start: per-language URLs, hreflang and canonical tags, a multilingual sitemap, share images and link preview cards, and accessible, well-structured pages that people and machines can both read.</p>
+          </li>
+          <li>
+            <h3 id="faq-6">Does SightPress use AI?</h3>
+            <p>Only if you want it to. The built-in AI assistant is off by default. When you turn it on, it uses your organisation’s own key with the AI provider you choose, and everything it writes stays a draft until a person reviews it.</p>
+          </li>
+          <li>
+            <h3 id="faq-7">When can I try SightPress?</h3>
+            <p>SightPress has not launched yet. Email <a href="mailto:team@sightpress.org">team@sightpress.org</a> to hear when there is something to try, or follow the development on <a href="https://github.com/sightpress" rel="noopener">GitHub</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Be the first to know</h2>
+          <p>SightPress has not launched yet. To hear when it does, or to share ideas, questions or accessibility feedback, write to us. A real person reads every message.</p>
+          <p class="email"><a href="mailto:team@sightpress.org">team@sightpress.org</a></p>
+          <p>The only official SightPress addresses are <a href="https://sightpress.org">sightpress.org</a> and team@sightpress.org.</p>
+          <h3>Follow the development</h3>
+          <p>SightPress is built in the open. See what we are working on, read the code and follow our progress on our GitHub organisation page.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/sightpress" rel="noopener">
+              Follow SightPress on GitHub
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="brand/icons/sprite.svg#sp-icon-external-link"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p><strong>SightPress</strong>. Beyond sight.</p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-2.0-or-later.</p>
+      </div>
+      <div>
+        <p><strong>About this page.</strong> We aim to meet WCAG 2.2 AA. It works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us</a>.</p>
+        <ul class="footer-links">
+          <li><a href="pt-pt/" lang="pt-PT" hreflang="pt-PT">Português (Portugal)</a></li>
+          <li><a href="es-es/" lang="es-ES" hreflang="es-ES">Español (España)</a></li>
+          <li><a href="#main">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

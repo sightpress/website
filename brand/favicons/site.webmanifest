@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "SightPress",
+  "short_name": "SightPress",
+  "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#3D2FC4",
+  "background_color": "#FBFAF7",
+  "display": "standalone"
+}
