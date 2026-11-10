@@ -4,20 +4,29 @@
 
 Key facts:
 
-- Multi-site and multi-language: many sites in one installation, per-language URLs, automatic redirects, hreflang and canonical tags, and a multilingual sitemap.
-- Accessible by design: the admin, default theme, built-in modules and emails target WCAG 2.2 AA. Every task works with a keyboard alone and with a screen reader; nothing depends on dragging, colour or a CAPTCHA. Accessibility cannot be switched off.
-- Several editing modes over the same content, with a publish checklist that checks alt text, heading order, link text, table headers and languages.
-- Small core with official modules (articles, community, forms, newsletters, notifications, image finding, AI, importers).
-- Secure by default: HTTPS only, encrypted provider keys, audit log, rate limits, no third-party scripts or fonts.
-- Optional built-in AI assistant, off by default: it drafts content from a brief, rewrites text in plain language, suggests alt text and descriptions, and answers how-to questions. It uses the organisation's own key with the AI provider it chooses, and everything it writes stays a draft until a person reviews it.
-- Built for blind and low-vision creators, organisations that need to meet WCAG 2.2 AA (charities, NGOs, government bodies), and audiences who rely on assistive technology.
+- Mission: accessibility is the floor, quality design is the goal, and neither is ever traded for the other. Accessibility is a release requirement and cannot be switched off.
+- Standards: the admin, sign-in pages, default theme, built-in modules and emails target WCAG 2.2 AA; SightPress as an authoring tool targets ATAG 2.0 AA. Conformance reports (WCAG 2.2, EN 301 549, ATAG 2.0) will be published with every release from 1.0.
+- Every task works with a keyboard alone and with a screen reader; nothing depends on dragging, colour or a CAPTCHA. Every admin task also has a documented command-line equivalent.
+- Multi-site and multi-language: many sites in one installation, each with its own domains, team and style; per-language URLs, a translator role scoped to languages, hreflang and canonical tags, and a multilingual sitemap.
+- Three editing modes per section and language: a visual editor, Markdown and HTML, with language and abbreviation marks in all three.
+- Help for authors: alt text required (or an explicit "decorative" choice), captions and transcripts required for video and audio, save-time checks (headings, link text, table headers), a publish checklist, a site-wide accessibility scan, and a generated accessibility statement for every site.
+- New sites get a home page, contact page, legal pages and an accessibility statement generated from the site profile.
+- Site styles refuse text colours below 4.5:1 contrast and never allow the focus indicator to be removed.
+- Roles for administrators, editors, authors, translators and moderators; drafts of published pages, comparison, scheduled publishing and editor approval.
+- Media library with an image finder for free and paid stock images (caption, credit and licence filled in); uploads stay private until published.
+- Secure by default: HTTPS only, one-time codes instead of email links, passkeys, two-step sign-in for owners, confirmation codes for critical changes, an audit log, no CAPTCHAs, no third-party scripts or fonts.
+- One encrypted, portable backup format that restores across databases and servers.
+- Runs with Docker on MariaDB, MySQL, PostgreSQL, SQLite, SQL Server, Oracle or Db2, with FrankenPHP, nginx or Apache, and local or cloud storage.
+- Small core with a built-in contact form; sharing, likes, reviews and moderated comments come as an official module; third-party modules are written against a stable interface.
+- Optional built-in AI assistant, off by default: it drafts from a brief, rewrites in plain language, suggests alt text, titles, descriptions and fixes, starts translations and answers how-to questions. It uses the organisation's own key with the provider it chooses (including self-hosted models), only acts when a person asks, never publishes, and everything it writes stays a suggestion until a person accepts it.
+- Roadmap for 1.1: accessible site search, full revision history, a link checker, PDF checks, readability scores per language, visitor display preferences without an overlay, an accessible form builder and media player. Official modules after 1.0 for news, events, documents, newsletters, cookieless analytics, donations, meetings, consultations, bookings, podcasts and more.
+- Demo: "Lisboa para Todos" (Portuguese: "Lisbon for All"), an accessible tour guide to Lisbon in Portuguese, English, Spanish and French.
+- Built for blind and low-vision creators; charities, NGOs, councils and public bodies that must meet WCAG 2.2 AA and EN 301 549; small businesses; individuals; and audiences who rely on assistive technology.
 - Founder and lead developer: Pedro Ferreira, a Portuguese web developer based in London who became blind in 2024.
 
 ## Pages
 
-- [SightPress home (English, UK)](https://sightpress.org/): what SightPress is, mission, features, creator, FAQ and contact
-- [SightPress (Português, Portugal)](https://sightpress.org/pt-pt/): the same page in European Portuguese
-- [SightPress (Español, España)](https://sightpress.org/es-es/): the same page in European Spanish
+- [SightPress home](https://sightpress.org/): what SightPress is, mission, features, accessibility, roadmap, creator, FAQ, sharing and contact
 
 ## Contact
 
