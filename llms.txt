@@ -1,6 +1,6 @@
 # SightPress
 
-> SightPress is an accessible, open-source content management system (CMS) for everyone, designed with blind and low-vision content creators and audiences who use assistive technology in mind. It is written in modern, object-oriented PHP and licensed GPL-2.0-or-later. Status: pre-launch, coming soon.
+> SightPress is an accessible, open-source content management system (CMS) for everyone, designed with blind and low-vision content creators and audiences who use assistive technology in mind. It is written in modern, object-oriented PHP and licensed GPL-3.0-or-later. Status: pre-launch, coming soon.
 
 Key facts:
 
@@ -16,7 +16,7 @@ Key facts:
 - Media library with an image finder for free and paid stock images (caption, credit and licence filled in); uploads stay private until published.
 - Secure by default: HTTPS only, one-time codes instead of email links, passkeys, two-step sign-in for owners, confirmation codes for critical changes, an audit log, no CAPTCHAs, no third-party scripts or fonts.
 - One encrypted, portable backup format that restores across databases and servers.
-- Runs with Docker on MariaDB, MySQL, PostgreSQL, SQLite, SQL Server, Oracle or Db2, with FrankenPHP, nginx or Apache, and local or cloud storage.
+- Runs with Docker on MariaDB, MySQL, PostgreSQL, SQLite or SQL Server, with FrankenPHP, nginx or Apache, and local or cloud storage.
 - Small core with a built-in contact form; sharing, likes, reviews and moderated comments come as an official module; third-party modules are written against a stable interface.
 - Optional built-in AI assistant, off by default: it drafts from a brief, rewrites in plain language, suggests alt text, titles, descriptions and fixes, starts translations and answers how-to questions. It uses the organisation's own key with the provider it chooses (including self-hosted models), only acts when a person asks, never publishes, and everything it writes stays a suggestion until a person accepts it.
 - Roadmap for 1.1: accessible site search, full revision history, a link checker, PDF checks, readability scores per language, visitor display preferences without an overlay, an accessible form builder and media player. Official modules after 1.0 for news, events, documents, newsletters, cookieless analytics, donations, meetings, consultations, bookings, podcasts and more.
