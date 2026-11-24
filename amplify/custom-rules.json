@@ -1,0 +1,12 @@
+[
+  {
+    "source": "https://sightpress.org",
+    "target": "https://www.sightpress.org",
+    "status": "302"
+  },
+  {
+    "source": "/<*>",
+    "target": "/404.html",
+    "status": "404"
+  }
+]

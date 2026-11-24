@@ -1,0 +1,7 @@
+{# Expects: share_url, share_text, share_subject (optional) #}
+<ul class="share-list">
+{% for link in share_links(share_url, share_text, share_subject ?? 'Have you seen SightPress?') %}
+  <li><a href="{{ link.href }}" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="{{ link.icon }}"/></svg><span>{{ link.label }}</span></a></li>
+{% endfor %}
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">{{ share_url }}</strong>.</p>

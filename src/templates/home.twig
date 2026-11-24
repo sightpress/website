@@ -1,0 +1,218 @@
+{% extends 'layout.twig' %}
+{% import 'partials/macros.twig' as m %}
+{% block main %}
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="status">Pre-launch · latest test release {{ site.release.version }} ({{ site.release.date|long_date }})</p>
+        <p class="motto">Beyond sight<span class="dot">.</span></p>
+        <h1 id="hero-title">Publish for every reader<span class="dot">.</span></h1>
+        <p class="lede">SightPress is a powerful multi-site, multi-language CMS for everyone, designed with <strong>blind and low-vision content creators</strong> and <strong>audiences who use assistive technology</strong> in mind.</p>
+        <p class="lede">Accessibility is the floor, good design is the goal, and neither is ever traded for the other. Test releases are out for developers and testers now; version 1.0 will be the first for live websites.</p>
+        <div class="actions">
+          {% include 'partials/stay-informed.twig' %}
+          <a class="button button-secondary" href="/features/">See what works today</a>
+          <a class="button button-secondary" href="/articles/">Read the latest articles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="cms" aria-labelledby="cms-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">The basics</p>
+          <h2 id="cms-title">What is a CMS?</h2>
+          <p class="lede">A CMS, or content management system, is the tool you use to create, edit and publish a website without writing code.</p>
+          <p>You write pages, add images and organise menus in an admin area. The CMS stores that content and turns it into the web pages your readers see. WordPress is the best-known example.</p>
+        </div>
+        <div>
+          <h3>Why another one?</h3>
+          <p>Most content tools are built for the mouse and the eye first. SightPress is built so that its admin area works as well with a screen reader or a keyboard as with a mouse, and so that what you publish works for every reader.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" aria-labelledby="progress-title">
+      <div class="wrap">
+        <p class="eyebrow">Progress</p>
+        <h2 id="progress-title">Where we are</h2>
+        <p class="lede">SightPress is released in small test versions while we build towards 1.0. Each one is tested with a keyboard and a screen reader before it ships.</p>
+        <div class="split">
+          <div>
+            <h3>Released so far</h3>
+            <ul class="progress-list">
+{% for release in site.releases %}
+              <li><strong>{{ release.version }}</strong>, <time datetime="{{ release.date }}">{{ release.date|long_date }}</time>: {{ release.summary }}</li>
+{% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3>What’s next</h3>
+            <ul class="progress-list">
+              <li><strong>Being built now, {{ site.next.version }}:</strong> {{ site.next.summary }}</li>
+              <li><strong>Before 1.0:</strong> a security review, privacy tools, speed, complete documentation and an independent accessibility review.</li>
+              <li><strong>1.0:</strong> the first version for live websites.</li>
+            </ul>
+            <p><a href="/features/">All features and plans</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="highlights-title">
+      <div class="wrap">
+        <p class="eyebrow">Find out more</p>
+        <h2 id="highlights-title">SightPress at a glance</h2>
+        <ul class="cards highlights">
+          <li class="card" id="about">
+            <h3>About</h3>
+            <p>Our mission is to make publishing on the web fully open to blind and low-vision creators, and reading it fully open to everyone.</p>
+            <figure class="creator-quote" id="creator">
+              <img class="avatar avatar-small" src="/assets/pedro.jpg" width="96" height="96" alt="Portrait of Pedro Ferreira">
+              <blockquote><p>Publishing should not be harder because you can’t see the screen.</p></blockquote>
+              <figcaption>Pedro Ferreira, founder and lead developer</figcaption>
+            </figure>
+            <p class="card-link"><a href="/about/">About SightPress and its creator</a></p>
+          </li>
+          <li class="card" id="features">
+            <h3>Features</h3>
+            <p>Working today, in test release {{ site.release.version }}:</p>
+            <ul class="compact-list">
+              <li>Pages built from blocks, with checks before anything is published</li>
+              <li>Several sites and languages in one installation</li>
+              <li>Site search and private analytics, with charts you can read in words</li>
+              <li>An optional AI assistant that only suggests</li>
+              <li>Themes with colour contrast checks</li>
+              <li>Captions, transcripts and large uploads</li>
+            </ul>
+            <p class="card-link"><a href="/features/">All features, and what’s coming next</a></p>
+          </li>
+          <li class="card">
+            <h3>Articles</h3>
+{% if page.latest is empty %}
+            <p>Our first articles are on their way: release notes, the story behind SightPress and what we learn about accessible publishing.</p>
+            <p class="card-link"><a href="/articles/feed.xml">Follow the articles feed (Atom)</a></p>
+{% else %}
+            <ul class="latest-list">
+{% for article in page.latest %}
+              <li>
+                <a href="{{ article.path }}">{{ article.title }}</a>
+                <span class="article-meta"><time datetime="{{ article.published }}">{{ article.published|long_date }}</time> · {{ article.section }}</span>
+                <span class="latest-description">{{ article.description }}</span>
+              </li>
+{% endfor %}
+            </ul>
+            <p class="card-link"><a href="/articles/">All articles</a></p>
+{% endif %}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="involved" aria-labelledby="involved-title">
+      <div class="wrap">
+        <p class="eyebrow">Get involved</p>
+        <h2 id="involved-title">Help us build it</h2>
+        <p class="lede">You don’t need to write code to help. Here is where each kind of help makes the most difference.</p>
+        <ul class="cards">
+          <li class="card">
+            <span class="icon-tile">{{ m.icon('settings') }}</span>
+            <h3>Try a test release</h3>
+            <p>For developers and testers. Install SightPress on your own computer with Docker and tell us what breaks. Test releases aren’t ready for live websites.</p>
+            <p class="card-link"><a href="{{ docs('getting-started/') }}">Getting started guide</a></p>
+          </li>
+          <li class="card">
+            <span class="icon-tile">{{ m.icon('accessibility') }}</span>
+            <h3>Report a barrier or an error</h3>
+            <p>Accessibility barriers are always treated as bugs. Tell us what you tried, what happened and which assistive technology you use, by email or on GitHub.</p>
+            <p class="card-link"><a href="{{ docs('how-to/report-a-problem/') }}">How to report a problem</a></p>
+          </li>
+          <li class="card">
+            <span class="icon-tile">{{ m.icon('screen-reader') }}</span>
+            <h3>Test with assistive technology, or translate</h3>
+            <p>If you use a screen reader, a magnifier, a braille display or voice control, or you speak another language well, we’d love your help.</p>
+            <p class="card-link"><a href="mailto:{{ site.contributeEmail }}?subject=I%E2%80%99d%20like%20to%20help%20with%20SightPress">Email {{ site.contributeEmail }}</a></p>
+          </li>
+          <li class="card">
+            <span class="icon-tile">{{ m.icon('bell') }}</span>
+            <h3>Follow the development</h3>
+            <p>SightPress is built in the open. Read the code and follow our progress on GitHub, or follow the articles in your feed reader.</p>
+            <p class="card-link"><a href="{{ site.github }}">SightPress on GitHub</a> · <a href="/articles/feed.xml">Articles feed (Atom)</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="share" aria-labelledby="share-title">
+      <div class="wrap">
+        <p class="eyebrow">Spread the word</p>
+        <h2 id="share-title">Help us reach the people who need it</h2>
+        <p class="lede">Most blind and low-vision creators have never had a publishing tool built for them. If you know someone who writes for the web, runs a charity, works in a public body or simply cares about accessibility, please share SightPress with them.</p>
+        {% include 'partials/share.twig' with {share_url: site.url ~ '/', share_text: site.shareText} %}
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">Good to know</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <ul class="faq">
+          <li>
+            <h3 id="faq-1">What is SightPress?</h3>
+            <p>SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages from one installation. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind.</p>
+          </li>
+          <li>
+            <h3 id="faq-2">Is SightPress only for blind people?</h3>
+            <p>No. SightPress is for everyone: charities, small businesses, public bodies and individuals. It is built so that blind and low-vision people can use every part of it, and that makes it clearer and calmer for everybody else too.</p>
+          </li>
+          <li>
+            <h3 id="faq-3">Can I use SightPress with a screen reader?</h3>
+            <p>Yes, that is what it is built for. The admin, sign-in pages, default theme and emails target WCAG 2.2 AA, and SightPress as an authoring tool targets ATAG 2.0 AA. Tasks work with a keyboard alone and with a screen reader, nothing depends on dragging, colour or a CAPTCHA, and there is a command-line tool for administration tasks too.</p>
+          </li>
+          <li>
+            <h3 id="faq-4">Will SightPress help me publish accessible content?</h3>
+            <p>Yes. Images need a description, or an explicit choice to mark them as decorative, and videos and recordings need captions and a transcript. SightPress checks each page before it goes live, including its link text and heading order, explains anything to fix, and won’t publish a page with an accessibility error.</p>
+          </li>
+          <li>
+            <h3 id="faq-5">Is SightPress free and open source?</h3>
+            <p>Yes. SightPress is licensed GPL-3.0-or-later, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub.</p>
+          </li>
+          <li>
+            <h3 id="faq-6">What do I need to run SightPress?</h3>
+            <p>SightPress is written in modern, object-oriented PHP and ships with ready-made Docker files. It is tested on MariaDB, MySQL, PostgreSQL and SQLite, runs on FrankenPHP, nginx or Apache, and stores files on your own server or, if you choose, in cloud storage. It loads no third-party scripts or fonts.</p>
+          </li>
+          <li>
+            <h3 id="faq-7">Will my site be easy to find in search engines and AI answers?</h3>
+            <p>SightPress is built for it from the start: server-rendered pages, a title, description and structured data for every page, per-language addresses, a sitemap for each language, and a Markdown version of every public page for AI tools. Each site decides how AI crawlers may use its content. It uses no tricks: it makes your site clear and eligible, and leaves the content to you.</p>
+          </li>
+          <li>
+            <h3 id="faq-8">Does SightPress use AI?</h3>
+            <p>Only if you want it to. The AI assistant is off for new sites. An admin can turn it on with the organisation’s own key from Anthropic, OpenAI or Mistral, or connect a compatible or self-hosted service. Nothing it writes is used until a person accepts it, and it never publishes anything.</p>
+          </li>
+          <li>
+            <h3 id="faq-9">When can I try SightPress?</h3>
+            <p>Now, if you are a developer or a tester: test release {{ site.release.version }} runs on your own computer, and the <a href="{{ docs('getting-started/') }}">getting started guide</a> explains how. Test releases aren’t ready for live websites yet; version 1.0 will be. Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> to hear when it is ready.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Be the first to know</h2>
+          <p>To hear when SightPress is ready for live websites, or to share ideas, questions or accessibility feedback, write to us. A real person reads every message.</p>
+          <p class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          <p>The only official SightPress addresses are <a href="{{ site.url }}">sightpress.org</a> and {{ site.email }}.</p>
+          <h3>Follow the development</h3>
+          <p>SightPress is built in the open. See what we are working on, read the code and follow our progress on our GitHub organisation page.</p>
+          <div class="actions">
+            <a class="button" href="{{ site.github }}">
+              Follow SightPress on GitHub
+              {{ m.icon('external-link') }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

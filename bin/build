@@ -1,0 +1,123 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/*
+ * Builds the website into public/.
+ *
+ *   bin/build [articles-folder]         build from the drafts folder (default ../articles, if it exists)
+ *   bin/build --from-public             build from the published articles already in public/articles
+ *   bin/build --check                   build in memory and fail if public/ doesn't match (used by CI)
+ *   bin/build --include-drafts          also build drafts, into a temporary folder (never into public/)
+ *   bin/build --output=DIR              write somewhere other than public/
+ */
+
+use SightPress\Website\ArticleLoader;
+use SightPress\Website\BuildError;
+use SightPress\Website\Markdown\MarkdownRenderer;
+use SightPress\Website\SiteBuilder;
+
+$root = dirname(__DIR__);
+require $root . '/vendor/autoload.php';
+
+$options = ['check' => false, 'from-public' => false, 'include-drafts' => false, 'output' => null];
+$articlesDir = null;
+foreach (array_slice($_SERVER['argv'] ?? [], 1) as $arg) {
+    match (true) {
+        $arg === '--check' => $options['check'] = true,
+        $arg === '--from-public' => $options['from-public'] = true,
+        $arg === '--include-drafts' => $options['include-drafts'] = true,
+        str_starts_with($arg, '--output=') => $options['output'] = substr($arg, 9),
+        $arg === '--help' || $arg === '-h' => usage(),
+        str_starts_with($arg, '--') => fail("Unknown option $arg. Run bin/build --help."),
+        default => $articlesDir = $arg,
+    };
+}
+
+$public = $root . '/public';
+$output = $options['output'] ?? $public;
+if ($options['include-drafts']) {
+    if ($options['check']) {
+        fail('--include-drafts and --check can’t be used together.');
+    }
+    if ($options['output'] === null || realpath($options['output']) === realpath($public)) {
+        $output = sys_get_temp_dir() . '/sightpress-website-drafts';
+    }
+}
+
+if (!$options['from-public'] && $articlesDir === null && is_dir($root . '/../articles')) {
+    $articlesDir = $root . '/../articles';
+}
+if ($articlesDir !== null && !is_dir($articlesDir)) {
+    fail("There is no articles folder at $articlesDir.");
+}
+
+$site = require $root . '/src/site.php';
+$taxonomy = require $root . '/src/taxonomy.php';
+$loader = new ArticleLoader(new MarkdownRenderer(), $taxonomy['sections'], $taxonomy['tags'], $site['url']);
+
+try {
+    $articles = $articlesDir === null || $options['from-public']
+        ? $loader->fromPublished($public . '/articles')
+        : $loader->fromDrafts($articlesDir, $options['include-drafts']);
+} catch (BuildError $error) {
+    fail("These articles can’t be published yet:\n  " . implode("\n  ", $error->problems));
+}
+foreach ($loader->warnings() as $warning) {
+    fwrite(STDERR, "Draft: $warning\n");
+}
+
+$build = (new SiteBuilder($site, $taxonomy, $root . '/src/templates'))->build($articles);
+$source = $articlesDir === null || $options['from-public'] ? 'the published articles in public/articles' : realpath($articlesDir);
+
+if ($options['check']) {
+    $differences = $build->compare($public);
+    if ($differences !== []) {
+        fail("public/ doesn’t match a fresh build from $source. Run bin/build and commit the result; never edit generated files by hand.\n  " . implode("\n  ", $differences));
+    }
+    echo 'public/ matches a fresh build (' . count($build->files()) . ' files, ' . count($articles) . " articles, from $source).\n";
+    exit(0);
+}
+
+if ($output !== $public) {
+    copyStatic($public, $output);
+}
+$build->write($output);
+echo 'Built ' . count($build->files()) . ' files with ' . count($articles) . " articles from $source into $output.\n";
+if ($options['include-drafts']) {
+    echo "Drafts are included. Preview them with: php -S localhost:8000 -t $output\n";
+}
+
+function usage(): never
+{
+    preg_match('#/\*(.*?)\*/#s', (string) file_get_contents(__FILE__), $match);
+    echo trim((string) preg_replace('/^ \* ?/m', '', $match[1] ?? '')) . "\n";
+    exit(0);
+}
+
+/** Copies the hand-made files (assets, brand …) so a build outside public/ can be previewed. */
+function copyStatic(string $from, string $to): void
+{
+    $items = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($from, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
+    foreach ($items as $item) {
+        /** @var SplFileInfo $item */
+        $relative = substr($item->getPathname(), strlen($from) + 1);
+        if (in_array(explode('/', $relative)[0], SightPress\Website\Output::GENERATED, true)) {
+            continue;
+        }
+        $target = $to . '/' . $relative;
+        if ($item->isDir()) {
+            is_dir($target) || mkdir($target, 0o755, true);
+        } else {
+            is_dir(dirname($target)) || mkdir(dirname($target), 0o755, true);
+            copy($item->getPathname(), $target);
+        }
+    }
+}
+
+function fail(string $message): never
+{
+    fwrite(STDERR, $message . "\n");
+    exit(1);
+}

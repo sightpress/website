@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-GB">
+  <id>https://sightpress.org/articles/feed.xml</id>
+  <title>SightPress articles</title>
+  <subtitle>Release notes, the story behind SightPress, and what we learn about accessible publishing.</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://sightpress.org/articles/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://sightpress.org/articles/"/>
+  <updated>2026-11-24T00:00:00Z</updated>
+  <author>
+    <name>Pedro Ferreira</name>
+    <uri>https://sightpress.org/about/#creator</uri>
+  </author>
+  <icon>https://sightpress.org/brand/favicons/icon-192.png</icon>
+  <rights>© SightPress</rights>
+</feed>

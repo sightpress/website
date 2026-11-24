@@ -1,0 +1,49 @@
+{% extends 'layout.twig' %}
+{% import 'partials/macros.twig' as m %}
+{% block main %}
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Articles</h1>
+        <p class="lede">Release notes, the story behind SightPress, and what we learn about accessible publishing, by Pedro Ferreira. Newest first.</p>
+        <p><a class="feed-link" href="/articles/feed.xml">{{ m.icon('bell') }} Follow the articles in your feed reader (Atom)</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="list-title">
+      <div class="wrap">
+        <h2 id="list-title" class="visually-hidden">All articles</h2>
+{% if page.articles is empty %}
+        <p>Our first articles are on their way. <a href="/articles/feed.xml">Follow the articles feed (Atom)</a> to hear about them, or <a href="mailto:{{ site.email }}?subject=Keep%20me%20updated%20about%20SightPress">email us to stay informed</a>.</p>
+{% else %}
+        <ul class="article-list">
+{% for article in page.articles %}
+          {{ m.article_item(article, 3) }}
+{% endfor %}
+        </ul>
+{% endif %}
+      </div>
+    </section>
+
+{% if page.articles is not empty %}
+    <section class="section section-alt" aria-labelledby="browse-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="browse-title">Browse by section</h2>
+          <ul class="plain-list">
+{% for section, list in page.sections %}
+            <li><a href="/articles/section/{{ section|slug }}/">{{ section }}</a> ({{ list|length }} {{ list|length == 1 ? 'article' : 'articles' }})</li>
+{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h2 id="tags-title">Browse by topic</h2>
+          <ul class="tag-list">
+{% for tag, list in page.tags %}
+            <li><a href="/articles/tag/{{ tag }}/">{{ tag|tag_label }}<span class="visually-hidden">,</span> <span class="tag-count">{{ list|length }} {{ list|length == 1 ? 'article' : 'articles' }}</span></a></li>
+{% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+{% endif %}
+{% endblock %}

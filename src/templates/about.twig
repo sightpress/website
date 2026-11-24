@@ -1,0 +1,116 @@
+{% extends 'layout.twig' %}
+{% import 'partials/macros.twig' as m %}
+{% block main %}
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="motto">Beyond sight<span class="dot">.</span></p>
+        <h1 id="page-title">About SightPress</h1>
+        <p class="lede">Our mission is to make publishing on the web fully open to blind and low-vision creators, and reading it fully open to everyone, by building a CMS where accessibility is the floor, quality design is the goal, and neither is ever traded for the other.</p>
+      </div>
+    </section>
+
+    <section class="section" id="who" aria-labelledby="who-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="who-title">Who it is for</h2>
+          <p class="lede">SightPress is for everyone, not only blind people. It is built so that blind and low-vision people can use every part of it, and that makes it clearer and calmer for everybody else too.</p>
+        </div>
+        <div>
+          {{ m.ticks([
+            'Blind and low-vision creators, who are the primary admin users.',
+            'Charities, NGOs, councils and public bodies that need to meet WCAG 2.2 AA and the European accessibility standard EN 301 549.',
+            'Small businesses and individuals who want a site that works for every visitor.',
+            'Audiences who rely on screen readers, magnifiers, voice control or a keyboard.',
+          ]) }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title">How we build it</h2>
+        <div class="split">
+          <div>
+            <h3>Accessibility can’t be switched off</h3>
+            <p>Accessibility in SightPress is a release requirement, on the same footing as security. The admin, the sign-in pages, the default theme and emails target <strong>WCAG 2.2 AA</strong>, and SightPress as an authoring tool targets <strong>ATAG 2.0 AA</strong>.</p>
+            <h3>How we test it</h3>
+            <ul class="plain-list">
+              <li>Automated accessibility checks run on every screen for every change, and a new problem stops the change.</li>
+              <li>Every screen is tested with the keyboard alone, in light and dark mode, in high-contrast mode and zoomed in.</li>
+              <li>A manual screen reader pass before every release.</li>
+              <li>Before 1.0, an independent review that includes blind and low-vision users, and from 1.0, public conformance reports for WCAG 2.2, EN 301 549 and ATAG 2.0.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Open source</h3>
+            <p>SightPress is written in modern, object-oriented PHP and licensed <strong>GPL-3.0-or-later</strong>, so anyone can use it, inspect it, improve it and trust it. It is developed in the open on <a href="{{ site.github }}">GitHub</a>.</p>
+            <h3>Private by default</h3>
+            <p>SightPress loads no third-party scripts or fonts. Its analytics count visits on your own server without cookies, and nothing goes to another company unless you choose to set it up.</p>
+            <h3>Where we start</h3>
+            <p>We are based in the UK, so SightPress starts with UK English and UK law, then the EU and its neighbours, the Americas and Israel. The admin is already available in European Portuguese and Spanish, and translators are welcome.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="creator" aria-labelledby="creator-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Creator</p>
+          <img class="avatar" src="/assets/pedro.jpg" width="160" height="160" alt="Portrait of Pedro Ferreira">
+          <h2 id="creator-title">Hello, I’m Pedro.</h2>
+          <p class="quote">Publishing should not be harder because you can’t see the screen.</p>
+          <p><strong>Pedro Ferreira</strong>, founder and lead developer of SightPress.</p>
+        </div>
+        <div>
+          <p>I am Portuguese. I was born in Lisbon and have lived in London since 2010. I’m an open-source advisor and a specialist in modern web development, with PHP as my primary language.</p>
+          <p>I’ve spent my career building for the web, working with small agencies and startups, and in the telecom and finance industries. That mix taught me how to move fast with a small team and how to meet the standards of large, regulated organisations.</p>
+          <p>In 2024 I became blind because of a genetic condition. I learned quickly how to keep working with screen readers and other assistive technologies. But I also found that most major web interfaces, especially the admin screens of content tools, are ugly to work with: cluttered, inconsistent, and built for the mouse and the eye first.</p>
+          <p>I chose to build a CMS rather than patch an existing one because accessibility works best when it is the foundation, not an add-on. I want to give other blind and low-vision people easy-to-use tools for their creative work, and I want those same tools to help audiences who rely on assistive technology get content that is accessible too.</p>
+          <p>I hope creators can write, describe, translate and publish without fighting their tools, and that audiences can read the result with any assistive technology. I’d like to show that a CMS can be accessible and beautiful at once, and that blind and low-vision people can build, and not only use, the tools of the web.</p>
+{% if page.goingBlind %}
+          <p>Read more in <a href="{{ page.goingBlind.path }}">{{ page.goingBlind.title }}</a>.</p>
+{% endif %}
+          <p><a href="{{ site.github }}">Follow SightPress on GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="community" aria-labelledby="community-title">
+      <div class="wrap">
+        <h2 id="community-title">Community</h2>
+        <p class="lede">Everyone who takes part agrees to follow our Code of Conduct. Here is where to find our community guides, and who to write to.</p>
+        <div class="split">
+          <div>
+            <h3>Guides</h3>
+            <ul class="plain-list">
+              <li><a href="{{ site.community.conduct }}">Code of Conduct</a></li>
+              <li><a href="{{ site.community.contributing }}">How to contribute</a>: testing, translating, writing, design and code</li>
+              <li><a href="{{ site.community.support }}">Getting help</a></li>
+              <li><a href="{{ site.community.security }}">Security policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Who to write to</h3>
+            <ul class="plain-list">
+              <li>Questions, ideas and feedback: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              <li>Helping out, or reporting a problem without a GitHub account: <a href="mailto:{{ site.contributeEmail }}">{{ site.contributeEmail }}</a></li>
+              <li>Code of Conduct reports: <a href="mailto:{{ site.conductEmail }}">{{ site.conductEmail }}</a></li>
+              <li>Security problems, never in a public issue: <a href="mailto:{{ site.securityEmail }}">{{ site.securityEmail }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="next-title">
+      <div class="wrap">
+        <h2 id="next-title">Stay in touch</h2>
+        <p>Hear when SightPress is ready for live websites, or read what we have written so far.</p>
+        <div class="actions">
+          {% include 'partials/stay-informed.twig' %}
+          <a class="button button-secondary" href="/articles/">Read the articles</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}

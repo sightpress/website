@@ -1,0 +1,42 @@
+{% extends 'layout.twig' %}
+{% block main %}
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <h1 id="page-title">Accessibility statement</h1>
+        <p class="lede">This statement covers the website at sightpress.org. It doesn’t cover the documentation site or SightPress itself, which have their own checks.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="aim-title">
+      <div class="wrap prose">
+        <h2 id="aim-title">Our aim</h2>
+        <p>We want everyone to be able to use this website, including people who use a screen reader, a magnifier, a braille display, voice control, switch access or a keyboard alone. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA.</p>
+        <p>You should be able to:</p>
+        <ul>
+          <li>move around every page with a keyboard alone, and always see where you are;</li>
+          <li>zoom in to 400% with the text reflowing into a single column;</li>
+          <li>choose a light or dark colour scheme, or use your system’s high-contrast colours;</li>
+          <li>use every page without JavaScript;</li>
+          <li>follow our articles in a feed reader, or read them as Markdown.</li>
+        </ul>
+        <p>The site has no cookies, trackers, third-party scripts or third-party fonts. The sharing links are plain links: nothing loads from a social network until you choose one.</p>
+
+        <h2 id="status-title">How accessible this website is</h2>
+        <p>We believe this website meets WCAG 2.2 AA. If you find something that doesn’t, please tell us: we treat accessibility barriers as bugs.</p>
+
+        <h2 id="testing-title">How we test it</h2>
+        <ul>
+          <li>Every change is checked automatically for WCAG 2.2 AA problems with axe-core, in light and dark mode and on a narrow screen, and the HTML of every page is validated.</li>
+          <li>We test the navigation and the colour scheme button with a keyboard alone.</li>
+          <li>Before a new kind of page goes live, we read it with NVDA and Firefox on Windows and VoiceOver and Safari on macOS.</li>
+        </ul>
+
+        <h2 id="contact-title">Tell us about a barrier</h2>
+        <p>If something on this website is hard to use, email <a href="mailto:{{ site.email }}?subject=Website%20accessibility%20feedback">{{ site.email }}</a>. Tell us the page, what you were trying to do and, if you use one, your assistive technology. A real person reads every message and replies within 5 working days.</p>
+        <p>If you’d like this website’s content in another format, write to the same address.</p>
+
+        <h2 id="date-title">About this statement</h2>
+        <p>This statement was last reviewed on <time datetime="{{ page.modified }}">{{ page.modified|long_date }}</time>.</p>
+      </div>
+    </section>
+{% endblock %}
