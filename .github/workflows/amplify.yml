@@ -1,0 +1,44 @@
+# The Amplify app is connected to this repository, so Amplify itself deploys public/ on every push to main (see
+# amplify.yml). This workflow keeps the app's redirect rules and response headers in step with amplify/, as the docs
+# repo does. AWS access uses GitHub OIDC (no stored keys): the repository variables AWS_ROLE_ARN, AWS_REGION and
+# AMPLIFY_APP_ID point at the role and the app. Until they are set, the job is skipped.
+name: Amplify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - amplify/**
+      - .github/workflows/amplify.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: amplify-settings
+  cancel-in-progress: false
+
+jobs:
+  settings:
+    name: Apply the redirect rules and headers
+    if: ${{ vars.AMPLIFY_APP_ID != '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: amplify
+
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Apply the redirect rules and headers
+        run: |
+          aws amplify update-app --app-id "${{ vars.AMPLIFY_APP_ID }}" \
+            --custom-rules file://amplify/custom-rules.json \
+            --custom-headers file://amplify/custom-headers.yml > /dev/null

@@ -1,0 +1,16 @@
+{
+  "name": "@sightpress/website-checks",
+  "private": true,
+  "description": "Accessibility and keyboard tests for the sightpress.org website (Playwright and axe-core).",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "a11y": "playwright test",
+    "lighthouse": "node tests/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "chrome-launcher": "^1.2.3",
+    "lighthouse": "^13.6.0"
+  }
+}
