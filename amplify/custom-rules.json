@@ -1,8 +1,8 @@
 [
   {
-    "source": "https://sightpress.org",
-    "target": "https://www.sightpress.org",
-    "status": "302"
+    "source": "https://www.sightpress.org",
+    "target": "https://sightpress.org",
+    "status": "301"
   },
   {
     "source": "/articles",
