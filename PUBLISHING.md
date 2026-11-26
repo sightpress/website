@@ -14,12 +14,13 @@ bin/build            # build the site into public/
 php -S localhost:8000 -t public tests/router.php   # preview it at http://localhost:8000
 ```
 
-## Articles
+## Blog articles
 
-Article drafts are kept **outside** this repository. By default the build reads them from `../articles` (a folder
-next to this one); pass another folder as an argument: `bin/build path/to/articles`. Only articles marked
-`status: published` are built. For each one, the build commits the page and a Markdown copy
-(`public/articles/<slug>/index.md`, with its front matter), and CI rebuilds the site from those copies.
+The blog lives at `/blog/` (the old `/articles/` addresses redirect there). Article drafts are kept **outside** this
+repository. By default the build reads them from `../articles` (a folder next to this one); pass another folder as an
+argument: `bin/build path/to/articles`. Only articles marked `status: published` are built. For each one, the build
+commits the page and a Markdown copy (`public/blog/<slug>/index.md`, with its front matter), and CI rebuilds the site
+from those copies.
 
 Each draft is a file named `YYYY-MM-DD-slug.md` that starts with front matter:
 
@@ -32,8 +33,10 @@ published: 2026-11-24             # optional; defaults to the date in the file n
 updated: 2026-11-30               # optional; shown as "Updated" and used in the sitemap and feed
 description: "One sentence, at most 160 characters, for search results and sharing."
 slug: my-article                  # optional; defaults to the file name without the date
-image: /brand/social/my-card.png  # optional share image, 1200 × 630, with image_alt
+image: /assets/articles/my-article.jpg  # optional share image, 1200 × 630, PNG or JPEG, with image_alt
 image_alt: "What the image shows."
+image_caption: "Why the picture is here."  # optional; inline Markdown
+image_credit: "Photo by [Name](https://unsplash.com/@name) on [Unsplash](https://unsplash.com/photos/…)"  # optional
 copies:                           # optional; copies on other sites, each linking back here
   - https://dev.to/…
 ---
@@ -46,6 +49,15 @@ By Pedro Ferreira
 
 The text…
 ```
+
+Article images live in `public/assets/articles/`, named after the article's slug. An image with a caption or a
+credit is also shown at the top of the article, with both under it; an image with neither (like the release cards) is
+only used when the article is shared. Every word drawn in an image must also be in its `image_alt`.
+
+- **Release announcements** get a card made from the brand colours and logo that says "SightPress x.y is out!" with
+  the release's subtitle.
+- **Other articles** get a free stock photo (for example from Unsplash, never an Unsplash+ photo), cropped to
+  1200 × 630, with a caption that links it to the text and a credit naming the photographer and the source.
 
 The first heading is the title. The "By …" and date lines under it are optional; the page shows the byline and dates
 itself.
@@ -75,12 +87,14 @@ To see every draft as it would look, run `bin/build --include-drafts`. It writes
 ### Unpublish an article
 
 Set `status: draft` and rebuild: the build deletes the page, its Markdown copy and its feed entry. Amplify can't answer
-`410 Gone`, so if people may still follow links to it, add a `301` redirect to `/articles/` in
+`410 Gone`, so if people may still follow links to it, add a `301` redirect to `/blog/` in
 `amplify/custom-rules.json` (above the last rule).
 
 ## Pages
 
-- Home, About, Features and the accessibility statement are templates in `src/templates/`.
+- Home, About, Features, FAQ and the accessibility statement are templates in `src/templates/`.
+- The FAQ's structured data is read from the rendered `faq.twig`, so add or change a question there only: each
+  question is an `h2` followed by one `<p>` answer inside `<ul class="faq">`.
 - Facts used on several pages (the latest release, what's in progress, contact addresses, the date each page last
   changed) live in `src/site.php`.
 - After every SightPress feature release: update `release`, `releases` and `next` in `src/site.php`, the *Available

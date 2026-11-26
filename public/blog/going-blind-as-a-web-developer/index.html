@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Going blind as a web developer: what changed and what didn&#039;t | SightPress</title>
+  <meta name="description" content="How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/blog/going-blind-as-a-web-developer/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Going blind as a web developer: what changed and what didn&#039;t">
+  <meta property="og:description" content="How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress.">
+  <meta property="og:url" content="https://sightpress.org/blog/going-blind-as-a-web-developer/">
+  <meta property="og:image" content="https://sightpress.org/assets/articles/going-blind-as-a-web-developer.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A developer&#039;s hands typing on a keyboard at night, in a dark room lit blue by a monitor showing code, with sticky notes and headphones on the desk.">
+  <meta property="article:published_time" content="2026-11-16">
+  <meta property="article:modified_time" content="2026-11-16">
+  <meta property="article:author" content="https://sightpress.org/about/#creator">
+  <meta property="article:section" content="Personal story">
+  <meta property="article:tag" content="Personal story">
+  <meta property="article:tag" content="Mission">
+  <meta property="article:tag" content="Screen readers">
+  <meta property="article:tag" content="Blind developers">
+  <meta property="article:tag" content="Assistive technology">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Going blind as a web developer: what changed and what didn&#039;t">
+  <meta name="twitter:description" content="How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress.">
+  <meta name="twitter:image" content="https://sightpress.org/assets/articles/going-blind-as-a-web-developer.jpg">
+  <meta name="twitter:image:alt" content="A developer&#039;s hands typing on a keyboard at night, in a dark room lit blue by a monitor showing code, with sticky notes and headphones on the desk.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <link rel="alternate" type="text/markdown" href="/blog/going-blind-as-a-web-developer/index.md" title="This article in Markdown">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": "https://sightpress.org/blog/going-blind-as-a-web-developer/#article",
+            "mainEntityOfPage": "https://sightpress.org/blog/going-blind-as-a-web-developer/",
+            "url": "https://sightpress.org/blog/going-blind-as-a-web-developer/",
+            "headline": "Going blind as a web developer: what changed and what didn't",
+            "description": "How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress.",
+            "datePublished": "2026-11-16",
+            "dateModified": "2026-11-16",
+            "author": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://sightpress.org/blog/#webpage"
+            },
+            "inLanguage": "en-GB",
+            "articleSection": "Personal story",
+            "keywords": [
+                "Personal story",
+                "Mission",
+                "Screen readers",
+                "Blind developers",
+                "Assistive technology"
+            ],
+            "wordCount": 1263,
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/assets/articles/going-blind-as-a-web-developer.jpg",
+                "width": 1200,
+                "height": 630
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://sightpress.org/blog/going-blind-as-a-web-developer/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sightpress.org/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://sightpress.org/blog/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Personal story",
+                    "item": "https://sightpress.org/blog/section/personal-story/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Going blind as a web developer: what changed and what didn't",
+                    "item": "https://sightpress.org/blog/going-blind-as-a-web-developer/"
+                }
+            ]
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/blog/" aria-current="true">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-header">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/personal-story/">Personal story</a></li>
+            </ol>
+          </nav>
+          <h1 id="article-title">Going blind as a web developer: what changed and what didn&#039;t</h1>
+          <p class="article-byline">By <a href="/about/#creator">Pedro Ferreira</a></p>
+          <dl class="article-facts">
+            <div><dt>Published</dt><dd><time datetime="2026-11-16">16 November 2026</time></dd></div>
+            <div><dt>Reading time</dt><dd>5 minutes</dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/personal-story/">Personal story</a></dd></div>
+          </dl>
+          <h2 class="visually-hidden" id="tags-title">Topics</h2>
+          <ul class="tag-list">
+            <li><a href="/blog/tag/personal-story/">Personal story</a></li>
+            <li><a href="/blog/tag/mission/">Mission</a></li>
+            <li><a href="/blog/tag/screen-readers/">Screen readers</a></li>
+            <li><a href="/blog/tag/blind-developers/">Blind developers</a></li>
+            <li><a href="/blog/tag/assistive-technology/">Assistive technology</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <div class="prose">
+          <figure class="article-image">
+            <img src="/assets/articles/going-blind-as-a-web-developer.jpg" alt="A developer&#039;s hands typing on a keyboard at night, in a dark room lit blue by a monitor showing code, with sticky notes and headphones on the desk." width="1200" height="630" fetchpriority="high">
+            <figcaption>
+              <span class="article-image-caption">Writing code at night. With a screen reader, what matters isn't how the screen looks but how well its content is structured.</span>
+              <span class="article-image-credit">Photo by <a href="https://unsplash.com/@jakubzerdzicki">Jakub Żerdzicki</a> on <a href="https://unsplash.com/photos/hands-typing-on-a-keyboard-with-computer-screens-8ljjFxQFwKM">Unsplash</a></span>
+            </figcaption>
+          </figure>
+<p>I was told I would go blind in 1995. It took almost thirty years to arrive. When it finally did, the tool that got me back to work was Windows Notepad.</p>
+<div class="heading-wrap"><h2 id="a-blank-page-and-a-voice">A blank page and a voice</h2><a class="heading-anchor" href="#a-blank-page-and-a-voice"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: A blank page and a voice</span></a></div>
+<p>Notepad has no syntax highlighting, no panels, no tabs and no icons. For a sighted developer it feels like a punishment. In 2024 it was the first screen that made sense to me again: a blank page, a cursor, and a voice reading back each line I typed.</p>
+<p>It was not elegant code, and it was not fast. But it was code, written by me, without seeing it. Some months earlier I had quietly decided my working life was over. Sitting in front of that old friend, the one we all used back when the web was new, I started to suspect I had been wrong.</p>
+<div class="heading-wrap"><h2 id="what-changed">What changed</h2><a class="heading-anchor" href="#what-changed"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What changed</span></a></div>
+<p>The diagnosis was retinitis pigmentosa, a genetic condition that narrows your sight slowly over many years. For most of my career it was background noise. Then, at the start of 2024, reading from a screen became very hard, and ordinary life became noticeably harder to manage with the sight I had left. Six months later I realised it was gone.</p>
+<div class="heading-wrap"><h3 id="reading-in-order">Reading in order</h3><a class="heading-anchor" href="#reading-in-order"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Reading in order</span></a></div>
+<p>The biggest change is that you can no longer glance. A sighted person looks at a screen and takes in its shape in a fraction of a second: where the menu is, where the error is, which part matters. A screen reader gives you none of that. Everything arrives one item at a time, in the order someone else decided, and you have to build the picture in your head.</p>
+<p>My first weeks with screen readers were genuinely stressful. The narration was hard to follow, and working out where I was on a page felt like navigating a building by touch with the lights off. I had spent decades scanning code and interfaces. Now I had to listen to them.</p>
+<p>What helps you is structure. Proper headings let you jump through a document instead of wading through it. Labels tell you what a control does before you press it. When they are there, a screen reader is fast. When they are missing, it is like reading a book with the chapter titles torn out and every sentence in the same voice.</p>
+<div class="heading-wrap"><h3 id="learning-again-quickly">Learning again, quickly</h3><a class="heading-anchor" href="#learning-again-quickly"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Learning again, quickly</span></a></div>
+<p>The second change surprised me: how quickly I adapted once I stopped waiting to feel ready. Notepad led to VS Code. VS Code led back to my favourite command-line tools, which turned out to be some of the most accessible software I own, because text in a terminal is just text.</p>
+<p>Before long I was back alongside my colleagues at the insurance company where I still work, reviewing pull requests, fixing bugs and improving code. I'm proud of that, and I don't think I need to pretend otherwise.</p>
+<div class="heading-wrap"><h2 id="what-didnt-change">What didn't change</h2><a class="heading-anchor" href="#what-didnt-change"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What didn't change</span></a></div>
+<p>Here is the part that I didn't expect, and that people rarely believe at first: almost everything that made me a good engineer is still there.</p>
+<p>I came up through web development from its early days to the present, through small agencies, telecoms and finance. Over those years I learned modern object-oriented programming, the SOLID principles, automated testing, and the discipline of CI/CD pipelines that won't let bad code through. None of that lived in my eyes.</p>
+<p>My judgement about how a system should be shaped is the same. I still know when a class is doing too much, when an abstraction is hiding a problem instead of solving it, and when a quick fix will cost us later. My debugging instincts are the same: form a theory, test it, narrow it down. My taste for clean, well-named code is, if anything, stronger, because now I hear every badly named variable read aloud.</p>
+<p>Code review works too. A diff is text. A failing test is text. A stack trace is text. Good tools present them in a sensible order, and I can work through them as well as I ever did.</p>
+<p>So when I took stock, the conclusion was clear. The developer was fine. The tools were the problem.</p>
+<div class="heading-wrap"><h2 id="where-the-tools-fail">Where the tools fail</h2><a class="heading-anchor" href="#where-the-tools-fail"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Where the tools fail</span></a></div>
+<p>Code turned out to be the easy part. The web browser was the next challenge, and it was much harder.</p>
+<p>Most of the sites I used to enjoy turned into a nightmare almost overnight. Social networks, which are mostly visual, I simply had to stop using. Reading Gmail in the browser became a slog. Even reading the news, something I had done every day of my adult life without thinking, became a fight with menus, pop-ups and unlabelled controls between me and the first paragraph.</p>
+<p>Then I tried to do what so many people do on the web every day: create and edit content. That is where it stopped being an inconvenience and became a wall.</p>
+<p>To a screen reader user, a typical content management admin screen sounds something like this: &quot;Button. Button. Link. Graphic. Button. Button.&quot; Icons with no names. Toolbars you can only operate with a mouse. Drag-and-drop with no alternative. Dialogs that open without telling you, and leave you stranded somewhere behind them.</p>
+<p>If you can see, you never notice any of this. If you can't, you can't publish. For most blind people I've spoken to, reading the web is hard, but adding to it is often impossible. That's a strange situation for a medium that was supposed to give everyone a voice.</p>
+<div class="heading-wrap"><h2 id="why-i-decided-to-build">Why I decided to build</h2><a class="heading-anchor" href="#why-i-decided-to-build"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Why I decided to build</span></a></div>
+<p>I could have written a long list of complaints and sent it to vendors. Plenty of people have, and plenty of those lists are still waiting for answers.</p>
+<p>Instead I looked at what I had: decades of experience building for the web, a fresh and very personal understanding of where it fails, and the time and stubbornness to do something about it. So I decided to put my coding skills to work and build a new content management system from the ground up. Some weeks ago I started planning it: who it was for, what it had to do and what it must never do. It didn't even have a name yet.</p>
+<p>The key word is &quot;ground&quot;. I've learned that accessibility bolted on at the end never quite fits. It has to be the foundation, there from the first line of code, so that it can't be forgotten or switched off.</p>
+<div class="heading-wrap"><h2 id="beyond-sight">Beyond sight</h2><a class="heading-anchor" href="#beyond-sight"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Beyond sight</span></a></div>
+<p>The name came on 1 November 2026, the day I registered sightpress.org. The result is SightPress: a CMS for everyone, designed with blind and low-vision creators and audiences in mind. It is built on modern object-oriented PHP and released as free software under the GPL. It should be just as beautiful and easy to use for sighted people, because good accessible design is simply good design.</p>
+<p>I want it to be the first choice for charities, public bodies, small businesses and individuals who care about accessibility. Our motto is &quot;Beyond sight.&quot;</p>
+<p>Notepad gave me a blank page and a voice that told me where I was. That isn't a high bar, and every tool that lets people publish on the web should clear it.</p>
+<p>Follow the development of <a href="https://github.com/sightpress">SightPress on GitHub</a>.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section-alt" aria-labelledby="share-title">
+      <div class="wrap">
+        <h2 id="share-title">Share this article</h2>
+        <ul class="share-list">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-facebook"/></svg><span>Share on Facebook</span></a></li>
+  <li><a href="https://x.com/intent/post?text=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t&amp;url=https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-x"/></svg><span>Share on X</span></a></li>
+  <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-linkedin"/></svg><span>Share on LinkedIn</span></a></li>
+  <li><a href="https://bsky.app/intent/compose?text=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t%20https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-bluesky"/></svg><span>Share on Bluesky</span></a></li>
+  <li><a href="https://www.threads.com/intent/post?text=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t%20https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-threads"/></svg><span>Share on Threads</span></a></li>
+  <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F&amp;title=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-reddit"/></svg><span>Share on Reddit</span></a></li>
+  <li><a href="https://wa.me/?text=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t%20https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-whatsapp"/></svg><span>Share on WhatsApp</span></a></li>
+  <li><a href="https://t.me/share/url?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F&amp;text=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-telegram"/></svg><span>Share on Telegram</span></a></li>
+  <li><a href="mailto:?subject=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t&amp;body=Going%20blind%20as%20a%20web%20developer%3A%20what%20changed%20and%20what%20didn%27t%0A%0Ahttps%3A%2F%2Fsightpress.org%2Fblog%2Fgoing-blind-as-a-web-developer%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/blog/going-blind-as-a-web-developer/</strong>.</p>
+        <p>This article is also available <a href="/blog/going-blind-as-a-web-developer/index.md">as Markdown</a>.</p>
+      </div>
+    </section>
+
+    <nav class="section pager" aria-label="More articles">
+      <div class="wrap split">
+        <p><span class="pager-label">Previous article</span> <a href="/blog/introducing-sightpress/">Introducing SightPress: a CMS for everyone, built from the ground up for accessibility</a></p>
+        <p><span class="pager-label">Next article</span> <a href="/blog/sightpress-0-1-0-first-usable-version/">SightPress 0.1.0: the first usable version</a></p>
+      </div>
+    </nav>
+
+    <section class="section section-alt" aria-labelledby="related-title">
+      <div class="wrap">
+        <h2 id="related-title">Related articles</h2>
+        <ul class="article-list">
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/ai-is-what-we-make-of-it/">AI is what we make of it</a></h3>
+  <p class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · <a href="/blog/section/ai-and-accessibility/">AI and accessibility</a> · 10 min read</p>
+  <p>AI isn&#039;t a monster or a miracle, it&#039;s a tool. A blind developer on what AI does well, what it does badly, and how we should use it.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/why-popular-cmss-fail-blind-creators/">Why WordPress and other popular CMSs still fail blind and low-vision creators</a></h3>
+  <p class="article-meta"><time datetime="2026-11-18">18 November 2026</time> · <a href="/blog/section/comparisons-and-myths/">Comparisons and myths</a> · 6 min read</p>
+  <p>Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here&#039;s why.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/introducing-sightpress/">Introducing SightPress: a CMS for everyone, built from the ground up for accessibility</a></h3>
+  <p class="article-meta"><time datetime="2026-11-03">3 November 2026</time> · <a href="/blog/section/behind-the-build/">Behind the build</a> · 6 min read</p>
+  <p>A blind web developer&#039;s plan for SightPress: a free, open-source CMS for everyone, built from the ground up for blind and low-vision creators.</p>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <h2 id="cta-title">Follow SightPress</h2>
+          <p>SightPress is in early development. Hear when it’s ready for live websites, or see what works today.</p>
+          <div class="actions">
+            <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
+            <a class="button button-secondary" href="/features/">See the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0, 24 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -11,7 +11,7 @@
         <div class="actions">
           {% include 'partials/stay-informed.twig' %}
           <a class="button button-secondary" href="/features/">See what works today</a>
-          <a class="button button-secondary" href="/articles/">Read the latest articles</a>
+          <a class="button button-secondary" href="/blog/">Read the blog</a>
         </div>
       </div>
     </section>
@@ -87,10 +87,10 @@
             <p class="card-link"><a href="/features/">All features, and what’s coming next</a></p>
           </li>
           <li class="card">
-            <h3>Articles</h3>
+            <h3>Blog</h3>
 {% if page.latest is empty %}
             <p>Our first articles are on their way: release notes, the story behind SightPress and what we learn about accessible publishing.</p>
-            <p class="card-link"><a href="/articles/feed.xml">Follow the articles feed (Atom)</a></p>
+            <p class="card-link"><a href="/blog/feed.xml">Follow the blog feed (Atom)</a></p>
 {% else %}
             <ul class="latest-list">
 {% for article in page.latest %}
@@ -101,8 +101,13 @@
               </li>
 {% endfor %}
             </ul>
-            <p class="card-link"><a href="/articles/">All articles</a></p>
+            <p class="card-link"><a href="/blog/">Read the blog</a></p>
 {% endif %}
+          </li>
+          <li class="card" id="faq">
+            <h3>Questions</h3>
+            <p>Is SightPress only for blind people? Can I use it with a screen reader? Is it free? Does it use AI? When can I try it?</p>
+            <p class="card-link"><a href="/faq/">Frequently asked questions</a></p>
           </li>
         </ul>
       </div>
@@ -135,8 +140,8 @@
           <li class="card">
             <span class="icon-tile">{{ m.icon('bell') }}</span>
             <h3>Follow the development</h3>
-            <p>SightPress is built in the open. Read the code and follow our progress on GitHub, or follow the articles in your feed reader.</p>
-            <p class="card-link"><a href="{{ site.github }}">SightPress on GitHub</a> · <a href="/articles/feed.xml">Articles feed (Atom)</a></p>
+            <p>SightPress is built in the open. Read the code and follow our progress on GitHub, or follow the blog in your feed reader.</p>
+            <p class="card-link"><a href="{{ site.github }}">SightPress on GitHub</a> · <a href="/blog/feed.xml">Blog feed (Atom)</a></p>
           </li>
         </ul>
       </div>
@@ -148,51 +153,6 @@
         <h2 id="share-title">Help us reach the people who need it</h2>
         <p class="lede">Most blind and low-vision creators have never had a publishing tool built for them. If you know someone who writes for the web, runs a charity, works in a public body or simply cares about accessibility, please share SightPress with them.</p>
         {% include 'partials/share.twig' with {share_url: site.url ~ '/', share_text: site.shareText} %}
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="wrap">
-        <p class="eyebrow">Good to know</p>
-        <h2 id="faq-title">Frequently asked questions</h2>
-        <ul class="faq">
-          <li>
-            <h3 id="faq-1">What is SightPress?</h3>
-            <p>SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages from one installation. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind.</p>
-          </li>
-          <li>
-            <h3 id="faq-2">Is SightPress only for blind people?</h3>
-            <p>No. SightPress is for everyone: charities, small businesses, public bodies and individuals. It is built so that blind and low-vision people can use every part of it, and that makes it clearer and calmer for everybody else too.</p>
-          </li>
-          <li>
-            <h3 id="faq-3">Can I use SightPress with a screen reader?</h3>
-            <p>Yes, that is what it is built for. The admin, sign-in pages, default theme and emails target WCAG 2.2 AA, and SightPress as an authoring tool targets ATAG 2.0 AA. Tasks work with a keyboard alone and with a screen reader, nothing depends on dragging, colour or a CAPTCHA, and there is a command-line tool for administration tasks too.</p>
-          </li>
-          <li>
-            <h3 id="faq-4">Will SightPress help me publish accessible content?</h3>
-            <p>Yes. Images need a description, or an explicit choice to mark them as decorative, and videos and recordings need captions and a transcript. SightPress checks each page before it goes live, including its link text and heading order, explains anything to fix, and won’t publish a page with an accessibility error.</p>
-          </li>
-          <li>
-            <h3 id="faq-5">Is SightPress free and open source?</h3>
-            <p>Yes. SightPress is licensed GPL-3.0-or-later, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub.</p>
-          </li>
-          <li>
-            <h3 id="faq-6">What do I need to run SightPress?</h3>
-            <p>SightPress is written in modern, object-oriented PHP and ships with ready-made Docker files. It is tested on MariaDB, MySQL, PostgreSQL and SQLite, runs on FrankenPHP, nginx or Apache, and stores files on your own server or, if you choose, in cloud storage. It loads no third-party scripts or fonts.</p>
-          </li>
-          <li>
-            <h3 id="faq-7">Will my site be easy to find in search engines and AI answers?</h3>
-            <p>SightPress is built for it from the start: server-rendered pages, a title, description and structured data for every page, per-language addresses, a sitemap for each language, and a Markdown version of every public page for AI tools. Each site decides how AI crawlers may use its content. It uses no tricks: it makes your site clear and eligible, and leaves the content to you.</p>
-          </li>
-          <li>
-            <h3 id="faq-8">Does SightPress use AI?</h3>
-            <p>Only if you want it to. The AI assistant is off for new sites. An admin can turn it on with the organisation’s own key from Anthropic, OpenAI or Mistral, or connect a compatible or self-hosted service. Nothing it writes is used until a person accepts it, and it never publishes anything.</p>
-          </li>
-          <li>
-            <h3 id="faq-9">When can I try SightPress?</h3>
-            <p>Now, if you are a developer or a tester: test release {{ site.release.version }} runs on your own computer, and the <a href="{{ docs('getting-started/') }}">getting started guide</a> explains how. Test releases aren’t ready for live websites yet; version 1.0 will be. Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> to hear when it is ready.</p>
-          </li>
-        </ul>
       </div>
     </section>
 

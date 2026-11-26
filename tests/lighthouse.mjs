@@ -9,7 +9,7 @@ import * as chromeLauncher from 'chrome-launcher';
 import lighthouse from 'lighthouse';
 
 const port = Number(process.env.WEBSITE_PORT ?? 8069);
-const pages = ['/', '/about/', '/features/', '/articles/', '/accessibility/'];
+const pages = ['/', '/about/', '/features/', '/faq/', '/blog/', '/accessibility/'];
 const budgets = { accessibility: 1, seo: 1, 'best-practices': 0.95, performance: 0.9 };
 
 const server = spawn('php', ['-S', `127.0.0.1:${port}`, '-t', process.env.WEBSITE_ROOT ?? 'public', 'tests/router.php'], { stdio: 'ignore' });

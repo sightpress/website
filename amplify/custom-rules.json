@@ -5,6 +5,16 @@
     "status": "302"
   },
   {
+    "source": "/articles",
+    "target": "/blog/",
+    "status": "301"
+  },
+  {
+    "source": "/articles/<*>",
+    "target": "/blog/<*>",
+    "status": "301"
+  },
+  {
     "source": "/<*>",
     "target": "/404.html",
     "status": "404"

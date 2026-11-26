@@ -8,8 +8,8 @@
           <nav class="breadcrumbs" aria-label="Breadcrumb">
             <ol>
               <li><a href="/">Home</a></li>
-              <li><a href="/articles/">Articles</a></li>
-              <li><a href="/articles/section/{{ article.section|slug }}/">{{ article.section }}</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/{{ article.section|slug }}/">{{ article.section }}</a></li>
             </ol>
           </nav>
           <h1 id="article-title">{{ article.title }}</h1>
@@ -20,13 +20,13 @@
             <div><dt>Updated</dt><dd><time datetime="{{ article.updated }}">{{ article.updated|long_date }}</time></dd></div>
 {% endif %}
             <div><dt>Reading time</dt><dd>{{ article.readingMinutes }} {{ article.readingMinutes == 1 ? 'minute' : 'minutes' }}</dd></div>
-            <div><dt>Section</dt><dd><a href="/articles/section/{{ article.section|slug }}/">{{ article.section }}</a></dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/{{ article.section|slug }}/">{{ article.section }}</a></dd></div>
           </dl>
 {% if article.tags is not empty %}
           <h2 class="visually-hidden" id="tags-title">Topics</h2>
           <ul class="tag-list">
 {% for tag in article.tags %}
-            <li><a href="/articles/tag/{{ tag }}/">{{ tag|tag_label }}</a></li>
+            <li><a href="/blog/tag/{{ tag }}/">{{ tag|tag_label }}</a></li>
 {% endfor %}
           </ul>
 {% endif %}
@@ -35,6 +35,19 @@
 
       <div class="wrap">
         <div class="prose">
+{% if article.showsImage %}
+          <figure class="article-image">
+            <img src="{{ article.image }}" alt="{{ article.imageAlt }}" width="1200" height="630" fetchpriority="high">
+            <figcaption>
+{% if article.imageCaption %}
+              <span class="article-image-caption">{{ article.imageCaption|raw }}</span>
+{% endif %}
+{% if article.imageCredit %}
+              <span class="article-image-credit">{{ article.imageCredit|raw }}</span>
+{% endif %}
+            </figcaption>
+          </figure>
+{% endif %}
 {{ article.html|raw }}
         </div>
       </div>

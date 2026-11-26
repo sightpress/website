@@ -7,7 +7,7 @@ declare(strict_types=1);
  * Builds the website into public/.
  *
  *   bin/build [articles-folder]         build from the drafts folder (default ../articles, if it exists)
- *   bin/build --from-public             build from the published articles already in public/articles
+ *   bin/build --from-public             build from the published articles already in public/blog
  *   bin/build --check                   build in memory and fail if public/ doesn't match (used by CI)
  *   bin/build --include-drafts          also build drafts, into a temporary folder (never into public/)
  *   bin/build --output=DIR              write somewhere other than public/
@@ -59,7 +59,7 @@ $loader = new ArticleLoader(new MarkdownRenderer(), $taxonomy['sections'], $taxo
 
 try {
     $articles = $articlesDir === null || $options['from-public']
-        ? $loader->fromPublished($public . '/articles')
+        ? $loader->fromPublished($public . '/blog')
         : $loader->fromDrafts($articlesDir, $options['include-drafts']);
 } catch (BuildError $error) {
     fail("These articles can’t be published yet:\n  " . implode("\n  ", $error->problems));
@@ -69,7 +69,7 @@ foreach ($loader->warnings() as $warning) {
 }
 
 $build = (new SiteBuilder($site, $taxonomy, $root . '/src/templates'))->build($articles);
-$source = $articlesDir === null || $options['from-public'] ? 'the published articles in public/articles' : realpath($articlesDir);
+$source = $articlesDir === null || $options['from-public'] ? 'the published articles in public/blog' : realpath($articlesDir);
 
 if ($options['check']) {
     $differences = $build->compare($public);

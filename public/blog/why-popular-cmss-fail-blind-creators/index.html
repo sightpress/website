@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why WordPress and other popular CMSs still fail blind and low-vision creators | SightPress</title>
+  <meta name="description" content="Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here&#039;s why.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Why WordPress and other popular CMSs still fail blind and low-vision creators">
+  <meta property="og:description" content="Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here&#039;s why.">
+  <meta property="og:url" content="https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/">
+  <meta property="og:image" content="https://sightpress.org/assets/articles/why-popular-cmss-fail-blind-creators.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="An eye doctor in a white coat points to a row of numbers on a sight-test chart hanging on a door, while a patient reads it.">
+  <meta property="article:published_time" content="2026-11-18">
+  <meta property="article:modified_time" content="2026-11-18">
+  <meta property="article:author" content="https://sightpress.org/about/#creator">
+  <meta property="article:section" content="Comparisons and myths">
+  <meta property="article:tag" content="CMS comparison">
+  <meta property="article:tag" content="Blind creators">
+  <meta property="article:tag" content="Low vision">
+  <meta property="article:tag" content="Admin panel">
+  <meta property="article:tag" content="ATAG">
+  <meta property="article:tag" content="Retrofitting">
+  <meta property="article:tag" content="Mission">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why WordPress and other popular CMSs still fail blind and low-vision creators">
+  <meta name="twitter:description" content="Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here&#039;s why.">
+  <meta name="twitter:image" content="https://sightpress.org/assets/articles/why-popular-cmss-fail-blind-creators.jpg">
+  <meta name="twitter:image:alt" content="An eye doctor in a white coat points to a row of numbers on a sight-test chart hanging on a door, while a patient reads it.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <link rel="alternate" type="text/markdown" href="/blog/why-popular-cmss-fail-blind-creators/index.md" title="This article in Markdown">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": "https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/#article",
+            "mainEntityOfPage": "https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/",
+            "url": "https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/",
+            "headline": "Why WordPress and other popular CMSs still fail blind and low-vision creators",
+            "description": "Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here's why.",
+            "datePublished": "2026-11-18",
+            "dateModified": "2026-11-18",
+            "author": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://sightpress.org/blog/#webpage"
+            },
+            "inLanguage": "en-GB",
+            "articleSection": "Comparisons and myths",
+            "keywords": [
+                "CMS comparison",
+                "Blind creators",
+                "Low vision",
+                "Admin panel",
+                "ATAG",
+                "Retrofitting",
+                "Mission"
+            ],
+            "wordCount": 1388,
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/assets/articles/why-popular-cmss-fail-blind-creators.jpg",
+                "width": 1200,
+                "height": 630
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sightpress.org/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://sightpress.org/blog/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Comparisons and myths",
+                    "item": "https://sightpress.org/blog/section/comparisons-and-myths/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Why WordPress and other popular CMSs still fail blind and low-vision creators",
+                    "item": "https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/"
+                }
+            ]
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/blog/" aria-current="true">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-header">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/comparisons-and-myths/">Comparisons and myths</a></li>
+            </ol>
+          </nav>
+          <h1 id="article-title">Why WordPress and other popular CMSs still fail blind and low-vision creators</h1>
+          <p class="article-byline">By <a href="/about/#creator">Pedro Ferreira</a></p>
+          <dl class="article-facts">
+            <div><dt>Published</dt><dd><time datetime="2026-11-18">18 November 2026</time></dd></div>
+            <div><dt>Reading time</dt><dd>6 minutes</dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/comparisons-and-myths/">Comparisons and myths</a></dd></div>
+          </dl>
+          <h2 class="visually-hidden" id="tags-title">Topics</h2>
+          <ul class="tag-list">
+            <li><a href="/blog/tag/cms-comparison/">CMS comparison</a></li>
+            <li><a href="/blog/tag/blind-creators/">Blind creators</a></li>
+            <li><a href="/blog/tag/low-vision/">Low vision</a></li>
+            <li><a href="/blog/tag/admin-panel/">Admin panel</a></li>
+            <li><a href="/blog/tag/atag/">ATAG</a></li>
+            <li><a href="/blog/tag/retrofitting/">Retrofitting</a></li>
+            <li><a href="/blog/tag/mission/">Mission</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <div class="prose">
+          <figure class="article-image">
+            <img src="/assets/articles/why-popular-cmss-fail-blind-creators.jpg" alt="An eye doctor in a white coat points to a row of numbers on a sight-test chart hanging on a door, while a patient reads it." width="1200" height="630" fetchpriority="high">
+            <figcaption>
+              <span class="article-image-caption">A sight test. Most admin panels quietly set one too: they assume the person running the website can see it.</span>
+              <span class="article-image-credit">Photo by <a href="https://unsplash.com/@cdc">CDC</a> on <a href="https://unsplash.com/photos/a-woman-pointing-at-a-sign-on-a-door-cguXr4imkks">Unsplash</a></span>
+            </figcaption>
+          </figure>
+<p><a href="https://w3techs.com/technologies/details/cm-wordpress">Nearly four in ten websites run on WordPress</a>. Add Wix, Squarespace, Joomla, Drupal and the rest, and most of the web is built with a handful of content management systems. If you're blind or have low vision and you want to publish something, one of these is almost certainly what you'll be offered.</p>
+<p>Most of them can produce an accessible website. Far fewer let a blind person build and run that website on their own. That gap is what this article is about.</p>
+<div class="heading-wrap"><h2 id="two-sides-of-every-cms">Two sides of every CMS</h2><a class="heading-anchor" href="#two-sides-of-every-cms"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Two sides of every CMS</span></a></div>
+<p>Every CMS has two faces. The public website is what visitors see. The admin panel is where someone writes the pages, uploads the images, fixes the menu and presses &quot;Publish&quot;.</p>
+<p>Most accessibility work in the CMS world goes into the public side, and that's understandable. That's where the law looks first, and it's where most people are. With a good theme, care and some expertise, WordPress, Drupal and the others can all produce pages that a screen reader user can read comfortably.</p>
+<p>The admin panel gets much less attention. The unspoken assumption is that the person running the site can see it. For a blind charity worker, a partially sighted councillor or a small business owner losing their sight, that assumption decides whether they can do their job.</p>
+<p>There's a standard for this side too, the <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG)</a>. It asks two things of a CMS: that its own interface is accessible, and that it helps authors produce accessible content. Hardly any mainstream CMS claims to meet it in full, and WordPress <a href="https://wordpress.org/about/accessibility/">states that it does not currently conform</a>.</p>
+<div class="heading-wrap"><h2 id="built-for-the-eye-first">Built for the eye first</h2><a class="heading-anchor" href="#built-for-the-eye-first"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Built for the eye first</span></a></div>
+<p>Modern editors are designed around looking. You see the page as it will appear, you drag a block where you want it, and you click a small icon to change it. For a sighted person this is quick and pleasant. With a screen reader it turns into a guessing game.</p>
+<p>WordPress's block editor, Gutenberg, is the best-known example. Two months before it <a href="https://wordpress.org/news/2018/12/bebo/">shipped in December 2018</a>, the WordPress accessibility team lead, Rian Rietveld, <a href="https://rianrietveld.com/?p=2046">resigned, citing political complications and new features that weren't keyboard tested</a> before they were implemented. In 2019 WPCampus <a href="https://wpcampus.org/blog/2019/05/gutenberg-audit-results/">commissioned an independent accessibility audit</a> of the editor, <a href="https://wptavern.com/wpcampus-selects-tenon-llc-for-wp-campus-gutenberg-accessibility-audit-completed-report-expected">funded by community donations and Automattic</a>. It found <a href="https://documents.wpcampus.org/gutenberg/audit/Gutenberg_Executive_Summary.pdf">&quot;significant and pervasive accessibility problems&quot; (PDF, 1.6 MB)</a>, affecting blind, low-vision and motor-impaired users among others.</p>
+<p>Things have improved since then, and the people working on WordPress accessibility deserve credit for that. But the editor's basic shape hasn't changed. It's still a visual canvas with floating toolbars, nested blocks and controls that appear and disappear depending on where your mouse or cursor is. To a screen reader user that means:</p>
+<ul>
+<li>toolbars that only exist while a block is selected, so you have to know they're there before you can find them;</li>
+<li>the same sort of block nested inside itself, with little to tell you which level you're on;</li>
+<li>settings tucked into sidebars, popovers and &quot;more options&quot; menus behind icons, in an admin where <a href="https://make.wordpress.org/core/2026/08/13/accessibility-improvements-in-wordpress-7-1/">missing labels were still being fixed in 2026</a>;</li>
+<li>moving content by drag and drop, with keyboard <a href="https://wordpress.org/documentation/article/moving-blocks/">alternatives</a> that are easy to miss or hard to use.</li>
+</ul>
+<p>Hosted builders like Wix and Squarespace lean even harder on the visual canvas. Their editors are built around dragging things around a design. Wix has added an <a href="https://support.wix.com/en/article/accessibility-using-the-accessibility-wizard">accessibility checker</a>, which is welcome, but both editors are still tools you mostly operate with your eyes.</p>
+<div class="heading-wrap"><h2 id="the-plugin-problem">The plugin problem</h2><a class="heading-anchor" href="#the-plugin-problem"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: The plugin problem</span></a></div>
+<p>Even when the core of a CMS is reasonably accessible, very few people use it on its own.</p>
+<p>A typical WordPress site has a theme, a page builder, a forms plugin, an SEO plugin, a cookie banner, a gallery and a backup tool. Each comes from a different company, with its own screens, its own idea of a button and its own approach to accessibility, which is often none at all. Popular page builders replace the editor completely with an even more visual one.</p>
+<p>So the question &quot;Is WordPress accessible?&quot; has no real answer. Your WordPress is a combination nobody has tested. One plugin update can put an unlabelled toggle on the screen you use every day, or a pop-up that takes your keyboard focus and never gives it back. Nothing in the system stops that happening, and nothing tells you it has.</p>
+<p>Accessibility in these systems is something you can add. That also means it's something that can be left out.</p>
+<div class="heading-wrap"><h2 id="low-vision-is-its-own-problem">Low vision is its own problem</h2><a class="heading-anchor" href="#low-vision-is-its-own-problem"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Low vision is its own problem</span></a></div>
+<p>Blindness gets most of the attention, but many more people have low vision. They often use their remaining sight with magnification, high contrast or very large text, and different things break for them.</p>
+<p>Admin panels are dense. They're full of small grey text, thin outlines and icons that only make sense at normal size. Zoom in to 300 or 400 percent and many of them fall apart. Sidebars cover the content, sticky toolbars hide the very text you're editing, and controls go off the edge of the screen. The media library, a grid of small thumbnails, is especially hard if you can only see part of the screen at once.</p>
+<p>The Web Content Accessibility Guidelines (WCAG) 2.2, the current web accessibility standard, added rules for exactly these problems. For example, it says that the thing you're working on <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">must not be hidden behind sticky bars</a>, and that <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">every drag action needs a simple alternative</a>. Many admin panels were designed long before those rules existed.</p>
+<div class="heading-wrap"><h2 id="retrofitting-is-the-hardest-way-to-do-it">Retrofitting is the hardest way to do it</h2><a class="heading-anchor" href="#retrofitting-is-the-hardest-way-to-do-it"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Retrofitting is the hardest way to do it</span></a></div>
+<p>None of this happens because the people behind these systems don't care. Many of them care a great deal. The problem is history.</p>
+<p>WordPress <a href="https://wordpress.org/support/article/history/">started in 2003</a> as <a href="https://ma.tt/2003/01/the-blogging-software-dilemma/">blogging software</a>. Wix started as a visual site builder. Each decade added another layer: new editors, new frameworks, thousands of plugins and millions of sites that depend on all of it staying as it is. Making that admin panel truly accessible means redesigning its core interactions without breaking everything built on top. That's slow, expensive and politically difficult, so progress comes one bug fix at a time.</p>
+<p>Retrofitting accessibility almost never catches up with the speed of new visual features. Every release adds new screens, and the accessibility work goes on chasing them.</p>
+<div class="heading-wrap"><h2 id="what-a-blind-creator-actually-needs">What a blind creator actually needs</h2><a class="heading-anchor" href="#what-a-blind-creator-actually-needs"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What a blind creator actually needs</span></a></div>
+<p>The needs aren't exotic. A blind or low-vision person running a website needs:</p>
+<ul>
+<li>screens with real headings and landmarks, so they can jump around instead of listening to everything;</li>
+<li>every control labelled with words, not just an icon;</li>
+<li>everything possible with a keyboard, including reordering and moving content;</li>
+<li>clear spoken feedback when something is saved, fails or changes;</li>
+<li>layouts that still work at 400 percent zoom and in high-contrast modes;</li>
+<li>an editor that helps them write accessible content, such as prompting for image descriptions and checking the heading outline;</li>
+<li>the confidence that an add-on or update can't quietly take any of this away.</li>
+</ul>
+<p>None of these is a nice-to-have. Each one decides whether a person can publish on their own or has to ask someone sighted for help.</p>
+<div class="heading-wrap"><h2 id="starting-from-the-other-end">Starting from the other end</h2><a class="heading-anchor" href="#starting-from-the-other-end"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Starting from the other end</span></a></div>
+<p>I'm a blind web developer, and this is why I'm building SightPress instead of filing more bug reports. <a href="https://sightpress.org">SightPress</a> is a CMS for everyone, designed with blind and low-vision creators and audiences in mind. It is built on modern object-oriented PHP and released as free software under the GPL. It starts from the admin panel, not the public website. Accessibility is a floor that themes and modules can't lower. Every change is tested automatically, and every milestone is checked by ear with real screen readers.</p>
+<p>The popular systems will keep improving, and I hope they do. But &quot;you can make it accessible if you know how and choose the right plugins&quot; isn't good enough for people who can't see the screen. Publishing on the web should work for them from the moment they first sign in.</p>
+<p>Follow the development of <a href="https://github.com/sightpress">SightPress on GitHub</a>.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section-alt" aria-labelledby="share-title">
+      <div class="wrap">
+        <h2 id="share-title">Share this article</h2>
+        <ul class="share-list">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-facebook"/></svg><span>Share on Facebook</span></a></li>
+  <li><a href="https://x.com/intent/post?text=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators&amp;url=https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-x"/></svg><span>Share on X</span></a></li>
+  <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-linkedin"/></svg><span>Share on LinkedIn</span></a></li>
+  <li><a href="https://bsky.app/intent/compose?text=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators%20https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-bluesky"/></svg><span>Share on Bluesky</span></a></li>
+  <li><a href="https://www.threads.com/intent/post?text=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators%20https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-threads"/></svg><span>Share on Threads</span></a></li>
+  <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F&amp;title=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-reddit"/></svg><span>Share on Reddit</span></a></li>
+  <li><a href="https://wa.me/?text=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators%20https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-whatsapp"/></svg><span>Share on WhatsApp</span></a></li>
+  <li><a href="https://t.me/share/url?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F&amp;text=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-telegram"/></svg><span>Share on Telegram</span></a></li>
+  <li><a href="mailto:?subject=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators&amp;body=Why%20WordPress%20and%20other%20popular%20CMSs%20still%20fail%20blind%20and%20low-vision%20creators%0A%0Ahttps%3A%2F%2Fsightpress.org%2Fblog%2Fwhy-popular-cmss-fail-blind-creators%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/</strong>.</p>
+        <p>This article is also available <a href="/blog/why-popular-cmss-fail-blind-creators/index.md">as Markdown</a>.</p>
+      </div>
+    </section>
+
+    <nav class="section pager" aria-label="More articles">
+      <div class="wrap split">
+        <p><span class="pager-label">Previous article</span> <a href="/blog/sightpress-0-1-0-first-usable-version/">SightPress 0.1.0: the first usable version</a></p>
+        <p><span class="pager-label">Next article</span> <a href="/blog/sightpress-0-2-0-languages-members-search/">SightPress 0.2.0: languages, members and site search</a></p>
+      </div>
+    </nav>
+
+    <section class="section section-alt" aria-labelledby="related-title">
+      <div class="wrap">
+        <h2 id="related-title">Related articles</h2>
+        <ul class="article-list">
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/introducing-sightpress/">Introducing SightPress: a CMS for everyone, built from the ground up for accessibility</a></h3>
+  <p class="article-meta"><time datetime="2026-11-03">3 November 2026</time> · <a href="/blog/section/behind-the-build/">Behind the build</a> · 6 min read</p>
+  <p>A blind web developer&#039;s plan for SightPress: a free, open-source CMS for everyone, built from the ground up for blind and low-vision creators.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-4-0-themes-and-media/">SightPress 0.4.0: themes you can choose and media without limits</a></h3>
+  <p class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 4 min read</p>
+  <p>SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/ai-is-what-we-make-of-it/">AI is what we make of it</a></h3>
+  <p class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · <a href="/blog/section/ai-and-accessibility/">AI and accessibility</a> · 10 min read</p>
+  <p>AI isn&#039;t a monster or a miracle, it&#039;s a tool. A blind developer on what AI does well, what it does badly, and how we should use it.</p>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <h2 id="cta-title">Follow SightPress</h2>
+          <p>SightPress is in early development. Hear when it’s ready for live websites, or see what works today.</p>
+          <div class="actions">
+            <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
+            <a class="button button-secondary" href="/features/">See the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0, 24 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

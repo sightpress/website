@@ -18,15 +18,23 @@ Key facts:
 
 ## Pages
 
-- [Home](https://sightpress.org/): what SightPress is, where it stands, how to get involved, FAQ and contact
+- [Home](https://sightpress.org/): what SightPress is, where it stands, how to get involved and contact
 - [About](https://sightpress.org/about/): mission, who it is for, how it is built and tested, the creator and the community
 - [Features](https://sightpress.org/features/): what works in 0.4.0, what is in progress, and the plans before and after 1.0
-- [Articles](https://sightpress.org/articles/): articles by Pedro Ferreira, with an Atom feed at https://sightpress.org/articles/feed.xml
+- [FAQ](https://sightpress.org/faq/): answers to common questions about SightPress
+- [Blog](https://sightpress.org/blog/): articles by Pedro Ferreira, with an Atom feed at https://sightpress.org/blog/feed.xml
 - [Documentation](https://docs.sightpress.org/): getting started, how-to guides and reference
 
-## Articles
+## Blog articles
 
-No articles are published yet.
+- [SightPress 0.4.0: themes you can choose and media without limits](https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/) (2026-11-24): SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage. Markdown: https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/index.md
+- [AI is what we make of it](https://sightpress.org/blog/ai-is-what-we-make-of-it/) (2026-11-24): AI isn't a monster or a miracle, it's a tool. A blind developer on what AI does well, what it does badly, and how we should use it. Markdown: https://sightpress.org/blog/ai-is-what-we-make-of-it/index.md
+- [SightPress 0.3.0: private analytics and an AI assistant that only suggests](https://sightpress.org/blog/sightpress-0-3-0-analytics-ai-assistant/) (2026-11-19): SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests. Markdown: https://sightpress.org/blog/sightpress-0-3-0-analytics-ai-assistant/index.md
+- [SightPress 0.2.0: languages, members and site search](https://sightpress.org/blog/sightpress-0-2-0-languages-members-search/) (2026-11-19): SightPress 0.2.0 adds websites in several languages, member accounts and site search, to help you run a website over time. Markdown: https://sightpress.org/blog/sightpress-0-2-0-languages-members-search/index.md
+- [Why WordPress and other popular CMSs still fail blind and low-vision creators](https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/) (2026-11-18): Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here's why. Markdown: https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/index.md
+- [SightPress 0.1.0: the first usable version](https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/) (2026-11-17): SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages. Markdown: https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/index.md
+- [Going blind as a web developer: what changed and what didn't](https://sightpress.org/blog/going-blind-as-a-web-developer/) (2026-11-16): How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress. Markdown: https://sightpress.org/blog/going-blind-as-a-web-developer/index.md
+- [Introducing SightPress: a CMS for everyone, built from the ground up for accessibility](https://sightpress.org/blog/introducing-sightpress/) (2026-11-03): A blind web developer's plan for SightPress: a free, open-source CMS for everyone, built from the ground up for blind and low-vision creators. Markdown: https://sightpress.org/blog/introducing-sightpress/index.md
 
 ## Contact
 

@@ -11,13 +11,13 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Reads articles either from the private drafts folder (files named `YYYY-MM-DD-slug.md`) or, when that folder isn't
  * available, from the Markdown copies of published articles that the build commits next to each page
- * (`public/articles/<slug>/index.md`). Both give the same result, so anyone can rebuild the site without the drafts.
+ * (`public/blog/<slug>/index.md`). Both give the same result, so anyone can rebuild the site without the drafts.
  */
 final class ArticleLoader
 {
     private const array KNOWN_KEYS = [
         'title', 'section', 'tags', 'status', 'published', 'updated', 'description', 'slug', 'image', 'image_alt',
-        'copies', 'author', 'canonical',
+        'image_caption', 'image_credit', 'copies', 'author', 'canonical',
     ];
 
     /** @var list<string> */
@@ -163,6 +163,26 @@ final class ArticleLoader
         if (($image === null) !== ($imageAlt === null)) {
             $problems[] = 'image and image_alt go together: set both or neither';
         }
+        if ($image !== null && preg_match('/\.(png|jpe?g)$/i', $image) !== 1) {
+            $problems[] = 'image must be a PNG or JPEG file';
+        }
+        $imageCaption = $this->string($meta, 'image_caption');
+        $imageCredit = $this->string($meta, 'image_credit');
+        if ($image === null && ($imageCaption !== null || $imageCredit !== null)) {
+            $problems[] = 'image_caption and image_credit need an image';
+        }
+        $captionHtml = null;
+        $creditHtml = null;
+        if ($imageCaption !== null) {
+            $caption = $this->markdown->inline($imageCaption);
+            $captionHtml = $caption->html;
+            $problems = [...$problems, ...$caption->problems];
+        }
+        if ($imageCredit !== null) {
+            $credit = $this->markdown->inline($imageCredit);
+            $creditHtml = $credit->html;
+            $problems = [...$problems, ...$credit->problems];
+        }
         $copies = $meta['copies'] ?? [];
         if (!\is_array($copies) || !array_is_list($copies)) {
             $problems[] = 'copies must be a list of addresses';
@@ -198,8 +218,10 @@ final class ArticleLoader
             'slug' => $slug,
             'image' => $image,
             'image_alt' => $imageAlt,
+            'image_caption' => $imageCaption,
+            'image_credit' => $imageCredit,
             'copies' => $copies,
-            'canonical' => $this->siteUrl . '/articles/' . $slug . '/',
+            'canonical' => $this->siteUrl . '/blog/' . $slug . '/',
         ], static fn (mixed $value): bool => $value !== null && $value !== []);
 
         return new Article(
@@ -213,6 +235,8 @@ final class ArticleLoader
             description: $description,
             image: $image,
             imageAlt: $imageAlt,
+            imageCaption: $captionHtml,
+            imageCredit: $creditHtml,
             copies: $copies,
             html: $rendered->html,
             words: $rendered->words,

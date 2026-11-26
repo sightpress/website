@@ -12,7 +12,7 @@ final class Output
 {
     /** Files and folders that belong to the build. */
     public const array GENERATED = [
-        '404.html', 'index.html', 'llms.txt', 'sitemap.xml', 'about', 'accessibility', 'articles', 'features',
+        '404.html', 'index.html', 'llms.txt', 'sitemap.xml', 'about', 'accessibility', 'blog', 'faq', 'features',
     ];
 
     /** @var array<string, string> path relative to the output folder => content */

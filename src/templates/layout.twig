@@ -18,7 +18,7 @@
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:url" content="{{ page.url }}">
   <meta property="og:image" content="{{ page.image.path|absolute }}">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:type" content="{{ page.image.path|lower ends with '.png' ? 'image/png' : 'image/jpeg' }}">
   <meta property="og:image:width" content="{{ page.image.width }}">
   <meta property="og:image:height" content="{{ page.image.height }}">
   <meta property="og:image:alt" content="{{ page.image.alt }}">
@@ -46,7 +46,7 @@
   <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/brand/favicons/site.webmanifest">
-  <link rel="alternate" type="application/atom+xml" href="/articles/feed.xml" title="SightPress articles">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
 {% if page.markdown %}
   <link rel="alternate" type="text/markdown" href="{{ page.markdown }}" title="This article in Markdown">
 {% endif %}
@@ -73,7 +73,8 @@
   {key: 'home', href: '/', label: 'Home'},
   {key: 'about', href: '/about/', label: 'About'},
   {key: 'features', href: '/features/', label: 'Features'},
-  {key: 'articles', href: '/articles/', label: 'Articles'},
+  {key: 'blog', href: '/blog/', label: 'Blog'},
+  {key: 'faq', href: '/faq/', label: 'FAQ'},
 ] %}
 {% set exact = page.nav == item.key and page.path == item.href %}
             <li><a href="{{ item.href }}"{% if exact %} aria-current="page"{% elseif page.nav == item.key %} aria-current="true"{% endif %}>{{ item.label }}</a></li>
@@ -103,8 +104,9 @@
         <ul class="footer-links">
           <li><a href="/about/">About</a></li>
           <li><a href="/features/">Features</a></li>
-          <li><a href="/articles/">Articles</a></li>
-          <li><a href="/articles/feed.xml">Articles feed (Atom)</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
           <li><a href="{{ site.docs }}">Documentation</a></li>
           <li><a href="{{ site.github }}">SightPress on GitHub</a></li>
           <li><a href="{{ site.community.conduct }}">Code of Conduct</a></li>

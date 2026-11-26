@@ -62,9 +62,33 @@ final class MarkdownRenderer
         $title = $this->takeTitle($document);
 
         $html = trim($this->renderer->renderDocument($document)->getContent());
-        $words = preg_match_all("/[\\p{L}\\p{N}][\\p{L}\\p{N}'’-]*/u", strip_tags($html));
+        // Count the words a reader sees: a space at each block boundary so adjacent blocks don't merge, and
+        // entities decoded so `&quot;` or `&#039;` aren't counted as words.
+        $text = (string) preg_replace('#<(?:br|/?(?:p|li|h[1-6]|blockquote|pre|t[dh]|d[td]|figcaption))\b[^>]*>#i', ' $0 ', $html);
+        $text = html_entity_decode(strip_tags($text), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $words = preg_match_all("/[\\p{L}\\p{N}][\\p{L}\\p{N}'’-]*/u", $text);
 
         return new RenderedMarkdown($title, $html, (int) $words, $problems);
+    }
+
+    /**
+     * Renders one line of inline Markdown (a caption or a credit) without the surrounding paragraph, and checks its links.
+     */
+    public function inline(string $markdown): RenderedMarkdown
+    {
+        $document = $this->parser->parse(str_replace("\n", ' ', $markdown));
+        $problems = [];
+        foreach ($document->iterator() as $node) {
+            if ($node instanceof Link) {
+                $problems = [...$problems, ...$this->checkLink($node)];
+            } elseif (!$node instanceof Document && $node->parent() instanceof Document && !$node instanceof Paragraph) {
+                $problems[] = sprintf('"%s" must be a single line of text.', $markdown);
+            }
+        }
+        $html = trim($this->renderer->renderDocument($document)->getContent());
+        $html = (string) preg_replace('#^<p>(.*)</p>$#s', '$1', $html);
+
+        return new RenderedMarkdown('', $html, 0, $problems);
     }
 
     /**

@@ -33,6 +33,6 @@ jobs:
       - name: Validate composer.json
         run: composer validate --strict
 
-      # Without the private drafts folder, the build reads the published articles from public/articles/*/index.md.
+      # Without the private drafts folder, the build reads the published articles from public/blog/*/index.md.
       - name: Static analysis and build check
         run: composer check

@@ -57,9 +57,10 @@ return [
 
     // Last content change of each hand-written page, for the sitemap and structured data.
     'pages' => [
-        'home' => '2026-11-24',
+        'home' => '2026-11-26',
         'about' => '2026-11-24',
         'features' => '2026-11-24',
+        'faq' => '2026-11-26',
         'accessibility' => '2026-11-24',
     ],
 ];

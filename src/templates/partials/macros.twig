@@ -12,7 +12,7 @@
 {% macro article_item(article, heading_level = 3) %}
 <li class="article-item">
   <h{{ heading_level }} class="article-item-title"><a href="{{ article.path }}">{{ article.title }}</a></h{{ heading_level }}>
-  <p class="article-meta"><time datetime="{{ article.published }}">{{ article.published|long_date }}</time> · <a href="/articles/section/{{ article.section|slug }}/">{{ article.section }}</a> · {{ article.readingMinutes }} min read</p>
+  <p class="article-meta"><time datetime="{{ article.published }}">{{ article.published|long_date }}</time> · <a href="/blog/section/{{ article.section|slug }}/">{{ article.section }}</a> · {{ article.readingMinutes }} min read</p>
   <p>{{ article.description }}</p>
 </li>
 {% endmacro %}

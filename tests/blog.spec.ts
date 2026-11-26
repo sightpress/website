@@ -1,10 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { pages } from './pages';
 
-const articles = pages().filter((path) => /^\/articles\/(?!section\/|tag\/)[^/]+\/$/.test(path));
+const articles = pages().filter((path) => /^\/blog\/(?!section\/|tag\/)[^/]+\/$/.test(path));
 
-test('the articles feed is valid Atom', async ({ request }) => {
-  const response = await request.get('/articles/feed.xml');
+test('the blog feed is valid Atom', async ({ request }) => {
+  const response = await request.get('/blog/feed.xml');
   expect(response.ok()).toBeTruthy();
   const body = await response.text();
   expect(body).toContain('<feed xmlns="http://www.w3.org/2005/Atom"');

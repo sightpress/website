@@ -27,7 +27,7 @@ test('the colour scheme button is reachable by keyboard and remembers the choice
 });
 
 test('the pre-launch banner and the footer are on every kind of page', async ({ page }) => {
-  for (const path of ['/', '/about/', '/features/', '/articles/', '/accessibility/', '/404.html']) {
+  for (const path of ['/', '/about/', '/features/', '/faq/', '/blog/', '/accessibility/', '/404.html']) {
     await page.goto(path);
     await expect(page.locator('.prelaunch')).toContainText('SightPress is in early development.');
     await expect(page.getByRole('navigation', { name: 'Footer' }).getByRole('link', { name: 'Accessibility statement' })).toBeVisible();

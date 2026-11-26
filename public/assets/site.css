@@ -261,7 +261,7 @@ a.button-secondary, a.button-secondary:visited, a.button-secondary:hover { color
 
 /* Frequently asked questions */
 .faq { list-style: none; margin: var(--sp-space-6) 0 0; padding: 0; display: grid; gap: var(--sp-space-6) var(--sp-space-7); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
-.faq h3 { margin-block-end: var(--sp-space-2); }
+.faq h2 { font-size: var(--sp-font-size-2); line-height: var(--sp-line-height-snug); margin-block: 0 var(--sp-space-2); }
 .faq p { margin-block-end: 0; }
 
 /* Roadmap and testing lists */
@@ -374,6 +374,11 @@ a.button-secondary, a.button-secondary:visited, a.button-secondary:hover { color
 .prose th, .prose td { border: 1px solid var(--sp-color-border-strong); padding: var(--sp-space-2) var(--sp-space-3); text-align: start; vertical-align: top; }
 .prose th { background: var(--sp-color-surface-sunken); }
 .prose img { block-size: auto; }
+.article-image { margin: 0 0 var(--sp-space-6); }
+.article-image img { display: block; inline-size: 100%; border-radius: var(--sp-radius-md); }
+.article-image figcaption { margin-block-start: var(--sp-space-2); font-size: var(--sp-font-size-n1); color: var(--sp-color-text-muted); }
+.article-image-caption { display: block; color: var(--sp-color-text); }
+.article-image-credit { display: block; }
 .prose hr { border: 0; border-block-start: 1px solid var(--sp-color-border); margin-block: var(--sp-space-7); }
 .prose .footnotes { font-size: var(--sp-font-size-n1); border-block-start: 1px solid var(--sp-color-border); margin-block-start: var(--sp-space-7); padding-block-start: var(--sp-space-4); }
 

@@ -58,7 +58,6 @@ final class SiteBuilder
         ], fn (array $page): array => [
             $this->webPage($page, 'WebPage', ['about' => ['@id' => $this->url . '/#software']]),
             $this->software(),
-            $this->faq($page),
         ]));
 
         $output->add('/about/', $this->page('about.twig', [
@@ -81,6 +80,16 @@ final class SiteBuilder
         ], fn (array $page): array => [
             $this->webPage($page, 'WebPage', ['about' => ['@id' => $this->url . '/#software']]),
             $this->software(),
+        ]));
+
+        $output->add('/faq/', $this->page('faq.twig', [
+            'path' => '/faq/',
+            'nav' => 'faq',
+            'title' => 'Frequently asked questions about SightPress',
+            'description' => 'Answers to common questions about SightPress: who it is for, screen readers, accessible content, open source, what you need to run it, AI and when you can try it.',
+            'modified' => $this->site['pages']['faq'],
+        ], fn (array $page): array => [
+            $this->webPage($page, 'FAQPage', ['mainEntity' => $this->faqQuestions($page)]),
         ]));
 
         $output->add('/accessibility/', $this->page('accessibility.twig', [
@@ -115,11 +124,11 @@ final class SiteBuilder
         $sections = $this->groupBySection($articles);
         $tags = $this->groupByTag($articles);
 
-        $output->add('/articles/', $this->page('articles.twig', [
-            'path' => '/articles/',
-            'nav' => 'articles',
-            'title' => 'Articles',
-            'description' => 'Articles about SightPress, accessible publishing and working as a blind web developer, by Pedro Ferreira.',
+        $output->add('/blog/', $this->page('blog.twig', [
+            'path' => '/blog/',
+            'nav' => 'blog',
+            'title' => 'Blog',
+            'description' => 'The SightPress blog: articles about SightPress, accessible publishing and working as a blind web developer, by Pedro Ferreira.',
             'modified' => $articles === [] ? $this->site['pages']['home'] : $this->newest($articles),
             'articles' => $articles,
             'sections' => $sections,
@@ -127,26 +136,26 @@ final class SiteBuilder
         ], fn (array $page): array => [$this->collection($page, $articles, true)]));
 
         foreach ($sections as $section => $list) {
-            $output->add('/articles/section/' . Slug::of($section) . '/', $this->page('article-list.twig', [
-                'path' => '/articles/section/' . Slug::of($section) . '/',
-                'nav' => 'articles',
+            $output->add('/blog/section/' . Slug::of($section) . '/', $this->page('article-list.twig', [
+                'path' => '/blog/section/' . Slug::of($section) . '/',
+                'nav' => 'blog',
                 'title' => $section,
                 'heading' => $section,
                 'kind' => 'section',
-                'description' => \sprintf('SightPress articles in the section “%s”.', $section),
+                'description' => \sprintf('SightPress blog articles in the section “%s”.', $section),
                 'modified' => $this->newest($list),
                 'articles' => $list,
             ], fn (array $page): array => [$this->collection($page, $list, false)]));
         }
         foreach ($tags as $tag => $list) {
             $label = $this->taxonomy['tags'][$tag];
-            $output->add('/articles/tag/' . $tag . '/', $this->page('article-list.twig', [
-                'path' => '/articles/tag/' . $tag . '/',
-                'nav' => 'articles',
+            $output->add('/blog/tag/' . $tag . '/', $this->page('article-list.twig', [
+                'path' => '/blog/tag/' . $tag . '/',
+                'nav' => 'blog',
                 'title' => 'Articles tagged “' . $label . '”',
                 'heading' => 'Articles tagged “' . $label . '”',
                 'kind' => 'tag',
-                'description' => \sprintf('SightPress articles tagged “%s”.', $label),
+                'description' => \sprintf('SightPress blog articles tagged “%s”.', $label),
                 'modified' => $this->newest($list),
                 'articles' => $list,
             ], fn (array $page): array => [$this->collection($page, $list, false)]));
@@ -156,7 +165,7 @@ final class SiteBuilder
         foreach ($articles as $index => $article) {
             $page = [
                 'path' => $article->path(),
-                'nav' => 'articles',
+                'nav' => 'blog',
                 'title' => $article->title,
                 'description' => $article->description,
                 'modified' => $article->lastModified(),
@@ -177,7 +186,7 @@ final class SiteBuilder
             $output->add($article->path() . 'index.md', $this->markdownAlternate($article));
         }
 
-        $output->add('/articles/feed.xml', $this->twig->render('feed.xml.twig', [
+        $output->add('/blog/feed.xml', $this->twig->render('feed.xml.twig', [
             'articles' => $articles,
             'updated' => $articles === [] ? $this->site['pages']['home'] : $this->newest($articles),
             'contents' => array_map(fn (Article $a): string => $this->absoluteLinks($a->html, $a->path()), $articles),
@@ -315,15 +324,15 @@ final class SiteBuilder
     /**
      * @param array<string, mixed> $page
      *
-     * @return array<string, mixed>
+     * @return list<array<string, mixed>>
      */
-    private function faq(array $page): array
+    private function faqQuestions(array $page): array
     {
         $questions = [];
-        $html = $this->twig->render('home.twig', ['page' => $page + ['jsonLd' => null]]);
-        // The questions and answers come from the rendered FAQ section, so the two can never disagree.
+        $html = $this->twig->render('faq.twig', ['page' => $page + ['jsonLd' => null]]);
+        // The questions and answers come from the rendered page, so the two can never disagree.
         preg_match('#<ul class="faq">(.*?)</ul>#s', $html, $faq);
-        preg_match_all('#<h3[^>]*>(.*?)</h3>\s*<p>(.*?)</p>#s', $faq[1] ?? '', $pairs, PREG_SET_ORDER);
+        preg_match_all('#<h2[^>]*>(.*?)</h2>\s*<p>(.*?)</p>#s', $faq[1] ?? '', $pairs, PREG_SET_ORDER);
         foreach ($pairs as [, $question, $answer]) {
             $questions[] = [
                 '@type' => 'Question',
@@ -334,14 +343,11 @@ final class SiteBuilder
                 ],
             ];
         }
+        if ($questions === []) {
+            throw new \LogicException('The FAQ page has no questions: faq.twig and SiteBuilder::faqQuestions() disagree.');
+        }
 
-        return [
-            '@type' => 'FAQPage',
-            '@id' => $this->url . '/#faq',
-            'inLanguage' => 'en-GB',
-            'isPartOf' => ['@id' => $page['url'] . '#webpage'],
-            'mainEntity' => $questions,
-        ];
+        return $questions;
     }
 
     /**
@@ -388,7 +394,7 @@ final class SiteBuilder
             'dateModified' => $article->lastModified(),
             'author' => ['@id' => $this->url . '/#pedro-ferreira'],
             'publisher' => ['@id' => $this->url . '/#organization'],
-            'isPartOf' => ['@id' => $this->url . '/articles/#webpage'],
+            'isPartOf' => ['@id' => $this->url . '/blog/#webpage'],
             'inLanguage' => 'en-GB',
             'articleSection' => $article->section,
             'keywords' => array_map(fn (string $t): string => $this->taxonomy['tags'][$t], $article->tags),
@@ -403,8 +409,8 @@ final class SiteBuilder
     {
         $items = [
             ['Home', '/'],
-            ['Articles', '/articles/'],
-            [$article->section, '/articles/section/' . Slug::of($article->section) . '/'],
+            ['Blog', '/blog/'],
+            [$article->section, '/blog/section/' . Slug::of($article->section) . '/'],
             [$article->title, $article->path()],
         ];
 
@@ -575,14 +581,15 @@ final class SiteBuilder
             ['loc' => '/', 'lastmod' => $pages['home']],
             ['loc' => '/about/', 'lastmod' => $pages['about']],
             ['loc' => '/features/', 'lastmod' => $pages['features']],
-            ['loc' => '/articles/', 'lastmod' => $articles === [] ? $pages['home'] : $this->newest($articles)],
+            ['loc' => '/faq/', 'lastmod' => $pages['faq']],
+            ['loc' => '/blog/', 'lastmod' => $articles === [] ? $pages['home'] : $this->newest($articles)],
             ['loc' => '/accessibility/', 'lastmod' => $pages['accessibility']],
         ];
         foreach ($this->groupBySection($articles) as $section => $list) {
-            $entries[] = ['loc' => '/articles/section/' . Slug::of($section) . '/', 'lastmod' => $this->newest($list)];
+            $entries[] = ['loc' => '/blog/section/' . Slug::of($section) . '/', 'lastmod' => $this->newest($list)];
         }
         foreach ($this->groupByTag($articles) as $tag => $list) {
-            $entries[] = ['loc' => '/articles/tag/' . $tag . '/', 'lastmod' => $this->newest($list)];
+            $entries[] = ['loc' => '/blog/tag/' . $tag . '/', 'lastmod' => $this->newest($list)];
         }
         foreach ($articles as $article) {
             $entries[] = ['loc' => $article->path(), 'lastmod' => $article->lastModified()];

@@ -6,7 +6,7 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <ol>
             <li><a href="/">Home</a></li>
-            <li><a href="/articles/">Articles</a></li>
+            <li><a href="/blog/">Blog</a></li>
           </ol>
         </nav>
         <p class="eyebrow">{{ page.kind == 'section' ? 'Section' : 'Topic' }}</p>
@@ -23,7 +23,7 @@
           {{ m.article_item(article, 3) }}
 {% endfor %}
         </ul>
-        <p><a href="/articles/">All articles</a></p>
+        <p><a href="/blog/">All articles in the blog</a></p>
       </div>
     </section>
 {% endblock %}

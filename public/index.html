@@ -35,7 +35,7 @@
   <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/brand/favicons/site.webmanifest">
-  <link rel="alternate" type="application/atom+xml" href="/articles/feed.xml" title="SightPress articles">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
   <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -103,7 +103,7 @@
             "isPartOf": {
                 "@id": "https://sightpress.org/#website"
             },
-            "dateModified": "2026-11-24",
+            "dateModified": "2026-11-26",
             "primaryImageOfPage": {
                 "@type": "ImageObject",
                 "url": "https://sightpress.org/brand/social/sightpress-share-card-motto.png",
@@ -146,88 +146,6 @@
                 "@id": "https://sightpress.org/#pedro-ferreira"
             },
             "keywords": "CMS, accessibility, WCAG 2.2 AA, ATAG 2.0, screen reader, blind, low vision, open source, PHP, multilingual, multi-site"
-        },
-        {
-            "@type": "FAQPage",
-            "@id": "https://sightpress.org/#faq",
-            "inLanguage": "en-GB",
-            "isPartOf": {
-                "@id": "https://sightpress.org/#webpage"
-            },
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What is SightPress?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages from one installation. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is SightPress only for blind people?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No. SightPress is for everyone: charities, small businesses, public bodies and individuals. It is built so that blind and low-vision people can use every part of it, and that makes it clearer and calmer for everybody else too."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I use SightPress with a screen reader?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, that is what it is built for. The admin, sign-in pages, default theme and emails target WCAG 2.2 AA, and SightPress as an authoring tool targets ATAG 2.0 AA. Tasks work with a keyboard alone and with a screen reader, nothing depends on dragging, colour or a CAPTCHA, and there is a command-line tool for administration tasks too."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Will SightPress help me publish accessible content?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Images need a description, or an explicit choice to mark them as decorative, and videos and recordings need captions and a transcript. SightPress checks each page before it goes live, including its link text and heading order, explains anything to fix, and won’t publish a page with an accessibility error."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is SightPress free and open source?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. SightPress is licensed GPL-3.0-or-later, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What do I need to run SightPress?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "SightPress is written in modern, object-oriented PHP and ships with ready-made Docker files. It is tested on MariaDB, MySQL, PostgreSQL and SQLite, runs on FrankenPHP, nginx or Apache, and stores files on your own server or, if you choose, in cloud storage. It loads no third-party scripts or fonts."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Will my site be easy to find in search engines and AI answers?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "SightPress is built for it from the start: server-rendered pages, a title, description and structured data for every page, per-language addresses, a sitemap for each language, and a Markdown version of every public page for AI tools. Each site decides how AI crawlers may use its content. It uses no tricks: it makes your site clear and eligible, and leaves the content to you."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Does SightPress use AI?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Only if you want it to. The AI assistant is off for new sites. An admin can turn it on with the organisation’s own key from Anthropic, OpenAI or Mistral, or connect a compatible or self-hosted service. Nothing it writes is used until a person accepts it, and it never publishes anything."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "When can I try SightPress?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Now, if you are a developer or a tester: test release 0.4.0 runs on your own computer, and the getting started guide explains how. Test releases aren’t ready for live websites yet; version 1.0 will be. Email team@sightpress.org to hear when it is ready."
-                    }
-                }
-            ]
         }
     ]
 }
@@ -249,7 +167,8 @@
             <li><a href="/" aria-current="page">Home</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="/features/">Features</a></li>
-            <li><a href="/articles/">Articles</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
           </ul>
         </nav>
       </div>
@@ -270,7 +189,7 @@
         <div class="actions">
           <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
           <a class="button button-secondary" href="/features/">See what works today</a>
-          <a class="button button-secondary" href="/articles/">Read the latest articles</a>
+          <a class="button button-secondary" href="/blog/">Read the blog</a>
         </div>
       </div>
     </section>
@@ -347,9 +266,30 @@
             <p class="card-link"><a href="/features/">All features, and what’s coming next</a></p>
           </li>
           <li class="card">
-            <h3>Articles</h3>
-            <p>Our first articles are on their way: release notes, the story behind SightPress and what we learn about accessible publishing.</p>
-            <p class="card-link"><a href="/articles/feed.xml">Follow the articles feed (Atom)</a></p>
+            <h3>Blog</h3>
+            <ul class="latest-list">
+              <li>
+                <a href="/blog/sightpress-0-4-0-themes-and-media/">SightPress 0.4.0: themes you can choose and media without limits</a>
+                <span class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · Releases</span>
+                <span class="latest-description">SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.</span>
+              </li>
+              <li>
+                <a href="/blog/ai-is-what-we-make-of-it/">AI is what we make of it</a>
+                <span class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · AI and accessibility</span>
+                <span class="latest-description">AI isn&#039;t a monster or a miracle, it&#039;s a tool. A blind developer on what AI does well, what it does badly, and how we should use it.</span>
+              </li>
+              <li>
+                <a href="/blog/sightpress-0-3-0-analytics-ai-assistant/">SightPress 0.3.0: private analytics and an AI assistant that only suggests</a>
+                <span class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · Releases</span>
+                <span class="latest-description">SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests.</span>
+              </li>
+            </ul>
+            <p class="card-link"><a href="/blog/">Read the blog</a></p>
+          </li>
+          <li class="card" id="faq">
+            <h3>Questions</h3>
+            <p>Is SightPress only for blind people? Can I use it with a screen reader? Is it free? Does it use AI? When can I try it?</p>
+            <p class="card-link"><a href="/faq/">Frequently asked questions</a></p>
           </li>
         </ul>
       </div>
@@ -382,8 +322,8 @@
           <li class="card">
             <span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-bell"/></svg></span>
             <h3>Follow the development</h3>
-            <p>SightPress is built in the open. Read the code and follow our progress on GitHub, or follow the articles in your feed reader.</p>
-            <p class="card-link"><a href="https://github.com/sightpress">SightPress on GitHub</a> · <a href="/articles/feed.xml">Articles feed (Atom)</a></p>
+            <p>SightPress is built in the open. Read the code and follow our progress on GitHub, or follow the blog in your feed reader.</p>
+            <p class="card-link"><a href="https://github.com/sightpress">SightPress on GitHub</a> · <a href="/blog/feed.xml">Blog feed (Atom)</a></p>
           </li>
         </ul>
       </div>
@@ -406,51 +346,6 @@
   <li><a href="mailto:?subject=Have%20you%20seen%20SightPress%3F&amp;body=SightPress%20is%20a%20new%2C%20open-source%20CMS%20for%20everyone%2C%20designed%20with%20blind%20and%20low-vision%20creators%20and%20audiences%20in%20mind.%0A%0Ahttps%3A%2F%2Fsightpress.org%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
 </ul>
 <p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/</strong>.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="wrap">
-        <p class="eyebrow">Good to know</p>
-        <h2 id="faq-title">Frequently asked questions</h2>
-        <ul class="faq">
-          <li>
-            <h3 id="faq-1">What is SightPress?</h3>
-            <p>SightPress is an accessible, open-source content management system (CMS) for building and running many websites in many languages from one installation. It is designed with blind and low-vision content creators, and audiences who use assistive technology, in mind.</p>
-          </li>
-          <li>
-            <h3 id="faq-2">Is SightPress only for blind people?</h3>
-            <p>No. SightPress is for everyone: charities, small businesses, public bodies and individuals. It is built so that blind and low-vision people can use every part of it, and that makes it clearer and calmer for everybody else too.</p>
-          </li>
-          <li>
-            <h3 id="faq-3">Can I use SightPress with a screen reader?</h3>
-            <p>Yes, that is what it is built for. The admin, sign-in pages, default theme and emails target WCAG 2.2 AA, and SightPress as an authoring tool targets ATAG 2.0 AA. Tasks work with a keyboard alone and with a screen reader, nothing depends on dragging, colour or a CAPTCHA, and there is a command-line tool for administration tasks too.</p>
-          </li>
-          <li>
-            <h3 id="faq-4">Will SightPress help me publish accessible content?</h3>
-            <p>Yes. Images need a description, or an explicit choice to mark them as decorative, and videos and recordings need captions and a transcript. SightPress checks each page before it goes live, including its link text and heading order, explains anything to fix, and won’t publish a page with an accessibility error.</p>
-          </li>
-          <li>
-            <h3 id="faq-5">Is SightPress free and open source?</h3>
-            <p>Yes. SightPress is licensed GPL-3.0-or-later, so anyone can use it, inspect it and improve it. The code is developed in the open on GitHub.</p>
-          </li>
-          <li>
-            <h3 id="faq-6">What do I need to run SightPress?</h3>
-            <p>SightPress is written in modern, object-oriented PHP and ships with ready-made Docker files. It is tested on MariaDB, MySQL, PostgreSQL and SQLite, runs on FrankenPHP, nginx or Apache, and stores files on your own server or, if you choose, in cloud storage. It loads no third-party scripts or fonts.</p>
-          </li>
-          <li>
-            <h3 id="faq-7">Will my site be easy to find in search engines and AI answers?</h3>
-            <p>SightPress is built for it from the start: server-rendered pages, a title, description and structured data for every page, per-language addresses, a sitemap for each language, and a Markdown version of every public page for AI tools. Each site decides how AI crawlers may use its content. It uses no tricks: it makes your site clear and eligible, and leaves the content to you.</p>
-          </li>
-          <li>
-            <h3 id="faq-8">Does SightPress use AI?</h3>
-            <p>Only if you want it to. The AI assistant is off for new sites. An admin can turn it on with the organisation’s own key from Anthropic, OpenAI or Mistral, or connect a compatible or self-hosted service. Nothing it writes is used until a person accepts it, and it never publishes anything.</p>
-          </li>
-          <li>
-            <h3 id="faq-9">When can I try SightPress?</h3>
-            <p>Now, if you are a developer or a tester: test release 0.4.0 runs on your own computer, and the <a href="https://docs.sightpress.org/latest/getting-started/">getting started guide</a> explains how. Test releases aren’t ready for live websites yet; version 1.0 will be. Email <a href="mailto:team@sightpress.org">team@sightpress.org</a> to hear when it is ready.</p>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -487,8 +382,9 @@
         <ul class="footer-links">
           <li><a href="/about/">About</a></li>
           <li><a href="/features/">Features</a></li>
-          <li><a href="/articles/">Articles</a></li>
-          <li><a href="/articles/feed.xml">Articles feed (Atom)</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
           <li><a href="https://docs.sightpress.org/">Documentation</a></li>
           <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
           <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
