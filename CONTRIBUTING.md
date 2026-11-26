@@ -106,11 +106,15 @@ to <contribute@sightpress.org>. A maintainer will add it to GitHub for you and k
 
 ## Working on this repository
 
-This repository is the website at <https://sightpress.org>. It is plain HTML and CSS with no build step: open
-`index.html` in a browser to preview it, or serve the folder with any static web server.
+This repository is the website at <https://sightpress.org>. It is a small static site: `bin/build` turns the Twig
+templates in `src/templates/` and the published articles into HTML in `public/`, and the generated files are
+committed. [PUBLISHING.md](PUBLISHING.md) explains how to build and preview it, how articles are published and which
+checks run.
 
-- Pages for each language live in their own folder, named after the locale (for example `en-gb/`).
+- Change the templates or `src/site.php`, run `bin/build`, and commit the result. Never edit generated HTML by hand:
+  `composer check` fails if `public/` doesn't match a fresh build.
 - Every page must meet WCAG 2.2 AA: headings in order, a label for every control, alt text for every image, enough
-  colour contrast, and everything usable with the keyboard alone.
-- Brand assets come from the [brand guide](https://github.com/sightpress/brand-guide). Don't change them here.
-- Keep `sitemap.xml` and `llms.txt` up to date when you add or remove a page.
+  colour contrast, and everything usable with the keyboard alone. `npx playwright test` runs axe-core on every page.
+- Brand assets in `public/brand/` come from the [brand guide](https://github.com/sightpress/brand-guide). Don't
+  change them here.
+- The sitemap, `llms.txt` and the articles feed are generated: add a page to the build and they follow.

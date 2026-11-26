@@ -1,0 +1,43 @@
+# SightPress
+
+> SightPress is an accessible, open-source content management system (CMS) for everyone, designed with blind and low-vision content creators and audiences who use assistive technology in mind. It is written in modern, object-oriented PHP and licensed GPL-3.0-or-later. Status: pre-launch. Test release 0.4.0 (24 November 2026) is available for developers and testers; version 1.0 will be the first for live websites.
+
+Key facts:
+
+- Mission: accessibility is the floor, quality design is the goal, and neither is ever traded for the other. Accessibility is a release requirement and cannot be switched off.
+- Standards: the admin, sign-in pages, default theme and emails target WCAG 2.2 AA; SightPress as an authoring tool targets ATAG 2.0 AA. Conformance reports (WCAG 2.2, EN 301 549, ATAG 2.0) are planned from version 1.0.
+- Releases so far: 0.4.0 (24 November 2026): Themes you can choose per site, captions and transcripts, large and resumable uploads, and optional cloud storage; 0.3.0 (19 November 2026): Private analytics with charts you can read in words and tables, and an optional AI assistant that only suggests; 0.2.0 (19 November 2026): Languages and translations, site search, members-only pages, older versions, scheduling and redirects; 0.1.0 (17 November 2026): The first usable version: build pages from blocks, publish checks, the admin panel and several sites in one installation.
+- Works today (0.4.0): pages built from ten block types; checks before publishing (image descriptions, link text, captions, transcripts, heading order) that stop a page with an accessibility error; several sites and languages in one installation; translations, hreflang and a sitemap per language; site search; members-only pages and self-registration; six-digit codes instead of email links; older versions compared word by word, scheduling and redirects; private cookieless analytics with chart summaries in words and data tables; themes per site with colour contrast checks; captions and transcripts; large, resumable uploads; optional cloud storage with a CDN; a Markdown version of every public page.
+- Optional AI assistant, off for new sites: uses the organisation's own key (Anthropic, OpenAI, Mistral, or a compatible or self-hosted service); it only suggests, never publishes, and AI-written alt text and translations must be checked by a person before publishing.
+- Runs with Docker on MariaDB, MySQL, PostgreSQL or SQLite, with FrankenPHP, nginx or Apache, and local or cloud storage. Loads no third-party scripts or fonts.
+- In progress (0.5.0): Add-on modules from other developers, custom roles, email and domain rules, and optional text messages.
+- Before 1.0: security review, UK/EU privacy tools (download or delete your data, retention, generated privacy policy), performance, guides for running on a public server, full documentation and an independent accessibility review.
+- After 1.0 (plans that may change): a link checker, PDF checks, readability scores, visitor display preferences without an overlay, an accessible form builder and media player, a WordPress importer, and official modules for news, events, documents, newsletters, donations, meetings, consultations, bookings, podcasts and more.
+- Built for blind and low-vision creators; charities, NGOs, councils and public bodies that must meet WCAG 2.2 AA and EN 301 549; small businesses; individuals; and audiences who rely on assistive technology.
+- Founder and lead developer: Pedro Ferreira, a Portuguese web developer based in London who became blind in 2024.
+
+## Pages
+
+- [Home](https://sightpress.org/): what SightPress is, where it stands, how to get involved and contact
+- [About](https://sightpress.org/about/): mission, who it is for, how it is built and tested, the creator and the community
+- [Features](https://sightpress.org/features/): what works in 0.4.0, what is in progress, and the plans before and after 1.0
+- [FAQ](https://sightpress.org/faq/): answers to common questions about SightPress
+- [Blog](https://sightpress.org/blog/): articles by Pedro Ferreira, with an Atom feed at https://sightpress.org/blog/feed.xml
+- [Documentation](https://docs.sightpress.org/): getting started, how-to guides and reference
+
+## Blog articles
+
+- [SightPress 0.4.0: themes you can choose and media without limits](https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/) (2026-11-24): SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage. Markdown: https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/index.md
+- [AI is what we make of it](https://sightpress.org/blog/ai-is-what-we-make-of-it/) (2026-11-24): AI isn't a monster or a miracle, it's a tool. A blind developer on what AI does well, what it does badly, and how we should use it. Markdown: https://sightpress.org/blog/ai-is-what-we-make-of-it/index.md
+- [SightPress 0.3.0: private analytics and an AI assistant that only suggests](https://sightpress.org/blog/sightpress-0-3-0-analytics-ai-assistant/) (2026-11-19): SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests. Markdown: https://sightpress.org/blog/sightpress-0-3-0-analytics-ai-assistant/index.md
+- [SightPress 0.2.0: languages, members and site search](https://sightpress.org/blog/sightpress-0-2-0-languages-members-search/) (2026-11-19): SightPress 0.2.0 adds websites in several languages, member accounts and site search, to help you run a website over time. Markdown: https://sightpress.org/blog/sightpress-0-2-0-languages-members-search/index.md
+- [Why WordPress and other popular CMSs still fail blind and low-vision creators](https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/) (2026-11-18): Popular CMSs can build accessible websites, but few let a blind or low-vision person run one on their own. Here's why. Markdown: https://sightpress.org/blog/why-popular-cmss-fail-blind-creators/index.md
+- [SightPress 0.1.0: the first usable version](https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/) (2026-11-17): SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages. Markdown: https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/index.md
+- [Going blind as a web developer: what changed and what didn't](https://sightpress.org/blog/going-blind-as-a-web-developer/) (2026-11-16): How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress. Markdown: https://sightpress.org/blog/going-blind-as-a-web-developer/index.md
+- [Introducing SightPress: a CMS for everyone, built from the ground up for accessibility](https://sightpress.org/blog/introducing-sightpress/) (2026-11-03): A blind web developer's plan for SightPress: a free, open-source CMS for everyone, built from the ground up for blind and low-vision creators. Markdown: https://sightpress.org/blog/introducing-sightpress/index.md
+
+## Contact
+
+- Email: team@sightpress.org
+- Source and development: https://github.com/sightpress
+- The only official addresses are sightpress.org and team@sightpress.org.

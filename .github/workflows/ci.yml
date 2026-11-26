@@ -1,0 +1,38 @@
+# Checks that public/ is exactly what the build makes from the committed templates and published articles (so nobody
+# edits generated HTML by hand), validates the front matter of every published article, and runs static analysis.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    name: composer check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          coverage: none
+          tools: composer:v2
+
+      - name: Install the build tools
+        run: composer install --no-interaction --no-progress
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      # Without the private drafts folder, the build reads the published articles from public/blog/*/index.md.
+      - name: Static analysis and build check
+        run: composer check

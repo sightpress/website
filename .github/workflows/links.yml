@@ -1,0 +1,23 @@
+# Checks every external link once a week (and on demand), so a page that moved elsewhere is noticed.
+name: External links
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: External links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check every link
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 3 --accept 200,206,403,429 --root-dir "${{ github.workspace }}/public" --index-files index.html --exclude '^mailto:' --exclude 'sharer|intent|share-offsite|submit\?|wa\.me|t\.me/share' 'public/**/*.html'
+          fail: true

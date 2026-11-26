@@ -1,0 +1,18 @@
+{% macro icon(name) %}<svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-{{ name }}"/></svg>{% endmacro %}
+
+{% macro ticks(items) %}
+<ul class="ticks">
+{% for item in items %}
+  <li>{{ _self.icon('check') }}<span>{{ item|raw }}</span></li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{# One article in a list: title (link), date, section and description. #}
+{% macro article_item(article, heading_level = 3) %}
+<li class="article-item">
+  <h{{ heading_level }} class="article-item-title"><a href="{{ article.path }}">{{ article.title }}</a></h{{ heading_level }}>
+  <p class="article-meta"><time datetime="{{ article.published }}">{{ article.published|long_date }}</time> · <a href="/blog/section/{{ article.section|slug }}/">{{ article.section }}</a> · {{ article.readingMinutes }} min read</p>
+  <p>{{ article.description }}</p>
+</li>
+{% endmacro %}

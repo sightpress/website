@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SightPress 0.1.0: the first usable version | SightPress</title>
+  <meta name="description" content="SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="SightPress 0.1.0: the first usable version">
+  <meta property="og:description" content="SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages.">
+  <meta property="og:url" content="https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/">
+  <meta property="og:image" content="https://sightpress.org/assets/articles/sightpress-0-1-0-first-usable-version.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SightPress logo. SightPress 0.1 is out! The first usable version.">
+  <meta property="article:published_time" content="2026-11-17">
+  <meta property="article:modified_time" content="2026-11-17">
+  <meta property="article:author" content="https://sightpress.org/about/#creator">
+  <meta property="article:section" content="Releases">
+  <meta property="article:tag" content="Release notes">
+  <meta property="article:tag" content="Project progress">
+  <meta property="article:tag" content="Admin panel">
+  <meta property="article:tag" content="Block editor">
+  <meta property="article:tag" content="Publishing workflow">
+  <meta property="article:tag" content="Verification codes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SightPress 0.1.0: the first usable version">
+  <meta name="twitter:description" content="SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages.">
+  <meta name="twitter:image" content="https://sightpress.org/assets/articles/sightpress-0-1-0-first-usable-version.png">
+  <meta name="twitter:image:alt" content="SightPress logo. SightPress 0.1 is out! The first usable version.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <link rel="alternate" type="text/markdown" href="/blog/sightpress-0-1-0-first-usable-version/index.md" title="This article in Markdown">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": "https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/#article",
+            "mainEntityOfPage": "https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/",
+            "url": "https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/",
+            "headline": "SightPress 0.1.0: the first usable version",
+            "description": "SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages.",
+            "datePublished": "2026-11-17",
+            "dateModified": "2026-11-17",
+            "author": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://sightpress.org/blog/#webpage"
+            },
+            "inLanguage": "en-GB",
+            "articleSection": "Releases",
+            "keywords": [
+                "Release notes",
+                "Project progress",
+                "Admin panel",
+                "Block editor",
+                "Publishing workflow",
+                "Verification codes"
+            ],
+            "wordCount": 472,
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/assets/articles/sightpress-0-1-0-first-usable-version.png",
+                "width": 1200,
+                "height": 630
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sightpress.org/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://sightpress.org/blog/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Releases",
+                    "item": "https://sightpress.org/blog/section/releases/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "SightPress 0.1.0: the first usable version",
+                    "item": "https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/"
+                }
+            ]
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/blog/" aria-current="true">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-header">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/releases/">Releases</a></li>
+            </ol>
+          </nav>
+          <h1 id="article-title">SightPress 0.1.0: the first usable version</h1>
+          <p class="article-byline">By <a href="/about/#creator">Pedro Ferreira</a></p>
+          <dl class="article-facts">
+            <div><dt>Published</dt><dd><time datetime="2026-11-17">17 November 2026</time></dd></div>
+            <div><dt>Reading time</dt><dd>2 minutes</dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/releases/">Releases</a></dd></div>
+          </dl>
+          <h2 class="visually-hidden" id="tags-title">Topics</h2>
+          <ul class="tag-list">
+            <li><a href="/blog/tag/release-notes/">Release notes</a></li>
+            <li><a href="/blog/tag/project-progress/">Project progress</a></li>
+            <li><a href="/blog/tag/admin-panel/">Admin panel</a></li>
+            <li><a href="/blog/tag/block-editor/">Block editor</a></li>
+            <li><a href="/blog/tag/publishing-workflow/">Publishing workflow</a></li>
+            <li><a href="/blog/tag/verification-codes/">Verification codes</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <div class="prose">
+<p>Two weeks ago I announced a plan with no code to download. Today, SightPress 0.1.0 is out, and you can run it on your own computer, create a website and publish pages.</p>
+<p>SightPress is a powerful content management system for everyone, designed with blind and low-vision creators and audiences in mind. It's free software, written in modern, object-oriented PHP.</p>
+<div class="heading-wrap"><h2 id="what-you-can-do">What you can do</h2><a class="heading-anchor" href="#what-you-can-do"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What you can do</span></a></div>
+<div class="heading-wrap"><h3 id="build-pages-from-blocks">Build pages from blocks</h3><a class="heading-anchor" href="#build-pages-from-blocks"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Build pages from blocks</span></a></div>
+<p>There are ten block types: heading, text, image, gallery, video, audio, file download, columns, call to action and contact form. Pages move from draft through review to published.</p>
+<div class="heading-wrap"><h3 id="catch-problems-before-publishing">Catch problems before publishing</h3><a class="heading-anchor" href="#catch-problems-before-publishing"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Catch problems before publishing</span></a></div>
+<p>SightPress checks each page before it goes live, including its image descriptions, link text, captions, transcripts and heading order. Accessibility errors stop the page from being published until they're fixed, and search engine issues appear as warnings.</p>
+<div class="heading-wrap"><h3 id="work-from-an-accessible-admin-panel">Work from an accessible admin panel</h3><a class="heading-anchor" href="#work-from-an-accessible-admin-panel"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Work from an accessible admin panel</span></a></div>
+<p>The admin panel covers pages, media, menus, people, site settings and branding. Upload progress is announced, and the menu shows only what your role can use. An audit log records who changed what.</p>
+<div class="heading-wrap"><h3 id="sign-in-without-risky-links">Sign in without risky links</h3><a class="heading-anchor" href="#sign-in-without-risky-links"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Sign in without risky links</span></a></div>
+<p>Password resets and invitations use a six-digit code that you type on a page, never a link in an email. That's easier with a screen reader, and it gives people one less link to be tricked by.</p>
+<div class="heading-wrap"><h3 id="run-several-sites">Run several sites</h3><a class="heading-anchor" href="#run-several-sites"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Run several sites</span></a></div>
+<p>One installation can run several sites, each with its own people, pages and files. Each new site starts with ready-made pages and menus in the default theme, and SightPress checks that theme's colour contrast and base font size.</p>
+<div class="heading-wrap"><h3 id="be-found-by-people-search-engines-and-ai">Be found by people, search engines and AI</h3><a class="heading-anchor" href="#be-found-by-people-search-engines-and-ai"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Be found by people, search engines and AI</span></a></div>
+<p>Every public page has its own title, description and structured data, and is listed in a sitemap. It's also available as Markdown for AI tools, and each site decides how AI crawlers may use its content.</p>
+<div class="heading-wrap"><h2 id="what-it-isnt-yet">What it isn't yet</h2><a class="heading-anchor" href="#what-it-isnt-yet"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What it isn't yet</span></a></div>
+<p>This is an early release for trying out and testing. The admin panel is in UK English only, and running SightPress on a public server isn't covered yet.</p>
+<div class="heading-wrap"><h2 id="try-it-and-tell-me-what-breaks">Try it and tell me what breaks</h2><a class="heading-anchor" href="#try-it-and-tell-me-what-breaks"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Try it and tell me what breaks</span></a></div>
+<p>The <a href="https://docs.sightpress.org/">SightPress documentation</a> has a getting started guide for non-developers, and the <a href="https://github.com/sightpress/core/releases/tag/0.1.0">0.1.0 release notes</a> list every change.</p>
+<p>If you use a screen reader, a magnifier, a braille display, voice control or only a keyboard, I especially want to hear where SightPress gets in your way.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section-alt" aria-labelledby="share-title">
+      <div class="wrap">
+        <h2 id="share-title">Share this article</h2>
+        <ul class="share-list">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-facebook"/></svg><span>Share on Facebook</span></a></li>
+  <li><a href="https://x.com/intent/post?text=SightPress%200.1.0%3A%20the%20first%20usable%20version&amp;url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-x"/></svg><span>Share on X</span></a></li>
+  <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-linkedin"/></svg><span>Share on LinkedIn</span></a></li>
+  <li><a href="https://bsky.app/intent/compose?text=SightPress%200.1.0%3A%20the%20first%20usable%20version%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-bluesky"/></svg><span>Share on Bluesky</span></a></li>
+  <li><a href="https://www.threads.com/intent/post?text=SightPress%200.1.0%3A%20the%20first%20usable%20version%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-threads"/></svg><span>Share on Threads</span></a></li>
+  <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F&amp;title=SightPress%200.1.0%3A%20the%20first%20usable%20version" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-reddit"/></svg><span>Share on Reddit</span></a></li>
+  <li><a href="https://wa.me/?text=SightPress%200.1.0%3A%20the%20first%20usable%20version%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-whatsapp"/></svg><span>Share on WhatsApp</span></a></li>
+  <li><a href="https://t.me/share/url?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F&amp;text=SightPress%200.1.0%3A%20the%20first%20usable%20version" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-telegram"/></svg><span>Share on Telegram</span></a></li>
+  <li><a href="mailto:?subject=SightPress%200.1.0%3A%20the%20first%20usable%20version&amp;body=SightPress%200.1.0%3A%20the%20first%20usable%20version%0A%0Ahttps%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-1-0-first-usable-version%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/blog/sightpress-0-1-0-first-usable-version/</strong>.</p>
+        <p>This article is also available <a href="/blog/sightpress-0-1-0-first-usable-version/index.md">as Markdown</a>.</p>
+      </div>
+    </section>
+
+    <nav class="section pager" aria-label="More articles">
+      <div class="wrap split">
+        <p><span class="pager-label">Previous article</span> <a href="/blog/going-blind-as-a-web-developer/">Going blind as a web developer: what changed and what didn&#039;t</a></p>
+        <p><span class="pager-label">Next article</span> <a href="/blog/why-popular-cmss-fail-blind-creators/">Why WordPress and other popular CMSs still fail blind and low-vision creators</a></p>
+      </div>
+    </nav>
+
+    <section class="section section-alt" aria-labelledby="related-title">
+      <div class="wrap">
+        <h2 id="related-title">Related articles</h2>
+        <ul class="article-list">
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-4-0-themes-and-media/">SightPress 0.4.0: themes you can choose and media without limits</a></h3>
+  <p class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 4 min read</p>
+  <p>SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-3-0-analytics-ai-assistant/">SightPress 0.3.0: private analytics and an AI assistant that only suggests</a></h3>
+  <p class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-2-0-languages-members-search/">SightPress 0.2.0: languages, members and site search</a></h3>
+  <p class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.2.0 adds websites in several languages, member accounts and site search, to help you run a website over time.</p>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <h2 id="cta-title">Follow SightPress</h2>
+          <p>SightPress is in early development. Hear when it’s ready for live websites, or see what works today.</p>
+          <div class="actions">
+            <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
+            <a class="button button-secondary" href="/features/">See the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0, 24 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

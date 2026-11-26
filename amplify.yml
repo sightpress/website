@@ -1,0 +1,13 @@
+# Build settings for the Amplify app, which is connected to this repository and deploys every push to main.
+# The site is already built and committed in public/, so there is nothing to build: Amplify publishes public/ only.
+version: 1
+frontend:
+  phases:
+    build:
+      commands: []
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  cache:
+    paths: []

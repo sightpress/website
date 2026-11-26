@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features: what SightPress can do today and what comes next | SightPress</title>
+  <meta name="description" content="What works in SightPress test release 0.4.0, what is being built now, and the plans before and after version 1.0.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/features/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Features: what SightPress can do today and what comes next">
+  <meta property="og:description" content="What works in SightPress test release 0.4.0, what is being built now, and the plans before and after version 1.0.">
+  <meta property="og:url" content="https://sightpress.org/features/">
+  <meta property="og:image" content="https://sightpress.org/brand/social/sightpress-share-card-motto.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SightPress logo. Beyond sight. A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Features: what SightPress can do today and what comes next">
+  <meta name="twitter:description" content="What works in SightPress test release 0.4.0, what is being built now, and the plans before and after version 1.0.">
+  <meta name="twitter:image" content="https://sightpress.org/brand/social/sightpress-share-card-motto.png">
+  <meta name="twitter:image:alt" content="SightPress logo. Beyond sight. A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://sightpress.org/features/#webpage",
+            "url": "https://sightpress.org/features/",
+            "name": "Features: what SightPress can do today and what comes next | SightPress",
+            "description": "What works in SightPress test release 0.4.0, what is being built now, and the plans before and after version 1.0.",
+            "inLanguage": "en-GB",
+            "isPartOf": {
+                "@id": "https://sightpress.org/#website"
+            },
+            "dateModified": "2026-11-24",
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/social/sightpress-share-card-motto.png",
+                "width": 1200,
+                "height": 630
+            },
+            "about": {
+                "@id": "https://sightpress.org/#software"
+            }
+        },
+        {
+            "@type": "SoftwareApplication",
+            "@id": "https://sightpress.org/#software",
+            "name": "SightPress",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "url": "https://sightpress.org/",
+            "applicationCategory": "WebApplication",
+            "applicationSubCategory": "Content management system",
+            "operatingSystem": "Linux, macOS, Windows (with Docker)",
+            "softwareVersion": "0.4.0",
+            "datePublished": "2026-11-24",
+            "releaseNotes": "https://github.com/sightpress/core/releases/tag/0.4.0",
+            "downloadUrl": "https://packagist.org/packages/sightpress/skeleton",
+            "softwareHelp": {
+                "@type": "CreativeWork",
+                "url": "https://docs.sightpress.org/"
+            },
+            "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+            },
+            "creativeWorkStatus": "Test release: not ready for live sites until version 1.0",
+            "author": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "creator": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "keywords": "CMS, accessibility, WCAG 2.2 AA, ATAG 2.0, screen reader, blind, low vision, open source, PHP, multilingual, multi-site"
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/" aria-current="page">Features</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow">Features</p>
+        <h1 id="page-title">Features</h1>
+        <p class="lede">What SightPress can do in test release 0.4.0, and what comes next.</p>
+        <div class="callout">
+          <h2 class="callout-title">Test releases are for developers and testers</h2>
+          <p>You can install SightPress on your own computer and try everything listed under <a href="#now">Available now</a>. It isn’t ready for live websites yet: running it on a public server is covered from version 1.0.</p>
+        </div>
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title" class="toc-title">On this page</h2>
+          <ul>
+            <li><a href="#now">Available now (0.4.0)</a></li>
+            <li><a href="#in-progress">In progress (0.5.0)</a></li>
+            <li><a href="#before-1-0">Before 1.0</a></li>
+            <li><a href="#after-1-0">After 1.0</a></li>
+            <li><a href="#try">Try it</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="now" aria-labelledby="now-title">
+      <div class="wrap">
+        <p class="eyebrow">Available in 0.4.0</p>
+        <h2 id="now-title">Available now</h2>
+        <p class="lede">Everything in this section works in test release 0.4.0. Each item links to a step-by-step guide in the documentation.</p>
+        <div class="feature-groups">
+          <section class="feature-group" aria-labelledby="f-writing">
+            <h3 id="f-writing"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-edit"/></svg> Writing and publishing</h3>
+            <ul class="plain-list">
+              <li>Build pages from ten kinds of block: heading, text, image, gallery, video, audio, file download, columns, call to action and contact form. <a href="https://docs.sightpress.org/latest/how-to/write-and-publish-a-page/">Write and publish a page</a></li>
+              <li>Pages move from draft through review to published, and can be published or taken down at a set time. <a href="https://docs.sightpress.org/latest/how-to/schedule-a-page/">Schedule a page</a></li>
+              <li>Compare any older version word by word, with changes written out as “removed” and “added”, and restore it without publishing it. <a href="https://docs.sightpress.org/latest/how-to/restore-an-older-version/">Restore an older version</a></li>
+              <li>Copy, archive, trash and move pages, with redirects that keep old addresses working. <a href="https://docs.sightpress.org/latest/how-to/move-or-rename-a-page/">Move or rename a page</a></li>
+              <li>Menus, and an audit log of who changed what.</li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-accessible">
+            <h3 id="f-accessible"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-accessibility"/></svg> Accessible by default</h3>
+            <ul class="plain-list">
+              <li>An admin panel designed to be used with a keyboard and a screen reader: upload progress is announced, and the menu shows only what your role can use.</li>
+              <li>Checks before publishing: image descriptions, link text, captions, transcripts and heading order. An accessibility error stops a page from being published until it is fixed.</li>
+              <li>Images need a description, or an explicit choice to mark them as decorative.</li>
+              <li>Each new site starts with ready-made pages, including an accessibility statement. <a href="https://docs.sightpress.org/latest/how-to/create-a-site/">Create a website</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-sites">
+            <h3 id="f-sites"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-language"/></svg> Several sites and languages</h3>
+            <ul class="plain-list">
+              <li>One installation runs several websites, each with its own people, pages and files.</li>
+              <li>Each page can have a translation in any available language, with its own title, address and content. Translations start as drafts. <a href="https://docs.sightpress.org/latest/how-to/add-a-language/">Add a language</a></li>
+              <li>Search engines are told which pages are translations of each other, and each language has its own sitemap.</li>
+              <li>The admin panel, site texts and emails are in UK English, European Portuguese and Spanish. <a href="https://docs.sightpress.org/latest/how-to/translate-sightpress/">Translate SightPress</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-people">
+            <h3 id="f-people"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-users"/></svg> People and sign-in</h3>
+            <ul class="plain-list">
+              <li>Invite people, or let them create their own account. <a href="https://docs.sightpress.org/latest/how-to/let-people-sign-up/">Let people sign up</a></li>
+              <li>Make single pages, or a whole site, readable only by signed-in members; those pages stay out of search engines. <a href="https://docs.sightpress.org/latest/how-to/make-a-site-members-only/">Make a site members-only</a></li>
+              <li>Password resets, invitations and new accounts use a six-digit code that you type on a page, never a link in an email. <a href="https://docs.sightpress.org/latest/how-to/codes-we-send-you/">Codes we send you</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-insight">
+            <h3 id="f-insight"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-search"/></svg> Search, analytics and the AI assistant</h3>
+            <ul class="plain-list">
+              <li>Site search on every page, with no outside service. It ignores capitals and accents, and marks matches in bold and underlined, not only in colour. <a href="https://docs.sightpress.org/latest/how-to/search-your-website/">Search your website</a></li>
+              <li>Private analytics on your own server, with no cookies and no IP addresses stored. Every chart has a summary in words and the same data in a table. <a href="https://docs.sightpress.org/latest/how-to/see-who-visits-your-website/">See who visits your website</a></li>
+              <li>An optional AI assistant, off for new sites, using your own key. It drafts and suggests; a person always decides, and AI-written alt text and translations must be checked before publishing. <a href="https://docs.sightpress.org/latest/how-to/use-the-ai-assistant/">Use the AI assistant</a></li>
+              <li>A title, description and structured data for every page, a sitemap, and a Markdown version of each public page for AI tools. Each site decides how AI crawlers may use its content.</li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-design">
+            <h3 id="f-design"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-theme"/></svg> Themes and design</h3>
+            <ul class="plain-list">
+              <li>Choose a theme for each site and preview it first. Themes are installed on the server, never uploaded through the website. <a href="https://docs.sightpress.org/latest/how-to/install-and-change-a-theme/">Install and change a theme</a></li>
+              <li>Change a theme’s colours for light and dark mode. A colour that would be too hard to read is refused, and the message names the colours that clash.</li>
+              <li>Home, standard, landing, sidebar and full-width page layouts, each becoming a single column on a narrow screen. <a href="https://docs.sightpress.org/latest/how-to/choose-a-page-layout/">Choose a page layout</a></li>
+              <li>Developers can start their own theme from the theme template, with checks and a tutorial. <a href="https://docs.sightpress.org/latest/tutorials/create-a-theme/">Create a theme</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-media">
+            <h3 id="f-media"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-video"/></svg> Media</h3>
+            <ul class="plain-list">
+              <li>Captions for videos in each of your site’s languages, and transcripts for videos and recordings. A page with a video or recording can’t be published without them. <a href="https://docs.sightpress.org/latest/how-to/add-captions-and-transcripts/">Add captions and transcripts</a></li>
+              <li>Large files upload in parts, with progress announced to screen readers. Pause, resume or cancel, and carry on for up to a day if the connection drops. <a href="https://docs.sightpress.org/latest/how-to/upload-large-files/">Upload large files</a></li>
+              <li>Upload limits for each site, and imports of very large files from the server. <a href="https://docs.sightpress.org/latest/how-to/import-files/">Import files from a folder</a></li>
+              <li>Optional cloud storage, such as AWS S3 or Cloudflare R2, with a content delivery network; unpublished and members-only files stay protected. <a href="https://docs.sightpress.org/latest/how-to/keep-files-in-the-cloud/">Keep files in the cloud</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" aria-labelledby="f-running">
+            <h3 id="f-running"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-settings"/></svg> Running SightPress</h3>
+            <ul class="plain-list">
+              <li>Runs with Docker, on MariaDB, MySQL, PostgreSQL or SQLite, with FrankenPHP, nginx or Apache. <a href="https://docs.sightpress.org/latest/getting-started/">Getting started</a></li>
+              <li>Turn optional features on or off for each site; turning one off keeps its data. <a href="https://docs.sightpress.org/latest/how-to/turn-features-on-or-off/">Turn features on or off</a></li>
+              <li>A command line tool for tasks such as creating a website. <a href="https://docs.sightpress.org/latest/how-to/try-the-command-line-tool/">Try the command line tool</a></li>
+              <li>Update to a newer version, keeping every website. <a href="https://docs.sightpress.org/latest/how-to/update-sightpress/">Update SightPress</a></li>
+            </ul>
+          </section>
+        </div>
+        <p>Every change is listed in the <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0 release notes</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="in-progress" aria-labelledby="progress-title">
+      <div class="wrap">
+        <p class="eyebrow">In progress</p>
+        <h2 id="progress-title">Being built now: 0.5.0</h2>
+        <p class="lede">The next release is about extending SightPress and setting rules for who can join a site.</p>
+        <ul class="plain-list">
+          <li>Add-on modules from other developers, installed with Composer and turned on or off for each site, with a module template and a step-by-step tutorial.</li>
+          <li>Custom roles, so each organisation can decide exactly who may do what.</li>
+          <li>Rules for which email addresses and domains may join a site.</li>
+          <li>Optional text messages: notifications, signing in with your phone number, and a second confirmation for important changes. Text messages are off unless a site sets them up.</li>
+        </ul>
+        <p>Plans for a release that isn’t out yet can still change.</p>
+      </div>
+    </section>
+
+    <section class="section" id="before-1-0" aria-labelledby="before-title">
+      <div class="wrap">
+        <p class="eyebrow">Planned</p>
+        <h2 id="before-title">Before 1.0</h2>
+        <p class="lede">Version 1.0 is the first version for live websites. Before it, we make SightPress safe, private, fast and fully documented.</p>
+        <div class="split">
+          <ul class="plain-list">
+            <li><strong>Security:</strong> a full security review of the code, and checks that personal data never appears in error messages or logs.</li>
+            <li><strong>Privacy:</strong> tools to meet UK and EU data protection law, so people can download their data or delete their account, and site owners can choose how long data is kept, with a generated privacy policy and cookie list.</li>
+            <li><strong>Speed:</strong> page caching and performance budgets.</li>
+          </ul>
+          <ul class="plain-list">
+            <li><strong>Running it for real:</strong> guides for running SightPress on a public server, on one server or several, and an upgrade tool.</li>
+            <li><strong>Documentation:</strong> a guide or reference for every feature, command and setting.</li>
+            <li><strong>Accessibility:</strong> an independent review, including blind and low-vision users, and a published accessibility conformance report.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="after-1-0" aria-labelledby="after-title">
+      <div class="wrap">
+        <p class="eyebrow">Planned</p>
+        <h2 id="after-title">After 1.0</h2>
+        <p class="lede">After 1.0, SightPress grows with the people who use it. These are plans, and they may change.</p>
+        <div class="split">
+          <div>
+            <h3>More help with accessible content</h3>
+            <ul class="plain-list">
+              <li>A link checker that finds broken links and links to documents that don’t say their type and size.</li>
+              <li>Checks on uploaded PDFs, and a readability score for each language.</li>
+              <li>Display preferences for visitors (text size, spacing, contrast and motion), without an overlay.</li>
+              <li>An accessible form builder and an accessible audio and video player.</li>
+            </ul>
+            <h3>Moving from WordPress</h3>
+            <p>The first module after 1.0 imports a WordPress site into SightPress.</p>
+          </div>
+          <div>
+            <h3>Official modules</h3>
+            <ul class="plain-list">
+              <li><strong>For every site:</strong> news with feeds, events, a documents library, newsletters, and maps with text directions first.</li>
+              <li><strong>For charities:</strong> donations with Gift Aid, volunteers and membership plans.</li>
+              <li><strong>For public bodies:</strong> meetings and minutes, consultations, transparency data and emergency alerts.</li>
+              <li><strong>For small businesses:</strong> catalogues, bookings and job vacancies.</li>
+              <li><strong>For individuals:</strong> podcasts with transcripts, portfolios and CVs.</li>
+            </ul>
+            <h3>Further ahead</h3>
+            <p>In time, SightPress could go beyond websites: events, bookings, courses and an online shop, then tools to run a small organisation, such as contacts, help desk and invoicing. Each would meet the same accessibility standard as the CMS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="try" aria-labelledby="try-title">
+      <div class="wrap">
+        <h2 id="try-title">Try it, and tell us what you need</h2>
+        <p class="lede">If you are a developer or a tester, you can run test release 0.4.0 on your own computer today. If SightPress is missing something you need, we want to know.</p>
+        <div class="actions">
+          <a class="button" href="https://docs.sightpress.org/latest/getting-started/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-settings"/></svg> Try a test release</a>
+          <a class="button button-secondary" href="mailto:team@sightpress.org?subject=What%20I%20need%20from%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Tell us what you need</a>
+          <a class="button button-secondary" href="https://github.com/sightpress">Follow on GitHub <svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-external-link"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0, 24 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

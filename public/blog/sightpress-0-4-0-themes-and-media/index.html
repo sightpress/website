@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SightPress 0.4.0: themes you can choose and media without limits | SightPress</title>
+  <meta name="description" content="SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="SightPress 0.4.0: themes you can choose and media without limits">
+  <meta property="og:description" content="SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.">
+  <meta property="og:url" content="https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/">
+  <meta property="og:image" content="https://sightpress.org/assets/articles/sightpress-0-4-0-themes-and-media.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SightPress logo. SightPress 0.4 is out! Themes you can choose and media without limits.">
+  <meta property="article:published_time" content="2026-11-24">
+  <meta property="article:modified_time" content="2026-11-24">
+  <meta property="article:author" content="https://sightpress.org/about/#creator">
+  <meta property="article:section" content="Releases">
+  <meta property="article:tag" content="Release notes">
+  <meta property="article:tag" content="Project progress">
+  <meta property="article:tag" content="Themes">
+  <meta property="article:tag" content="Colour and contrast">
+  <meta property="article:tag" content="Accessible content">
+  <meta property="article:tag" content="Admin panel">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SightPress 0.4.0: themes you can choose and media without limits">
+  <meta name="twitter:description" content="SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.">
+  <meta name="twitter:image" content="https://sightpress.org/assets/articles/sightpress-0-4-0-themes-and-media.png">
+  <meta name="twitter:image:alt" content="SightPress logo. SightPress 0.4 is out! Themes you can choose and media without limits.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <link rel="alternate" type="text/markdown" href="/blog/sightpress-0-4-0-themes-and-media/index.md" title="This article in Markdown">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": "https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/#article",
+            "mainEntityOfPage": "https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/",
+            "url": "https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/",
+            "headline": "SightPress 0.4.0: themes you can choose and media without limits",
+            "description": "SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.",
+            "datePublished": "2026-11-24",
+            "dateModified": "2026-11-24",
+            "author": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://sightpress.org/blog/#webpage"
+            },
+            "inLanguage": "en-GB",
+            "articleSection": "Releases",
+            "keywords": [
+                "Release notes",
+                "Project progress",
+                "Themes",
+                "Colour and contrast",
+                "Accessible content",
+                "Admin panel"
+            ],
+            "wordCount": 859,
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/assets/articles/sightpress-0-4-0-themes-and-media.png",
+                "width": 1200,
+                "height": 630
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sightpress.org/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://sightpress.org/blog/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Releases",
+                    "item": "https://sightpress.org/blog/section/releases/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "SightPress 0.4.0: themes you can choose and media without limits",
+                    "item": "https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/"
+                }
+            ]
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/blog/" aria-current="true">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-header">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/releases/">Releases</a></li>
+            </ol>
+          </nav>
+          <h1 id="article-title">SightPress 0.4.0: themes you can choose and media without limits</h1>
+          <p class="article-byline">By <a href="/about/#creator">Pedro Ferreira</a></p>
+          <dl class="article-facts">
+            <div><dt>Published</dt><dd><time datetime="2026-11-24">24 November 2026</time></dd></div>
+            <div><dt>Reading time</dt><dd>4 minutes</dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/releases/">Releases</a></dd></div>
+          </dl>
+          <h2 class="visually-hidden" id="tags-title">Topics</h2>
+          <ul class="tag-list">
+            <li><a href="/blog/tag/release-notes/">Release notes</a></li>
+            <li><a href="/blog/tag/project-progress/">Project progress</a></li>
+            <li><a href="/blog/tag/themes/">Themes</a></li>
+            <li><a href="/blog/tag/colour-and-contrast/">Colour and contrast</a></li>
+            <li><a href="/blog/tag/accessible-content/">Accessible content</a></li>
+            <li><a href="/blog/tag/admin-panel/">Admin panel</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <div class="prose">
+<p>SightPress 0.4.0 is out. It's about two things: how your website looks, and the pictures, videos and recordings you put on it. You can now choose a theme for each site and change its colours, and SightPress handles large files, captions, transcripts and cloud storage.</p>
+<div class="heading-wrap"><h2 id="whats-new">What's new</h2><a class="heading-anchor" href="#whats-new"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What's new</span></a></div>
+<div class="heading-wrap"><h3 id="choose-a-theme-for-each-site">Choose a theme for each site</h3><a class="heading-anchor" href="#choose-a-theme-for-each-site"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Choose a theme for each site</span></a></div>
+<p>A new <strong>Appearance</strong> screen lists every installed theme, with its status in words and a picture of the theme with a description. If there's no picture, the screen describes the theme in words. <strong>Preview</strong> opens a sample page with every kind of block in that theme, so you can look before you change anything. Each site can use its own theme, and your pages and their content stay the same when you change it.</p>
+<p>Themes are installed on the server by whoever runs SightPress, never uploaded through the website. That keeps your site safe.</p>
+<div class="heading-wrap"><h3 id="change-the-colours-but-never-lose-contrast">Change the colours, but never lose contrast</h3><a class="heading-anchor" href="#change-the-colours-but-never-lose-contrast"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Change the colours, but never lose contrast</span></a></div>
+<p>You can change a theme's colours for light and dark mode. SightPress checks every pair of colours that appear together. If a colour would be too hard to read, it's refused, and the message names the colours that clash and their contrast. What you typed is kept, so you can adjust it. Every theme goes through the same checks before it can be installed, and again before it's applied.</p>
+<p>The admin panel keeps its own colours whatever you choose, so you can always find your way around.</p>
+<div class="heading-wrap"><h3 id="more-page-layouts">More page layouts</h3><a class="heading-anchor" href="#more-page-layouts"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: More page layouts</span></a></div>
+<p>Besides the home page and standard layouts, pages can now use a <strong>landing</strong> layout, a <strong>sidebar</strong> layout that lists the other pages in the same section, and a <strong>full width</strong> layout for wide galleries and tables. On a narrow screen or when zoomed in, every layout becomes a single column. If you switch to a theme that lacks a layout, SightPress lists the pages affected before anything changes.</p>
+<div class="heading-wrap"><h3 id="make-your-own-theme">Make your own theme</h3><a class="heading-anchor" href="#make-your-own-theme"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Make your own theme</span></a></div>
+<p>Developers can start a new theme from the theme template. It comes with the checks, the tests and a step-by-step tutorial, and the checks explain in words what needs fixing.</p>
+<div class="heading-wrap"><h3 id="captions-and-transcripts">Captions and transcripts</h3><a class="heading-anchor" href="#captions-and-transcripts"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Captions and transcripts</span></a></div>
+<p>Videos can now have captions in each of your site's languages. SightPress checks each captions file and tells you which line to fix. Videos and recordings get a transcript that visitors open with a button under the player. A page with a video or recording can't be published until it has them.</p>
+<p>If the AI assistant is on, it can add punctuation, paragraphs and speaker labels to a transcript. It can't change the words, and a person still checks the result against the recording before the page can be published.</p>
+<div class="heading-wrap"><h3 id="upload-large-files-and-carry-on-if-they-stop">Upload large files, and carry on if they stop</h3><a class="heading-anchor" href="#upload-large-files-and-carry-on-if-they-stop"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Upload large files, and carry on if they stop</span></a></div>
+<p>Large files are now sent in small parts, with a progress bar that screen readers announce every 10%. You can pause, resume or cancel an upload. If your connection drops, or you close the page, you can carry on from where the upload stopped for up to a day. Each site can also have its own upload limits, and files too large for the browser can be imported from the server, with the same safety checks.</p>
+<div class="heading-wrap"><h3 id="keep-your-files-in-the-cloud-if-you-want-to">Keep your files in the cloud, if you want to</h3><a class="heading-anchor" href="#keep-your-files-in-the-cloud-if-you-want-to"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Keep your files in the cloud, if you want to</span></a></div>
+<p>A site can keep its files in cloud storage such as AWS S3 or Cloudflare R2, and let a content delivery network (CDN) send public files from near each visitor. Unpublished files and every file of a members-only site stay protected: their addresses stop working after a short time, so a shared link doesn't give them away. SightPress can set everything up at AWS or Cloudflare, and moves your files safely, checking each one.</p>
+<p>All of this is optional. By default your files stay on your own server, and nothing goes to another company unless you choose to set it up. When you do, SightPress picks a location that matches the site's country: London for UK sites, and the EU for sites in Europe.</p>
+<div class="heading-wrap"><h2 id="what-it-isnt-yet">What it isn't yet</h2><a class="heading-anchor" href="#what-it-isnt-yet"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What it isn't yet</span></a></div>
+<p>SightPress is still an early release for trying out and testing, and running it on a public server isn't covered yet. The next release is about extending SightPress: modules from other developers, custom roles and optional text messages.</p>
+<div class="heading-wrap"><h2 id="try-it">Try it</h2><a class="heading-anchor" href="#try-it"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Try it</span></a></div>
+<p>The <a href="https://docs.sightpress.org/">SightPress documentation</a> has new guides to changing a theme, choosing page layouts, adding captions and transcripts, uploading large files and keeping files in the cloud. There's also a tutorial for creating your own theme. The <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0 release notes</a> list every change.</p>
+<p>If you design themes, or you rely on captions and transcripts, I'd love to hear how this release works for you.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section-alt" aria-labelledby="share-title">
+      <div class="wrap">
+        <h2 id="share-title">Share this article</h2>
+        <ul class="share-list">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-facebook"/></svg><span>Share on Facebook</span></a></li>
+  <li><a href="https://x.com/intent/post?text=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits&amp;url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-x"/></svg><span>Share on X</span></a></li>
+  <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-linkedin"/></svg><span>Share on LinkedIn</span></a></li>
+  <li><a href="https://bsky.app/intent/compose?text=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-bluesky"/></svg><span>Share on Bluesky</span></a></li>
+  <li><a href="https://www.threads.com/intent/post?text=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-threads"/></svg><span>Share on Threads</span></a></li>
+  <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F&amp;title=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-reddit"/></svg><span>Share on Reddit</span></a></li>
+  <li><a href="https://wa.me/?text=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits%20https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-whatsapp"/></svg><span>Share on WhatsApp</span></a></li>
+  <li><a href="https://t.me/share/url?url=https%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F&amp;text=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-telegram"/></svg><span>Share on Telegram</span></a></li>
+  <li><a href="mailto:?subject=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits&amp;body=SightPress%200.4.0%3A%20themes%20you%20can%20choose%20and%20media%20without%20limits%0A%0Ahttps%3A%2F%2Fsightpress.org%2Fblog%2Fsightpress-0-4-0-themes-and-media%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/</strong>.</p>
+        <p>This article is also available <a href="/blog/sightpress-0-4-0-themes-and-media/index.md">as Markdown</a>.</p>
+      </div>
+    </section>
+
+    <nav class="section pager" aria-label="More articles">
+      <div class="wrap split">
+        <p><span class="pager-label">Previous article</span> <a href="/blog/ai-is-what-we-make-of-it/">AI is what we make of it</a></p>
+      </div>
+    </nav>
+
+    <section class="section section-alt" aria-labelledby="related-title">
+      <div class="wrap">
+        <h2 id="related-title">Related articles</h2>
+        <ul class="article-list">
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-3-0-analytics-ai-assistant/">SightPress 0.3.0: private analytics and an AI assistant that only suggests</a></h3>
+  <p class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-1-0-first-usable-version/">SightPress 0.1.0: the first usable version</a></h3>
+  <p class="article-meta"><time datetime="2026-11-17">17 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.1.0 is out: the first version you can run on your own computer to create a website and publish pages.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-2-0-languages-members-search/">SightPress 0.2.0: languages, members and site search</a></h3>
+  <p class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.2.0 adds websites in several languages, member accounts and site search, to help you run a website over time.</p>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <h2 id="cta-title">Follow SightPress</h2>
+          <p>SightPress is in early development. Hear when it’s ready for live websites, or see what works today.</p>
+          <div class="actions">
+            <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
+            <a class="button button-secondary" href="/features/">See the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.4.0">0.4.0, 24 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
