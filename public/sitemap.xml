@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sightpress.org/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/about/</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://sightpress.org/features/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/faq/</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/accessibility/</loc>
@@ -38,7 +38,11 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/section/releases/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://sightpress.org/blog/section/accessible-content/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/section/ai-and-accessibility/</loc>
@@ -46,11 +50,11 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/accessible-content/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/accounts-and-membership/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/admin-panel/</loc>
@@ -62,11 +66,11 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/alt-text/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/assistive-technology/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/atag/</loc>
@@ -82,7 +86,7 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/block-editor/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/cms-comparison/</loc>
@@ -90,19 +94,23 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/colour-and-contrast/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/design-decisions/</loc>
     <lastmod>2026-11-24</lastmod>
   </url>
   <url>
+    <loc>https://sightpress.org/blog/tag/headings-and-links/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
     <loc>https://sightpress.org/blog/tag/low-vision/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/mission/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/multilingual/</loc>
@@ -118,7 +126,7 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/project-progress/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/publishing-workflow/</loc>
@@ -126,7 +134,7 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/release-notes/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/retrofitting/</loc>
@@ -138,7 +146,11 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/screen-readers/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://sightpress.org/blog/tag/sign-in-and-security/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/testing/</loc>
@@ -150,7 +162,15 @@
   </url>
   <url>
     <loc>https://sightpress.org/blog/tag/verification-codes/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://sightpress.org/blog/sightpress-0-5-0-modules-roles-text-messages/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://sightpress.org/blog/sightpress-0-4-0-themes-and-media/</loc>

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr" data-color-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The accessibility rules that matter to blind and low-vision people, and why they matter to everyone | SightPress</title>
+  <meta name="description" content="A plain-English guide to the web accessibility rules that matter most to blind and low-vision people, and why they make the web better for everyone.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Pedro Ferreira">
+  <link rel="canonical" href="https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/">
+  <meta name="theme-color" content="#101430">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SightPress">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="The accessibility rules that matter to blind and low-vision people, and why they matter to everyone">
+  <meta property="og:description" content="A plain-English guide to the web accessibility rules that matter most to blind and low-vision people, and why they make the web better for everyone.">
+  <meta property="og:url" content="https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/">
+  <meta property="og:image" content="https://sightpress.org/assets/articles/accessibility-rules-for-blind-and-low-vision-users.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A pedestrian crossing seen from ground level. A strip of raised tactile tiles runs straight across the middle of the painted white stripes and into the distance.">
+  <meta property="article:published_time" content="2026-11-27">
+  <meta property="article:modified_time" content="2026-11-27">
+  <meta property="article:author" content="https://sightpress.org/about/#creator">
+  <meta property="article:section" content="Accessible content">
+  <meta property="article:tag" content="Accessible content">
+  <meta property="article:tag" content="Screen readers">
+  <meta property="article:tag" content="Low vision">
+  <meta property="article:tag" content="Assistive technology">
+  <meta property="article:tag" content="Colour and contrast">
+  <meta property="article:tag" content="Headings and links">
+  <meta property="article:tag" content="Alt text">
+  <meta property="article:tag" content="Mission">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The accessibility rules that matter to blind and low-vision people, and why they matter to everyone">
+  <meta name="twitter:description" content="A plain-English guide to the web accessibility rules that matter most to blind and low-vision people, and why they make the web better for everyone.">
+  <meta name="twitter:image" content="https://sightpress.org/assets/articles/accessibility-rules-for-blind-and-low-vision-users.jpg">
+  <meta name="twitter:image:alt" content="A pedestrian crossing seen from ground level. A strip of raised tactile tiles runs straight across the middle of the painted white stripes and into the distance.">
+  <link rel="preload" href="/brand/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/brand/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/fonts/fonts.css">
+  <link rel="stylesheet" href="/brand/tokens/tokens.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/theme.js"></script>
+  <link rel="icon" href="/brand/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/brand/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/brand/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/brand/favicons/site.webmanifest">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.xml" title="SightPress blog">
+  <link rel="alternate" type="text/markdown" href="/blog/accessibility-rules-for-blind-and-low-vision-users/index.md" title="This article in Markdown">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://sightpress.org/#organization",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/brand/favicons/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "team@sightpress.org",
+            "slogan": "Beyond sight.",
+            "sameAs": [
+                "https://github.com/sightpress"
+            ],
+            "founder": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://sightpress.org/#pedro-ferreira",
+            "name": "Pedro Ferreira",
+            "jobTitle": "Founder and lead developer of SightPress",
+            "image": "https://sightpress.org/assets/pedro.jpg",
+            "worksFor": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "url": "https://sightpress.org/about/#creator",
+            "birthPlace": {
+                "@type": "Place",
+                "name": "Lisbon, Portugal"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Web development",
+                "Open source",
+                "Web accessibility",
+                "Screen readers"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://sightpress.org/#website",
+            "name": "SightPress",
+            "url": "https://sightpress.org/",
+            "description": "An accessible, open-source CMS for everyone, designed with blind and low-vision creators and audiences in mind.",
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "inLanguage": "en-GB"
+        },
+        {
+            "@type": "BlogPosting",
+            "@id": "https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/#article",
+            "mainEntityOfPage": "https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/",
+            "url": "https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/",
+            "headline": "The accessibility rules that matter to blind and low-vision people, and why they matter to everyone",
+            "description": "A plain-English guide to the web accessibility rules that matter most to blind and low-vision people, and why they make the web better for everyone.",
+            "datePublished": "2026-11-27",
+            "dateModified": "2026-11-27",
+            "author": {
+                "@id": "https://sightpress.org/#pedro-ferreira"
+            },
+            "publisher": {
+                "@id": "https://sightpress.org/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://sightpress.org/blog/#webpage"
+            },
+            "inLanguage": "en-GB",
+            "articleSection": "Accessible content",
+            "keywords": [
+                "Accessible content",
+                "Screen readers",
+                "Low vision",
+                "Assistive technology",
+                "Colour and contrast",
+                "Headings and links",
+                "Alt text",
+                "Mission"
+            ],
+            "wordCount": 2428,
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://sightpress.org/assets/articles/accessibility-rules-for-blind-and-low-vision-users.jpg",
+                "width": 1200,
+                "height": 630
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/#breadcrumbs",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sightpress.org/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://sightpress.org/blog/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Accessible content",
+                    "item": "https://sightpress.org/blog/section/accessible-content/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "The accessibility rules that matter to blind and low-vision people, and why they matter to everyone",
+                    "item": "https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/"
+                }
+            ]
+        }
+    ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <img class="logo-light" src="/brand/logo/sightpress-logo.svg" width="168" height="35" alt="SightPress home">
+        <img class="logo-dark" src="/brand/logo/sightpress-logo-dark.svg" width="168" height="35" alt="SightPress home">
+      </a>
+      <div class="header-tools">
+        <button type="button" class="theme-toggle" id="theme-toggle" hidden data-label-light="Switch to light theme" data-label-dark="Switch to dark theme">Switch to light theme</button>
+        <nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/blog/" aria-current="true">Blog</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="prelaunch">
+      <p class="wrap"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-info"/></svg><span><strong>SightPress is in early development.</strong> Test releases are available for developers; it is not ready for live sites yet. <a href="/features/#try">How to try a test release</a></span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article" aria-labelledby="article-title">
+      <header class="article-header">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/blog/section/accessible-content/">Accessible content</a></li>
+            </ol>
+          </nav>
+          <h1 id="article-title">The accessibility rules that matter to blind and low-vision people, and why they matter to everyone</h1>
+          <p class="article-byline">By <a href="/about/#creator">Pedro Ferreira</a></p>
+          <dl class="article-facts">
+            <div><dt>Published</dt><dd><time datetime="2026-11-27">27 November 2026</time></dd></div>
+            <div><dt>Reading time</dt><dd>10 minutes</dd></div>
+            <div><dt>Section</dt><dd><a href="/blog/section/accessible-content/">Accessible content</a></dd></div>
+          </dl>
+          <h2 class="visually-hidden" id="tags-title">Topics</h2>
+          <ul class="tag-list">
+            <li><a href="/blog/tag/accessible-content/">Accessible content</a></li>
+            <li><a href="/blog/tag/screen-readers/">Screen readers</a></li>
+            <li><a href="/blog/tag/low-vision/">Low vision</a></li>
+            <li><a href="/blog/tag/assistive-technology/">Assistive technology</a></li>
+            <li><a href="/blog/tag/colour-and-contrast/">Colour and contrast</a></li>
+            <li><a href="/blog/tag/headings-and-links/">Headings and links</a></li>
+            <li><a href="/blog/tag/alt-text/">Alt text</a></li>
+            <li><a href="/blog/tag/mission/">Mission</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <div class="prose">
+          <figure class="article-image">
+            <img src="/assets/articles/accessibility-rules-for-blind-and-low-vision-users.jpg" alt="A pedestrian crossing seen from ground level. A strip of raised tactile tiles runs straight across the middle of the painted white stripes and into the distance." width="1200" height="630" fetchpriority="high">
+            <figcaption>
+              <span class="article-image-caption">Tactile paving across a crossing in Tokyo. Rules for blind people are guides that everyone walks on.</span>
+              <span class="article-image-credit">Photo by <a href="https://unsplash.com/@piak">Josip Ivanković</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-crosswalk-with-a-tactile-paving-strip-rUumOXGZ8jc">Unsplash</a></span>
+            </figcaption>
+          </figure>
+<p>In 1967, a Japanese inventor called Seiichi Miyake laid the first tactile paving tiles on a street in Okayama, near a school for the blind. Today you'll find those raised bumps and bars at almost every station platform and pedestrian crossing. Blind people use them to find the edge. Everyone else uses them too, mostly without noticing: they're the reason you slow down before the platform edge while looking at your phone.</p>
+<p>The web has its own tactile paving. It's a set of rules, standards and habits that let blind and low-vision people find their way around a page. This article summarises the ones that matter most, in plain English, and explains why they aren't a favour to a small group. They make the web work better for all of us.</p>
+<div class="heading-wrap"><h2 id="who-were-talking-about">Who we're talking about</h2><a class="heading-anchor" href="#who-were-talking-about"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Who we're talking about</span></a></div>
+<p>According to the <a href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment">World Health Organization's fact sheet on blindness and vision impairment</a>, at least 2.2 billion people worldwide have a near or distance vision impairment. That's more than one person in four.</p>
+<p>Only some of them are blind. Many more have low vision: they use their remaining sight with magnification, high contrast, large text or a mix of all three. Others have colour vision deficiency, cataracts, glaucoma, macular degeneration, or simply eyes that have got older. Most of us will join this group at some point if we live long enough.</p>
+<p>People with sight loss use the web with different tools:</p>
+<ul>
+<li><strong>Screen readers</strong> such as JAWS, NVDA, VoiceOver, TalkBack and Narrator read the page aloud or send it to a <strong>braille display</strong>. Their users usually move with the keyboard or with gestures, jumping between headings, links, form fields and landmarks.</li>
+<li><strong>Screen magnifiers</strong>, including the ones built into Windows, macOS, iOS and Android, enlarge part of the screen. The user sees only a small window of the page at once.</li>
+<li><strong>Browser and system settings</strong> change the zoom, the text size, the colours, or switch to a high-contrast or dark theme.</li>
+</ul>
+<p>Every rule below exists because one of these tools needs something from the page to work.</p>
+<div class="heading-wrap"><h2 id="the-main-rulebook-wcag-2-2">The main rulebook: WCAG 2.2</h2><a class="heading-anchor" href="#the-main-rulebook-wcag-2-2"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: The main rulebook: WCAG 2.2</span></a></div>
+<p>The <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a> are the standard almost every law points to. They're published by the W3C, the body that also looks after HTML and CSS. WCAG is built on four principles: content must be <strong>perceivable</strong>, <strong>operable</strong>, <strong>understandable</strong> and <strong>robust</strong>. Each rule, called a success criterion, has a level: A (the minimum), AA (the level the law usually asks for) and AAA (the highest).</p>
+<p>Here are the criteria that make the biggest difference to blind and low-vision people, grouped by what they do.</p>
+<div class="heading-wrap"><h3 id="give-every-image-and-control-a-meaning-in-words">Give every image and control a meaning in words</h3><a class="heading-anchor" href="#give-every-image-and-control-a-meaning-in-words"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Give every image and control a meaning in words</span></a></div>
+<ul>
+<li><strong>Text alternatives</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">1.1.1 Non-text content</a>). Every meaningful image needs alt text that says what it shows or does. A screen reader can't describe a photo it can't see. Decorative images should be marked as decorative so they're skipped.</li>
+<li><strong>Names for controls</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">4.1.2 Name, role, value</a>). A button that shows only a magnifying glass icon must still be called &quot;Search&quot; in the code. Otherwise a screen reader announces &quot;button&quot; and nothing else.</li>
+<li><strong>Labels on form fields</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html">3.3.2 Labels or instructions</a>). Every field needs a label tied to it, not just grey placeholder text that disappears when you start typing.</li>
+</ul>
+<div class="heading-wrap"><h3 id="build-the-page-with-real-structure">Build the page with real structure</h3><a class="heading-anchor" href="#build-the-page-with-real-structure"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Build the page with real structure</span></a></div>
+<ul>
+<li><strong>Structure in the code, not just the look</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html">1.3.1 Info and relationships</a>). Headings must be real headings, lists real lists and tables real tables. Making text big and bold isn't enough. Screen reader users navigate by headings more than by anything else, so a page with good headings is a page they can skim.</li>
+<li><strong>A meaningful order</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html">1.3.2 Meaningful sequence</a>). The order in the code should match the order that makes sense when read aloud.</li>
+<li><strong>Page titles and language</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html">2.4.2 Page titled</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html">3.1.1 Language of page</a>). The title is the first thing a screen reader announces. The language tells it which voice and pronunciation to use, so English isn't read with a French accent.</li>
+<li><strong>Links that make sense on their own</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html">2.4.4 Link purpose</a>). Screen reader users often pull up a list of all the links on a page. Ten links called &quot;click here&quot; are useless in that list.</li>
+</ul>
+<div class="heading-wrap"><h3 id="dont-rely-on-sight-alone">Don't rely on sight alone</h3><a class="heading-anchor" href="#dont-rely-on-sight-alone"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Don't rely on sight alone</span></a></div>
+<ul>
+<li><strong>Not by colour alone</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">1.4.1 Use of colour</a>). A red border on its own doesn't tell a colour-blind person or a screen reader user that a field has an error. Add words or an icon with a text label.</li>
+<li><strong>Not by shape or position alone</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html">1.3.3 Sensory characteristics</a>). &quot;Press the round button on the right&quot; means nothing if you can't see the screen.</li>
+<li><strong>Announce changes</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">4.1.3 Status messages</a>). When a message such as &quot;Saved&quot; or &quot;3 results found&quot; appears without the page reloading, a screen reader must be told about it.</li>
+<li><strong>Describe what matters in videos</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html">1.2.5 Audio description</a>). If a video shows important information that nobody says out loud, blind viewers need it described.</li>
+</ul>
+<div class="heading-wrap"><h3 id="make-it-readable-for-people-with-low-vision">Make it readable for people with low vision</h3><a class="heading-anchor" href="#make-it-readable-for-people-with-low-vision"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Make it readable for people with low vision</span></a></div>
+<ul>
+<li><strong>Contrast</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">1.4.3 Contrast (minimum)</a>). Normal text needs a contrast ratio of at least 4.5 to 1 against its background, and large text at least 3 to 1. Icons, input borders and focus outlines need at least 3 to 1 (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">1.4.11 Non-text contrast</a>).</li>
+<li><strong>Text that can grow</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html">1.4.4 Resize text</a>). Text must still work at 200 percent of its size without anything being cut off.</li>
+<li><strong>Layouts that reflow</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">1.4.10 Reflow</a>). At a width of 320 CSS pixels, which is roughly what 400 percent zoom looks like on a laptop, the page should fit in one column without scrolling sideways to read each line.</li>
+<li><strong>Room to breathe</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html">1.4.12 Text spacing</a>). If someone increases the spacing between lines, words and letters to make text easier to read, nothing should overlap or disappear.</li>
+<li><strong>No hidden focus</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus not obscured</a>). Sticky headers and cookie banners mustn't cover the thing you're working on. For someone using a magnifier, that may be the only part of the page they can see.</li>
+</ul>
+<div class="heading-wrap"><h3 id="make-everything-work-from-the-keyboard">Make everything work from the keyboard</h3><a class="heading-anchor" href="#make-everything-work-from-the-keyboard"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Make everything work from the keyboard</span></a></div>
+<ul>
+<li><strong>Keyboard access</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html">2.1.1 Keyboard</a>). Blind people rarely use a mouse. Everything a mouse can do, a keyboard must be able to do as well, and focus must never get trapped (<a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html">2.1.2 No keyboard trap</a>).</li>
+<li><strong>Visible focus</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">2.4.7 Focus visible</a>). Low-vision keyboard users need a clear outline showing where they are.</li>
+<li><strong>A logical focus order</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html">2.4.3 Focus order</a>) and a way to <strong>skip repeated menus</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html">2.4.1 Bypass blocks</a>), so nobody has to listen to the whole navigation on every page.</li>
+<li><strong>Sign-in without puzzles</strong> (<a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">3.3.8 Accessible authentication</a>). New in WCAG 2.2: you mustn't have to solve a visual puzzle or retype a code from memory to sign in, and pasting passwords must be allowed. That helps blind users and everyone who uses a password manager.</li>
+</ul>
+<div class="heading-wrap"><h2 id="the-protocols-behind-the-scenes">The protocols behind the scenes</h2><a class="heading-anchor" href="#the-protocols-behind-the-scenes"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: The protocols behind the scenes</span></a></div>
+<p>WCAG says what the result must be. A few other standards explain how it actually reaches a blind person.</p>
+<p><strong>The accessibility tree.</strong> Browsers turn every page into a simplified tree of objects, each with a name, a role (button, link, heading) and a state (checked, expanded). Operating systems pass that tree to screen readers and magnifiers through their own accessibility interfaces. A screen reader never &quot;sees&quot; your design. It only gets that tree. If something isn't in it, for a blind user it doesn't exist.</p>
+<p><strong>Semantic HTML.</strong> The simplest and most reliable way to fill that tree correctly is to use the right HTML element: <code>&lt;button&gt;</code> for buttons, <code>&lt;a&gt;</code> for links, <code>&lt;h2&gt;</code> for headings, <code>&lt;label&gt;</code> for labels, <code>&lt;nav&gt;</code> and <code>&lt;main&gt;</code> for regions. They come with keyboard support and the right roles for free.</p>
+<p><strong>WAI-ARIA.</strong> When HTML has no suitable element, for example for tabs or a live notification area, <a href="https://www.w3.org/TR/wai-aria-1.2/">WAI-ARIA</a> adds roles, states and properties to fill the gap. The <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices Guide</a> shows how common widgets should behave from the keyboard. But the <a href="https://www.w3.org/TR/using-aria/#rule1">first rule of ARIA</a> is not to use it when a native HTML element will do. Badly used ARIA is worse than none, because it tells the screen reader something untrue.</p>
+<p><strong>ATAG for the tools we publish with.</strong> The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> cover content management systems, editors and site builders. They ask two things: the tool itself must be accessible to authors with disabilities, and it must help every author produce accessible content, for example by prompting for alt text.</p>
+<div class="heading-wrap"><h2 id="what-the-law-says">What the law says</h2><a class="heading-anchor" href="#what-the-law-says"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: What the law says</span></a></div>
+<p>In most of the places where SightPress will be used, these rules aren't optional.</p>
+<ul>
+<li><strong>United Kingdom.</strong> The Equality Act 2010 requires service providers to make reasonable adjustments for disabled people. Public sector websites must also meet <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">the public sector accessibility regulations</a>, which are checked against WCAG 2.2 AA and require an accessibility statement.</li>
+<li><strong>European Union.</strong> The <a href="https://eur-lex.europa.eu/eli/dir/2019/882/oj">European Accessibility Act</a> has applied since 28 June 2025 to many private services, including online shops, banking and e-books. Public bodies were already covered by the Web Accessibility Directive. Both rely on the European standard EN 301 549, which includes WCAG.</li>
+<li><strong>The Americas.</strong> In the United States, the Americans with Disabilities Act and Section 508 cover websites, and Ontario in Canada has the AODA. Both point to WCAG.</li>
+<li><strong>Israel.</strong> The accessibility regulations rely on the Israeli standard IS 5568, which is also based on WCAG.</li>
+</ul>
+<p>The law gives the rules teeth, but it isn't the best reason to follow them.</p>
+<div class="heading-wrap"><h2 id="why-these-rules-matter-to-everybody">Why these rules matter to everybody</h2><a class="heading-anchor" href="#why-these-rules-matter-to-everybody"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Why these rules matter to everybody</span></a></div>
+<div class="heading-wrap"><h3 id="because-the-web-is-still-failing">Because the web is still failing</h3><a class="heading-anchor" href="#because-the-web-is-still-failing"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Because the web is still failing</span></a></div>
+<p>Every year, WebAIM tests the home pages of the top million websites. Its <a href="https://webaim.org/projects/million/">2026 WebAIM Million report</a> found detectable WCAG failures on 95.9 percent of them, with an average of 56.1 errors per page. The most common problems are exactly the ones in this article: low-contrast text on 83.9 percent of home pages, missing alt text on 53.1 percent, unlabelled form fields on 51 percent and empty links on 46.3 percent. And automated tools only catch part of what's wrong.</p>
+<p>Each of those errors is a door that's locked for someone who can't see it.</p>
+<div class="heading-wrap"><h3 id="because-the-same-rules-help-in-everyday-life">Because the same rules help in everyday life</h3><a class="heading-anchor" href="#because-the-same-rules-help-in-everyday-life"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Because the same rules help in everyday life</span></a></div>
+<p><a href="https://inclusive.microsoft.design/">Microsoft's inclusive design toolkit</a> describes disability as a spectrum, not a fixed group. For sight, it gives three examples of the same need: someone who is blind (permanent), someone with cataracts (temporary) and a distracted driver (situational). Design for the first and you help all three.</p>
+<p>Look again at the rules above:</p>
+<ul>
+<li><strong>Good contrast</strong> helps anyone reading a phone in bright sunlight or on a cheap, dim screen.</li>
+<li><strong>Text that resizes and reflows</strong> helps everyone over 45 who has started holding their phone further away.</li>
+<li><strong>Clear headings and descriptive links</strong> help everyone who skims, which is most of us, most of the time.</li>
+<li><strong>Alt text</strong> shows up when images fail to load on a slow connection, and helps search engines understand your page.</li>
+<li><strong>Keyboard access</strong> helps power users, people with a broken wrist and anyone whose trackpad has just died.</li>
+<li><strong>Captions and audio description</strong> help people watching on a noisy train or listening with the screen off.</li>
+<li><strong>Accessible sign-in</strong> helps everyone who uses a password manager, and reduces the number of people locked out of their account.</li>
+</ul>
+<p>This is often called the <a href="https://ssir.org/articles/entry/the_curb_cut_effect">curb-cut effect</a>: dropped kerbs were fought for by wheelchair users, and are now used every day by parents with buggies, travellers with suitcases and delivery workers with trolleys. Tactile paving is the same story for blind people.</p>
+<div class="heading-wrap"><h3 id="because-almost-everyone-will-need-them-one-day">Because almost everyone will need them one day</h3><a class="heading-anchor" href="#because-almost-everyone-will-need-them-one-day"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Because almost everyone will need them one day</span></a></div>
+<p>Sight changes with age for nearly everyone. Most people who live long enough will need reading glasses, many will develop cataracts, and some will lose much more. An accessible website isn't only for &quot;them&quot;. It's for your parents now and for you later.</p>
+<div class="heading-wrap"><h3 id="because-its-simply-better-work">Because it's simply better work</h3><a class="heading-anchor" href="#because-its-simply-better-work"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Because it's simply better work</span></a></div>
+<p>Accessible pages tend to be cleaner, faster and easier to maintain. They work better with search engines, voice assistants and AI tools, which all depend on the same structure a screen reader does. Accessibility isn't a coat of paint added at the end. It's what good engineering looks like.</p>
+<div class="heading-wrap"><h2 id="where-to-start">Where to start</h2><a class="heading-anchor" href="#where-to-start"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Where to start</span></a></div>
+<p>You don't need to memorise every criterion. If you publish on the web, start with these habits:</p>
+<ol>
+<li>Write meaningful alt text for every image that carries information.</li>
+<li>Use real headings, in order, and make every link describe where it goes.</li>
+<li>Check your colours with a contrast checker.</li>
+<li>Zoom your page to 400 percent and see whether it still works.</li>
+<li>Put your mouse away and try to use your site with only the keyboard.</li>
+<li>Switch on the screen reader built into your phone or computer and listen to your own page for five minutes.</li>
+</ol>
+<p>That last one is the most eye-opening of all, if you'll forgive the phrase.</p>
+<div class="heading-wrap"><h2 id="why-sightpress-builds-on-these-rules">Why SightPress builds on these rules</h2><a class="heading-anchor" href="#why-sightpress-builds-on-these-rules"><span aria-hidden="true">#</span><span class="visually-hidden">Link to this section: Why SightPress builds on these rules</span></a></div>
+<p>I'm a blind web developer, and I depend on every one of these rules to do my job. That's why <a href="https://sightpress.org">SightPress</a> treats them as a floor that nothing can lower. It's a CMS for everyone, designed with blind and low-vision creators and audiences in mind. Its own admin panel aims to meet WCAG 2.2 AA and ATAG, and it helps authors get alt text, headings and links right while they write, so that following the rules is the easy path, not the hard one.</p>
+<p>Tactile paving didn't make streets worse for sighted people. It made them safer for everyone. The web can work the same way.</p>
+<p>Follow the development of <a href="https://github.com/sightpress">SightPress on GitHub</a>.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section-alt" aria-labelledby="share-title">
+      <div class="wrap">
+        <h2 id="share-title">Share this article</h2>
+        <ul class="share-list">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-facebook"/></svg><span>Share on Facebook</span></a></li>
+  <li><a href="https://x.com/intent/post?text=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone&amp;url=https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-x"/></svg><span>Share on X</span></a></li>
+  <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-linkedin"/></svg><span>Share on LinkedIn</span></a></li>
+  <li><a href="https://bsky.app/intent/compose?text=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone%20https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-bluesky"/></svg><span>Share on Bluesky</span></a></li>
+  <li><a href="https://www.threads.com/intent/post?text=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone%20https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-threads"/></svg><span>Share on Threads</span></a></li>
+  <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F&amp;title=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-reddit"/></svg><span>Share on Reddit</span></a></li>
+  <li><a href="https://wa.me/?text=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone%20https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-whatsapp"/></svg><span>Share on WhatsApp</span></a></li>
+  <li><a href="https://t.me/share/url?url=https%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F&amp;text=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/share-icons.svg#share-telegram"/></svg><span>Share on Telegram</span></a></li>
+  <li><a href="mailto:?subject=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone&amp;body=The%20accessibility%20rules%20that%20matter%20to%20blind%20and%20low-vision%20people%2C%20and%20why%20they%20matter%20to%20everyone%0A%0Ahttps%3A%2F%2Fsightpress.org%2Fblog%2Faccessibility-rules-for-blind-and-low-vision-users%2F" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg><span>Share by email</span></a></li>
+</ul>
+<p>Each link opens that network’s own sharing page with a short message ready for you to edit. This page loads nothing from these networks until you choose one. Anywhere else, share our address: <strong class="share-address">https://sightpress.org/blog/accessibility-rules-for-blind-and-low-vision-users/</strong>.</p>
+        <p>This article is also available <a href="/blog/accessibility-rules-for-blind-and-low-vision-users/index.md">as Markdown</a>.</p>
+      </div>
+    </section>
+
+    <nav class="section pager" aria-label="More articles">
+      <div class="wrap split">
+        <p><span class="pager-label">Previous article</span> <a href="/blog/sightpress-0-4-0-themes-and-media/">SightPress 0.4.0: themes you can choose and media without limits</a></p>
+        <p><span class="pager-label">Next article</span> <a href="/blog/sightpress-0-5-0-modules-roles-text-messages/">SightPress 0.5.0: modules, your own roles and text messages</a></p>
+      </div>
+    </nav>
+
+    <section class="section section-alt" aria-labelledby="related-title">
+      <div class="wrap">
+        <h2 id="related-title">Related articles</h2>
+        <ul class="article-list">
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/going-blind-as-a-web-developer/">Going blind as a web developer: what changed and what didn&#039;t</a></h3>
+  <p class="article-meta"><time datetime="2026-11-16">16 November 2026</time> · <a href="/blog/section/personal-story/">Personal story</a> · 5 min read</p>
+  <p>How losing my sight changed the way I write code, what stayed the same, and why it led me to build SightPress.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-4-0-themes-and-media/">SightPress 0.4.0: themes you can choose and media without limits</a></h3>
+  <p class="article-meta"><time datetime="2026-11-24">24 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 4 min read</p>
+  <p>SightPress 0.4.0 lets you choose a theme for each site and change its colours, and handles large files, captions, transcripts and cloud storage.</p>
+</li>
+
+          <li class="article-item">
+  <h3 class="article-item-title"><a href="/blog/sightpress-0-3-0-analytics-ai-assistant/">SightPress 0.3.0: private analytics and an AI assistant that only suggests</a></h3>
+  <p class="article-meta"><time datetime="2026-11-19">19 November 2026</time> · <a href="/blog/section/releases/">Releases</a> · 2 min read</p>
+  <p>SightPress 0.3.0 adds private analytics you can understand without seeing a chart, and an optional AI assistant that only suggests.</p>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="contact-box">
+          <h2 id="cta-title">Follow SightPress</h2>
+          <p>SightPress is in early development. Hear when it’s ready for live websites, or see what works today.</p>
+          <div class="actions">
+            <a class="button" href="mailto:team@sightpress.org?subject=Keep%20me%20updated%20about%20SightPress"><svg class="icon" aria-hidden="true" focusable="false"><use href="/brand/icons/sprite.svg#sp-icon-mail"/></svg> Email us to stay informed</a>
+            <a class="button button-secondary" href="/features/">See the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-motto"><strong>SightPress</strong>. Beyond sight<span class="dot">.</span></p>
+        <p>A powerful CMS for everyone, designed with blind and low-vision creators and audiences in mind. Open source under GPL-3.0-or-later.</p>
+        <p>Latest test release: <a href="https://github.com/sightpress/core/releases/tag/0.5.0">0.5.0, 27 November 2026</a>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/feed.xml">Blog feed (Atom)</a></li>
+          <li><a href="/faq/">Frequently asked questions</a></li>
+          <li><a href="https://docs.sightpress.org/">Documentation</a></li>
+          <li><a href="https://github.com/sightpress">SightPress on GitHub</a></li>
+          <li><a href="https://github.com/sightpress/.github/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/accessibility/">Accessibility statement</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">About this site</h2>
+        <p>We aim to meet WCAG 2.2 AA. This site works without JavaScript, and it has no cookies, trackers or third-party scripts. If something is hard to use, please <a href="mailto:team@sightpress.org?subject=Website%20accessibility%20feedback">tell us about it by email</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

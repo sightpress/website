@@ -32,7 +32,8 @@
           <section class="feature-group" aria-labelledby="f-writing">
             <h3 id="f-writing">{{ m.icon('edit') }} Writing and publishing</h3>
             <ul class="plain-list">
-              <li>Build pages from ten kinds of block: heading, text, image, gallery, video, audio, file download, columns, call to action and contact form. <a href="{{ docs('how-to/write-and-publish-a-page/') }}">Write and publish a page</a></li>
+              <li>Build pages from thirteen kinds of block: heading, text, image, gallery, video, audio, file download, columns, call to action, contact form, list of pages, sign language video, and a video or map from another site that loads nothing until the reader asks. <a href="{{ docs('how-to/write-and-publish-a-page/') }}">Write and publish a page</a></li>
+              <li>Give each block its own look: a background, a width and the space around it. Every theme’s colours are checked, so text stays readable on every background.</li>
               <li>Pages move from draft through review to published, and can be published or taken down at a set time. <a href="{{ docs('how-to/schedule-a-page/') }}">Schedule a page</a></li>
               <li>Compare any older version word by word, with changes written out as “removed” and “added”, and restore it without publishing it. <a href="{{ docs('how-to/restore-an-older-version/') }}">Restore an older version</a></li>
               <li>Copy, archive, trash and move pages, with redirects that keep old addresses working. <a href="{{ docs('how-to/move-or-rename-a-page/') }}">Move or rename a page</a></li>
@@ -63,6 +64,10 @@
               <li>Invite people, or let them create their own account. <a href="{{ docs('how-to/let-people-sign-up/') }}">Let people sign up</a></li>
               <li>Make single pages, or a whole site, readable only by signed-in members; those pages stay out of search engines. <a href="{{ docs('how-to/make-a-site-members-only/') }}">Make a site members-only</a></li>
               <li>Password resets, invitations and new accounts use a six-digit code that you type on a page, never a link in an email. <a href="{{ docs('how-to/codes-we-send-you/') }}">Codes we send you</a></li>
+              <li>Create your own roles with exactly the permissions someone needs, each explained in plain English. SightPress won’t let you remove the last admin or lock yourself out. <a href="{{ docs('how-to/create-a-custom-role/') }}">Create a custom role</a></li>
+              <li>Allow only your organisation’s email addresses to join, and only its domain names for websites. <a href="{{ docs('how-to/keep-websites-to-your-organisation/') }}">Keep websites to your organisation</a></li>
+              <li>Optional text messages, off until someone connects a provider and sets a monthly budget: notifications, signing in with your mobile number and password resets by code. A text never contains a link. <a href="{{ docs('how-to/set-up-text-messages/') }}">Set up text messages</a></li>
+              <li>Ask for a code by text before important changes, such as giving someone a role, so a stolen password alone can’t take over a website. <a href="{{ docs('how-to/confirm-important-changes/') }}">Confirm important changes</a></li>
             </ul>
           </section>
           <section class="feature-group" aria-labelledby="f-insight">
@@ -97,6 +102,8 @@
             <ul class="plain-list">
               <li>Runs with Docker, on MariaDB, MySQL, PostgreSQL or SQLite, with FrankenPHP, nginx or Apache. <a href="{{ docs('getting-started/') }}">Getting started</a></li>
               <li>Turn optional features on or off for each site; turning one off keeps its data. <a href="{{ docs('how-to/turn-features-on-or-off/') }}">Turn features on or off</a></li>
+              <li>Add features with modules from other developers, turned on only for the websites that need them. A broken or removed module never takes a website down. <a href="{{ docs('how-to/add-a-module/') }}">Add a module</a></li>
+              <li>Developers can start their own module from the module template, with checks and a tutorial. <a href="{{ docs('tutorials/create-a-module/') }}">Create a module</a></li>
               <li>A command line tool for tasks such as creating a website. <a href="{{ docs('how-to/try-the-command-line-tool/') }}">Try the command line tool</a></li>
               <li>Update to a newer version, keeping every website. <a href="{{ docs('how-to/update-sightpress/') }}">Update SightPress</a></li>
             </ul>
@@ -110,12 +117,11 @@
       <div class="wrap">
         <p class="eyebrow">In progress</p>
         <h2 id="progress-title">Being built now: {{ site.next.version }}</h2>
-        <p class="lede">The next release is about extending SightPress and setting rules for who can join a site.</p>
+        <p class="lede">The next release starts the work of getting SightPress ready for live websites.</p>
         <ul class="plain-list">
-          <li>Add-on modules from other developers, installed with Composer and turned on or off for each site, with a module template and a step-by-step tutorial.</li>
-          <li>Custom roles, so each organisation can decide exactly who may do what.</li>
-          <li>Rules for which email addresses and domains may join a site.</li>
-          <li>Optional text messages: notifications, signing in with your phone number, and a second confirmation for important changes. Text messages are off unless a site sets them up.</li>
+          <li>A security review of the code, and checks that personal data never appears in error messages or logs.</li>
+          <li>Tools to download your personal data or delete your account, and to choose how long data is kept.</li>
+          <li>Faster pages, with page caching and performance budgets.</li>
         </ul>
         <p>Plans for a release that isn’t out yet can still change.</p>
       </div>
